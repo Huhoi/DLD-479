@@ -92,7 +92,7 @@ if __name__ == "__main__":
         print(f"Error: output directory not found at {args.output_dir}")
         exit(1)
     
-    results = detect_crashes(args.output_dir)  # Threshold is now fixed at 5
+    results = detect_crashes(args.output_dir)  # Threshold is fixed at 5
     
     if results["crashes"]:
         print(f"\nDetected {len(results['crashes'])} potential crash(es)")
