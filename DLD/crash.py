@@ -1,26 +1,29 @@
 import os
 import json
+import argparse
 from PIL import Image
 import imagehash
 
-def detect_crashes(states_path, events_path, similarity_threshold=5):
+def detect_crashes(output_dir, similarity_threshold=5):
     """
     Detect app crashes by checking if homescreen appears again after initial state.
     
     Args:
-        states_path: Path to the states directory
-        events_path: Path to the events directory
-        similarity_threshold: Maximum hash difference to consider states similar
+        output_dir: Path to the output directory (e.g., "output/apkName")
+        similarity_threshold: Maximum hash difference to consider states similar (fixed at 5)
         
     Returns:
         List of event indices where crashes were detected
     """
+    states_path = os.path.join(output_dir, "states")
+    events_path = os.path.join(output_dir, "events")
+    
     # Get all state and event files
     state_files = sorted([f for f in os.listdir(states_path) if f.endswith('.png') or f.endswith('.jpg')])
     event_files = sorted([f for f in os.listdir(events_path) if f.endswith('.json')])
     
     if not state_files or not event_files:
-        print("No state or event files found")
+        print(f"No state or event files found in {output_dir}")
         return []
     
     # Load initial state
@@ -50,15 +53,19 @@ def detect_crashes(states_path, events_path, similarity_threshold=5):
     
     return crash_points
 
+def parse_args():
+    parser = argparse.ArgumentParser(description='Detect app crashes from DroidBot output.')
+    parser.add_argument('output_dir', help='Path to the output directory (e.g., "output/apkName")')
+    return parser.parse_args()
+
 if __name__ == "__main__":
-    states_path = "DLD/output/states"
-    events_path = "DLD/output/events"
+    args = parse_args()
     
-    if not os.path.exists(states_path) or not os.path.exists(events_path):
-        print("Error: states or events directory not found")
+    if not os.path.exists(args.output_dir):
+        print(f"Error: output directory not found at {args.output_dir}")
         exit(1)
     
-    crashes = detect_crashes(states_path, events_path)
+    crashes = detect_crashes(args.output_dir)  # Threshold is now fixed at 5
     
     if crashes:
         print(f"\nDetected {len(crashes)} potential crash(es) at positions: {crashes}")
