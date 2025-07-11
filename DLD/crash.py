@@ -3,6 +3,7 @@ import json
 import argparse
 from PIL import Image
 import imagehash
+from datetime import datetime
 
 def detect_crashes(output_dir, similarity_threshold=5):
     """
@@ -13,10 +14,20 @@ def detect_crashes(output_dir, similarity_threshold=5):
         similarity_threshold: Maximum hash difference to consider states similar (fixed at 5)
         
     Returns:
-        List of event indices where crashes were detected
+        Dictionary containing crash information and metadata
     """
     states_path = os.path.join(output_dir, "states")
     events_path = os.path.join(output_dir, "events")
+    
+    # Initialize result dictionary
+    result = {
+        "metadata": {
+            "output_dir": output_dir,
+            "analysis_time": datetime.now().isoformat(),
+            "similarity_threshold": similarity_threshold
+        },
+        "crashes": []
+    }
     
     # Get all state and event files
     state_files = sorted([f for f in os.listdir(states_path) if f.endswith('.png') or f.endswith('.jpg')])
@@ -24,13 +35,11 @@ def detect_crashes(output_dir, similarity_threshold=5):
     
     if not state_files or not event_files:
         print(f"No state or event files found in {output_dir}")
-        return []
+        return result
     
     # Load initial state
     initial_state_file = os.path.join(states_path, state_files[0])
     initial_hash = imagehash.average_hash(Image.open(initial_state_file))
-    
-    crash_points = []
     
     # Compare all subsequent states to initial state
     for i, state_file in enumerate(state_files[1:], 1):
@@ -41,6 +50,13 @@ def detect_crashes(output_dir, similarity_threshold=5):
         if current_hash - initial_hash <= similarity_threshold:
             print(f"Potential crash detected at state {i} ({state_file})")
             
+            crash_info = {
+                "state_index": i,
+                "state_file": state_file,
+                "hash_difference": int(current_hash - initial_hash),
+                "events": []
+            }
+            
             # Find the corresponding event
             if i < len(event_files):
                 event_file = os.path.join(events_path, event_files[i])
@@ -48,10 +64,21 @@ def detect_crashes(output_dir, similarity_threshold=5):
                     event_data = json.load(f)
                 for event in event_data:
                     print(f"{event} : {event_data[event]}")
+                    crash_info["events"].append({
+                        "event_type": event,
+                        "event_data": event_data[event]
+                    })
             
-            crash_points.append(i)
+            result["crashes"].append(crash_info)
     
-    return crash_points
+    return result
+
+def save_results(results, output_dir):
+    """Save crash results to a JSON file"""
+    output_file = os.path.join(output_dir, "crash_logs.json")
+    with open(output_file, 'w') as f:
+        json.dump(results, f, indent=4)
+    print(f"\nCrash results saved to {output_file}")
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Detect app crashes from DroidBot output.')
@@ -65,9 +92,12 @@ if __name__ == "__main__":
         print(f"Error: output directory not found at {args.output_dir}")
         exit(1)
     
-    crashes = detect_crashes(args.output_dir)  # Threshold is now fixed at 5
+    results = detect_crashes(args.output_dir)  # Threshold is now fixed at 5
     
-    if crashes:
-        print(f"\nDetected {len(crashes)} potential crash(es) at positions: {crashes}")
+    if results["crashes"]:
+        print(f"\nDetected {len(results['crashes'])} potential crash(es)")
+        save_results(results, args.output_dir)
     else:
         print("\nNo crashes detected")
+        # Still save empty result for record keeping
+        save_results(results, args.output_dir)
