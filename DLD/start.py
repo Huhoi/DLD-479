@@ -23,8 +23,7 @@ class ProcessManager:
         cmd = [
             "droidbot",
             "-a", "droidbot/APK/Amaze_File_Manager_v3.1.0-beta.1.apk",
-            "-o", "droidbot/output",
-            "-keep_env"
+            "-o", "DLD/output"
         ]
         self.droidbot_process = subprocess.Popen(cmd)
         self.droidbot_process.wait()
