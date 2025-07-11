@@ -51,8 +51,8 @@ def detect_crashes(states_path, events_path, similarity_threshold=5):
     return crash_points
 
 if __name__ == "__main__":
-    states_path = "droidbot/output/states"
-    events_path = "droidbot/output/events"
+    states_path = "DLD/output/states"
+    events_path = "DLD/output/events"
     
     if not os.path.exists(states_path) or not os.path.exists(events_path):
         print("Error: states or events directory not found")
