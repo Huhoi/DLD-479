@@ -1,6 +1,7 @@
-# Python Libraries
+# Python Packages
 - pip install Pillow imagehash
-- pip install droidbot
+- cd droidbot
+    - pip install e .
 
 # Prereqs
 - Need to have Python 3.9 (3.13 does not work. IDK about other versions)
@@ -10,4 +11,6 @@
 
 # How to Run
 - Have emulator running
-- Run start.py in DLD
+- Run ***startDLD.py*** in DLD (NOT start.py in droidbot)
+- Ctrl + C to cancel whenver. As of right now it runs indefinitely I think
+- Output should be in "DLD/output" (Need to change this later when running for multiple APK's)
