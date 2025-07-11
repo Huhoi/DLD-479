@@ -1,0 +1,55 @@
+{
+  "tag": "2025-07-10_183014",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.amaze.filemanager",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          428,
+          1321
+        ],
+        [
+          713,
+          1447
+        ]
+      ],
+      "resource_id": "com.amaze.filemanager:id/buttonDefaultNegative",
+      "checked": false,
+      "text": "DESCENDING",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 3,
+      "temp_id": 23,
+      "size": "285*126",
+      "signature": "[class]android.widget.TextView[resource_id]com.amaze.filemanager:id/buttonDefaultNegative[text]DESCENDING[enabled,,]",
+      "view_str": "f5f655aed0f7412fc5fde4c7539fa2fd",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]com.amaze.filemanager:id/buttonDefaultNegative",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "5",
+      "desc": "<button bound_box=428,1321,713,1447>DESCENDING</button>"
+    }
+  },
+  "start_state": "3bfda9bfafbc1688f23d87861d1cdeef",
+  "stop_state": "80092530409efcf748073b6c16969f7f",
+  "event_str": "TouchEvent(state=3bfda9bfafbc1688f23d87861d1cdeef, view=f5f655aed0f7412fc5fde4c7539fa2fd(MainActivity/TextView-DESCENDING))"
+}

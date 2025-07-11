@@ -1,0 +1,51 @@
+{
+  "tag": "2025-07-10_184417",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.amaze.filemanager",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        4
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          565,
+          73
+        ],
+        [
+          1080,
+          199
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 2,
+      "temp_id": 3,
+      "size": "515*126",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[enabled,,]",
+      "view_str": "0818f2254789bb0b99737030c1865326",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    }
+  },
+  "start_state": "ba90c3e1b729dd1a311cf88ca70e02d1",
+  "stop_state": "3bfda9bfafbc1688f23d87861d1cdeef",
+  "event_str": "TouchEvent(state=ba90c3e1b729dd1a311cf88ca70e02d1, view=0818f2254789bb0b99737030c1865326(MainActivity/LinearLayout-))"
+}

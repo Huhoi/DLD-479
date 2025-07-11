@@ -1,0 +1,56 @@
+{
+  "tag": "2025-07-10_183045",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.amaze.filemanager",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "Search",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          723,
+          73
+        ],
+        [
+          849,
+          199
+        ]
+      ],
+      "resource_id": "com.amaze.filemanager:id/search",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": true,
+      "parent": 11,
+      "temp_id": 12,
+      "size": "126*126",
+      "signature": "[class]android.widget.TextView[resource_id]com.amaze.filemanager:id/search[text]None[enabled,,]",
+      "view_str": "55883679543ec33250782b97ae928702",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]com.amaze.filemanager:id/search",
+      "allowed_actions": [
+        "touch",
+        "long_touch"
+      ],
+      "special_attrs": [],
+      "local_id": "2",
+      "desc": "<button text='Search' bound_box=723,73,849,199></button>"
+    }
+  },
+  "start_state": "f574dd9a1abcd3f0411bd60ad3f3532c",
+  "stop_state": "cbb08ca49d4a63bf2c20ae50f0df8f6f",
+  "event_str": "TouchEvent(state=f574dd9a1abcd3f0411bd60ad3f3532c, view=55883679543ec33250782b97ae928702(MainActivity/TextView-))"
+}

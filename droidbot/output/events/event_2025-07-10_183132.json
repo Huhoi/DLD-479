@@ -1,0 +1,56 @@
+{
+  "tag": "2025-07-10_183132",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.amaze.filemanager",
+      "visible": true,
+      "checkable": true,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          159,
+          1065
+        ],
+        [
+          492,
+          1149
+        ]
+      ],
+      "resource_id": "com.amaze.filemanager:id/checkBox",
+      "checked": false,
+      "text": "Do for all items",
+      "class": "android.widget.CheckBox",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 8,
+      "temp_id": 10,
+      "size": "333*84",
+      "signature": "[class]android.widget.CheckBox[resource_id]com.amaze.filemanager:id/checkBox[text]Do for all items[enabled,,]",
+      "view_str": "d54fae89d5a04f3701b48a45915d48b8",
+      "content_free_signature": "[class]android.widget.CheckBox[resource_id]com.amaze.filemanager:id/checkBox",
+      "allowed_actions": [
+        "select",
+        "unselect"
+      ],
+      "special_attrs": [],
+      "local_id": "2",
+      "desc": "<checkbox bound_box=159,1065,492,1149>Do for all items</checkbox>"
+    }
+  },
+  "start_state": "f48537b4e0399559e40d69b695d40fb2",
+  "stop_state": "7b6618c07730bc0a012004e1c2a9ed5e",
+  "event_str": "TouchEvent(state=f48537b4e0399559e40d69b695d40fb2, view=d54fae89d5a04f3701b48a45915d48b8(MainActivity/CheckBox-Do for all))"
+}

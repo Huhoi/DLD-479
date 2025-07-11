@@ -1,0 +1,303 @@
+Activity Resolver Table:
+  Full MIME Types:
+      application/zip:
+        674935b com.amaze.filemanager/.activities.MainActivity filter 75f0a37
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "application/zip"
+          StaticType: "application/x-rar-compressed"
+      text/*:
+        61e4ba4 com.amaze.filemanager/.activities.TextReader filter aca5d0d
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "text"
+          mPriority=0, mOrder=0, mHasStaticPartialTypes=true, mHasDynamicPartialTypes=false
+      */*:
+        674935b com.amaze.filemanager/.activities.MainActivity filter fe744d1
+          Action: "android.intent.action.GET_CONTENT"
+          Category: "android.intent.category.OPENABLE"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "*"
+          mPriority=0, mOrder=0, mHasStaticPartialTypes=true, mHasDynamicPartialTypes=false
+      db/*:
+        591c4c2 com.amaze.filemanager/.activities.DbViewer filter 91012d3
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "db"
+          mPriority=0, mOrder=0, mHasStaticPartialTypes=true, mHasDynamicPartialTypes=false
+      application/x-rar-compressed:
+        674935b com.amaze.filemanager/.activities.MainActivity filter 75f0a37
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "application/zip"
+          StaticType: "application/x-rar-compressed"
+
+  Base MIME Types:
+      application:
+        674935b com.amaze.filemanager/.activities.MainActivity filter 75f0a37
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "application/zip"
+          StaticType: "application/x-rar-compressed"
+        674935b com.amaze.filemanager/.activities.MainActivity filter 75f0a37
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "application/zip"
+          StaticType: "application/x-rar-compressed"
+
+  Wild MIME Types:
+      *:
+        674935b com.amaze.filemanager/.activities.MainActivity filter fe744d1
+          Action: "android.intent.action.GET_CONTENT"
+          Category: "android.intent.category.OPENABLE"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "*"
+          mPriority=0, mOrder=0, mHasStaticPartialTypes=true, mHasDynamicPartialTypes=false
+      db:
+        591c4c2 com.amaze.filemanager/.activities.DbViewer filter 91012d3
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "db"
+          mPriority=0, mOrder=0, mHasStaticPartialTypes=true, mHasDynamicPartialTypes=false
+      text:
+        61e4ba4 com.amaze.filemanager/.activities.TextReader filter aca5d0d
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "text"
+          mPriority=0, mOrder=0, mHasStaticPartialTypes=true, mHasDynamicPartialTypes=false
+
+  Non-Data Actions:
+      android.intent.action.MAIN:
+        674935b com.amaze.filemanager/.activities.MainActivity filter 7eaa7f8
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+      android.intent.action.RINGTONE_PICKER:
+        674935b com.amaze.filemanager/.activities.MainActivity filter 7162b36
+          Action: "android.intent.action.RINGTONE_PICKER"
+          Category: "android.intent.category.DEFAULT"
+
+  MIME Typed Actions:
+      android.intent.action.VIEW:
+        674935b com.amaze.filemanager/.activities.MainActivity filter 75f0a37
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "application/zip"
+          StaticType: "application/x-rar-compressed"
+        61e4ba4 com.amaze.filemanager/.activities.TextReader filter aca5d0d
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "text"
+          mPriority=0, mOrder=0, mHasStaticPartialTypes=true, mHasDynamicPartialTypes=false
+        591c4c2 com.amaze.filemanager/.activities.DbViewer filter 91012d3
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "db"
+          mPriority=0, mOrder=0, mHasStaticPartialTypes=true, mHasDynamicPartialTypes=false
+      android.intent.action.GET_CONTENT:
+        674935b com.amaze.filemanager/.activities.MainActivity filter fe744d1
+          Action: "android.intent.action.GET_CONTENT"
+          Category: "android.intent.category.OPENABLE"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "*"
+          mPriority=0, mOrder=0, mHasStaticPartialTypes=true, mHasDynamicPartialTypes=false
+
+Receiver Resolver Table:
+  Non-Data Actions:
+      com.amaze.filemanager.services.ftpservice.FTPReceiver.ACTION_STOP_FTPSERVER:
+        3c67e10 com.amaze.filemanager/.services.ftpservice.FTPReceiver filter 64cbd09
+          Action: "com.amaze.filemanager.services.ftpservice.FTPReceiver.ACTION_START_FTPSERVER"
+          Action: "com.amaze.filemanager.services.ftpservice.FTPReceiver.ACTION_STOP_FTPSERVER"
+      com.amaze.filemanager.services.ftpservice.FTPReceiver.FTPSERVER_STARTED:
+        e3b6b0e com.amaze.filemanager/.ui.notifications.FTPNotification filter 4bf092f
+          Action: "com.amaze.filemanager.services.ftpservice.FTPReceiver.FTPSERVER_STARTED"
+          Action: "com.amaze.filemanager.services.ftpservice.FTPReceiver.FTPSERVER_STOPPED"
+      com.amaze.filemanager.services.ftpservice.FTPReceiver.FTPSERVER_STOPPED:
+        e3b6b0e com.amaze.filemanager/.ui.notifications.FTPNotification filter 4bf092f
+          Action: "com.amaze.filemanager.services.ftpservice.FTPReceiver.FTPSERVER_STARTED"
+          Action: "com.amaze.filemanager.services.ftpservice.FTPReceiver.FTPSERVER_STOPPED"
+      com.amaze.filemanager.services.ftpservice.FTPReceiver.ACTION_START_FTPSERVER:
+        3c67e10 com.amaze.filemanager/.services.ftpservice.FTPReceiver filter 64cbd09
+          Action: "com.amaze.filemanager.services.ftpservice.FTPReceiver.ACTION_START_FTPSERVER"
+          Action: "com.amaze.filemanager.services.ftpservice.FTPReceiver.ACTION_STOP_FTPSERVER"
+
+Domain verification status:
+
+Key Set Manager:
+  [com.amaze.filemanager]
+      Signing KeySets: 42
+
+Packages:
+  Package [com.amaze.filemanager] (189943e):
+    userId=10153
+    pkg=Package{8b3329f com.amaze.filemanager}
+    codePath=/data/app/~~-JJQkMiKzPggkGFKB8kXwg==/com.amaze.filemanager-cYt6kSOKp0nI-g1tHCKELA==
+    resourcePath=/data/app/~~-JJQkMiKzPggkGFKB8kXwg==/com.amaze.filemanager-cYt6kSOKp0nI-g1tHCKELA==
+    legacyNativeLibraryDir=/data/app/~~-JJQkMiKzPggkGFKB8kXwg==/com.amaze.filemanager-cYt6kSOKp0nI-g1tHCKELA==/lib
+    extractNativeLibs=true
+    primaryCpuAbi=null
+    secondaryCpuAbi=null
+    cpuAbiOverride=null
+    versionCode=42 minSdk=14 targetSdk=23
+    minExtensionVersions=[]
+    versionName=3.1.0 Beta 1
+    usesNonSdkApi=false
+    splits=[base]
+    apkSigningVersion=2
+    applicationInfo=PackageImpl{8b3329f com.amaze.filemanager}
+    flags=[ DEBUGGABLE HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]
+    privateFlags=[ PRIVATE_FLAG_REQUEST_LEGACY_EXTERNAL_STORAGE PRIVATE_FLAG_ALLOW_NATIVE_HEAP_POINTER_TAGGING ]
+    forceQueryable=false
+    queriesPackages=[]
+    dataDir=/data/user/0/com.amaze.filemanager
+    supportsScreens=[small, medium, large, xlarge, resizeable, anyDensity]
+    usesLibraries:
+      android.test.base
+      org.apache.http.legacy
+    usesLibraryFiles:
+      /system/framework/android.test.base.jar
+      /system/framework/org.apache.http.legacy.jar
+    timeStamp=2025-07-10 19:07:42
+    firstInstallTime=2025-07-10 19:07:42
+    lastUpdateTime=2025-07-10 19:07:42
+    signatures=PackageSignatures{3b32fec version:2, signatures:[45e775cf], past signatures:[]}
+    installPermissionsFixed=true
+    pkgFlags=[ DEBUGGABLE HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]
+    requested permissions:
+      android.permission.ACCESS_WIFI_STATE
+      android.permission.ACCESS_NETWORK_STATE
+      android.permission.WRITE_EXTERNAL_STORAGE
+      android.permission.ACCESS_SUPERUSER
+      com.android.launcher.permission.INSTALL_SHORTCUT
+      android.permission.INTERNET
+      android.permission.READ_EXTERNAL_STORAGE
+      android.permission.ACCESS_MEDIA_LOCATION
+    install permissions:
+      android.permission.INTERNET: granted=true
+      android.permission.ACCESS_NETWORK_STATE: granted=true
+      android.permission.ACCESS_WIFI_STATE: granted=true
+      com.android.launcher.permission.INSTALL_SHORTCUT: granted=true
+    User 0: ceDataInode=180432 installed=true hidden=false suspended=false distractionFlags=0 stopped=true notLaunched=true enabled=0 instant=false virtual=false
+      gids=[3003]
+      runtime permissions:
+        android.permission.READ_EXTERNAL_STORAGE: granted=false, flags=[ REVOKE_WHEN_REQUESTED|USER_SENSITIVE_WHEN_GRANTED|USER_SENSITIVE_WHEN_DENIED|RESTRICTION_INSTALLER_EXEMPT]
+        android.permission.WRITE_EXTERNAL_STORAGE: granted=false, flags=[ USER_SENSITIVE_WHEN_GRANTED|USER_SENSITIVE_WHEN_DENIED|RESTRICTION_INSTALLER_EXEMPT]
+        android.permission.ACCESS_MEDIA_LOCATION: granted=false, flags=[ REVOKE_WHEN_REQUESTED|USER_SENSITIVE_WHEN_GRANTED|USER_SENSITIVE_WHEN_DENIED]
+
+Queries:
+  system apps queryable: false
+  queries via package name:
+  queries via intent:
+    com.google.android.settings.intelligence:
+      com.amaze.filemanager
+    com.google.android.youtube:
+      com.amaze.filemanager
+    com.google.android.gm:
+      com.amaze.filemanager
+    com.google.android.apps.docs:
+      com.amaze.filemanager
+    com.android.emergency:
+      com.amaze.filemanager
+  queryable via interaction:
+    User 0:
+  queryable via uses-library:
+
+Package Changes:
+  Sequence number=725
+  User 0:
+    seq=0, package=com.google.android.permissioncontroller
+    seq=2, package=com.android.systemui
+    seq=5, package=com.android.bluetooth
+    seq=6, package=com.google.android.inputmethod.latin
+    seq=9, package=com.google.android.sdksetup
+    seq=71, package=com.android.stk
+    seq=120, package=com.google.android.cellbroadcastreceiver
+    seq=133, package=com.android.carrierdefaultapp
+    seq=291, package=com.google.android.partnersetup
+    seq=335, package=com.android.settings
+    seq=353, package=com.android.traceur
+    seq=475, package=com.google.android.settings.intelligence
+    seq=480, package=com.google.android.calendar
+    seq=481, package=com.android.camera2
+    seq=489, package=com.android.nfc
+    seq=491, package=com.android.statementservice
+    seq=496, package=com.google.android.apps.photos
+    seq=499, package=com.google.android.apps.wellbeing
+    seq=522, package=com.google.android.projection.gearhead
+    seq=523, package=com.google.android.setupwizard
+    seq=524, package=com.google.android.apps.maps
+    seq=530, package=com.google.android.syncadapters.contacts
+    seq=541, package=com.google.android.apps.restore
+    seq=542, package=com.google.android.gm
+    seq=543, package=com.google.android.apps.messaging
+    seq=565, package=com.google.android.googlequicksearchbox
+    seq=566, package=com.android.vending
+    seq=604, package=com.google.android.gsf
+    seq=624, package=com.google.android.apps.youtube.music
+    seq=625, package=com.google.android.youtube
+    seq=710, package=com.google.android.gms
+    seq=715, package=com.google.android.apps.docs
+    seq=721, package=io.github.ylimit.droidbotapp
+    seq=724, package=com.amaze.filemanager
+
+
+Dexopt state:
+  [com.amaze.filemanager]
+    path: /data/app/~~-JJQkMiKzPggkGFKB8kXwg==/com.amaze.filemanager-cYt6kSOKp0nI-g1tHCKELA==/base.apk
+      x86_64: [status=run-from-apk] [reason=unknown]
+
+
+Compiler stats:
+  [com.amaze.filemanager]
+    (No recorded stats)
+
+APEX session state:
+
+Active APEX packages:
+
+
+Inactive APEX packages:
+
+
+Factory APEX packages:
+
+
+Snapshot statistics
+   Unrecorded-hits: 6128  Cork-level: 0
+   Summary stats               TotBlds     TotUsed     TotCork     BigBlds    ShortLvd     TotTime     MaxTime
+          0:09         now           3         709           0           0           0           1           0
+          1:09        0:09           3      186502           0           0           0           1           1
+          2:09        1:09          14       20527           0           0           0           5           1
+          3:09        2:09           2         253           0           0           0           0           0
+          4:09        3:09          35       76196           0           0           7          11           2
+          5:09        4:09          18       26184           0           0           2           5           1
+          6:09        5:09         122       84924           0           0          51          26           4
+          7:09        6:09         100       91515           0           0          39          24           5
+          8:09        7:09          18       33581           0           0           4           2           0
+          9:09        8:09          88      157737           0           0          24          29           6
+         10:09         now        1457      906633           0           1         530         324          58
+
+   Build times                  <= 1ms      <= 2ms      <= 5ms     <= 10ms     <= 20ms     <= 50ms    <= 100ms     > 100ms
+          0:09         now           3           0           0           0           0           0           0           0
+          1:09        0:09           3           0           0           0           0           0           0           0
+          2:09        1:09          14           0           0           0           0           0           0           0
+          3:09        2:09           2           0           0           0           0           0           0           0
+          4:09        3:09          34           1           0           0           0           0           0           0
+          5:09        4:09          18           0           0           0           0           0           0           0
+          6:09        5:09         120           1           1           0           0           0           0           0
+          7:09        6:09          99           0           1           0           0           0           0           0
+          8:09        7:09          18           0           0           0           0           0           0           0
+          9:09        8:09          85           1           0           2           0           0           0           0
+         10:09         now        1443           6           4           3           0           0           1           0
+
+   Use counters                   <= 1        <= 2        <= 5       <= 10       <= 20       <= 50      <= 100       > 100
+          0:09         now           0           0           0           0           0           0           1           2
+          1:09        0:09           0           0           0           1           0           0           0           2
+          2:09        1:09           0           0           0           1           0           2           2           9
+          3:09        2:09           0           0           0           0           0           1           0           1
+          4:09        3:09           6           0           1           2           2           1           3          20
+          5:09        4:09           2           0           0           1           0           4           2           9
+          6:09        5:09          12          24          15          10           8          11          11          31
+          7:09        6:09          12          15          12          10           5           6           7          33
+          8:09        7:09           3           0           1           0           2           0           1          11
+          9:09        8:09          10           9           5           6           0           9           1          48
+         10:09         now         129         202         198         313          82          98         104         330

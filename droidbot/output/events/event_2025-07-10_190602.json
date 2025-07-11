@@ -1,0 +1,11 @@
+{
+  "tag": "2025-07-10_190602",
+  "event": {
+    "event_type": "kill_app",
+    "log_lines": null,
+    "stop_intent": "am force-stop com.amaze.filemanager"
+  },
+  "start_state": "26bf23152b9f78e8e07c4afc65fc04d4",
+  "stop_state": "26bf23152b9f78e8e07c4afc65fc04d4",
+  "event_str": "KillAppEvent()"
+}

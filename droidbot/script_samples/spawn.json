@@ -1,0 +1,39 @@
+{
+    "views": {
+        "any_screen": {
+            "class": ".*"
+        }
+    },
+    "states": {
+        "rotation_state": {
+            "views": ["any_screen"]
+        }
+    },
+    "operations": {
+        "rotate_portrait": [
+            {
+                "event_type": "set_orientation",
+                "orientation": "portrait"
+            }
+        ],
+        "rotate_landscape": [
+            {
+                "event_type": "set_orientation",
+                "orientation": "landscape"
+            }
+        ],
+        "rotate_random": [
+            {
+                "event_type": "set_orientation",
+                "orientation": "random"
+            }
+        ]
+    },
+    "main": {
+        "rotation_state": [
+            "rotate_portrait",
+            "rotate_landscape",
+            "rotate_random"
+        ]
+    }
+}

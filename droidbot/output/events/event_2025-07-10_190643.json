@@ -1,0 +1,55 @@
+{
+  "tag": "2025-07-10_190643",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.google.android.permissioncontroller",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          133,
+          991
+        ],
+        [
+          947,
+          1124
+        ]
+      ],
+      "resource_id": "com.android.permissioncontroller:id/permission_message",
+      "checked": false,
+      "text": "Allow Amaze to access photos, media, and files on your device?",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 7,
+      "temp_id": 9,
+      "size": "814*133",
+      "signature": "[class]android.widget.TextView[resource_id]com.android.permissioncontroller:id/permission_message[text]None[enabled,,]",
+      "view_str": "d3ec8a7d312b6a47380b8ad5259c5df0",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]com.android.permissioncontroller:id/permission_message",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "0",
+      "desc": "<button bound_box=133,991,947,1124>Allow Amaze to access photos, media, and files on your device?</button>"
+    }
+  },
+  "start_state": "c187ffcacc5f30a8b9a3f1d9030546e9",
+  "stop_state": "c187ffcacc5f30a8b9a3f1d9030546e9",
+  "event_str": "TouchEvent(state=c187ffcacc5f30a8b9a3f1d9030546e9, view=d3ec8a7d312b6a47380b8ad5259c5df0(GrantPermissionsActivity/TextView-Allow Amaz))"
+}

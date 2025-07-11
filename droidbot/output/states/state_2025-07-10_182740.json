@@ -1,0 +1,1655 @@
+{
+  "tag": "2025-07-10_182740",
+  "state_str": "bf994cec61b9190ac460ec400c107b65",
+  "state_str_content_free": "36cff4d4513ffefe4ed690dd29dd7bd4",
+  "foreground_activity": "com.amaze.filemanager/.activities.MainActivity",
+  "activity_stack": [
+    "com.amaze.filemanager/.activities.MainActivity"
+  ],
+  "background_services": [
+    "com.google.android.gms/.nearby.presence.service.LifeCycleService",
+    "com.google.android.gms/.play.integrity.api.service.IntegrityApiPersistentService",
+    "com.google.android.apps.messaging/com.google.android.ims.service.JibeService",
+    "com.google.android.networkstack.tethering/com.android.networkstack.tethering.TetheringService",
+    "com.google.android.ext.services/com.android.textclassifier.DefaultTextClassifierService",
+    "com.google.android.gms/.nearby.sharing.ReceiveSurfaceService",
+    "com.google.android.gms/.icing.service.AppIndexingService",
+    "com.google.android.googlequicksearchbox/com.google.android.apps.gsa.shared.util.keepalive.StandaloneKeepAlive",
+    "com.android.systemui/.keyguard.KeyguardService",
+    "com.android.bluetooth/.btservice.AdapterService",
+    "com.android.systemui/.ImageWallpaper",
+    "com.google.android.setupwizard/.notification.SetupNotificationService",
+    "com.google.android.gms/.personalsafety.service.SndDetectionService",
+    "com.google.android.gms/.auth.setup.devicesignals.LockScreenService",
+    "com.google.android.gms/.gcm.GcmService",
+    "com.google.android.gms/.chimera.PersistentApiServiceNoInstantApps",
+    "com.google.android.gms/.clearcut.debug.ClearcutDebugDumpService",
+    "com.google.android.apps.messaging/com.google.android.ims.binding.SystemBindingService",
+    "com.google.android.gms/.chimera.PersistentApiService",
+    "com.google.android.gms/.location.geocode.GeocodeService",
+    "com.android.phone/com.android.internal.telephony.CellularNetworkService",
+    "com.google.android.gms/.magictether.service.TetherService",
+    "com.google.android.gms/.chimera.PersistentBoundBrokerService",
+    "com.android.bluetooth/.gatt.GattService",
+    "com.google.android.gms/.chimera.GmsBoundBrokerService",
+    "com.google.android.gms/.tron.CollectionService",
+    "com.google.android.googlequicksearchbox/com.google.android.apps.gsa.nowoverlayservice.DrawerOverlayService",
+    "com.google.android.gms/.nearby.sharing.SendSurfaceService",
+    "io.github.ylimit.droidbotapp/.DroidBotIME",
+    "com.android.bluetooth/.pbap.BluetoothPbapService",
+    "com.google.android.gms/com.google.android.location.fused.FusedLocationService",
+    "com.google.android.gms/.gcm.nts.SchedulerService",
+    "com.google.android.ext.services/android.ext.services.autofill.InlineSuggestionRenderServiceImpl",
+    "com.google.android.setupwizard/.logging.ScreenOnClock",
+    "com.android.bluetooth/.a2dp.A2dpService",
+    "com.google.android.providers.media.module/com.android.providers.media.fuse.ExternalStorageServiceImpl",
+    "io.github.ylimit.droidbotapp/io.github.privacystreams.accessibility.PSAccessibilityService",
+    "com.google.android.googlequicksearchbox/com.google.android.apps.gsa.nga.engine.viss.NgaService",
+    "com.google.android.gms/.thunderbird.EmergencyPersistentService",
+    "com.google.android.apps.nexuslauncher/com.android.launcher3.notification.NotificationListener",
+    "com.android.systemui/.SystemUIService",
+    "android/.hardware.location.GeofenceHardwareService",
+    "com.android.se/.SecureElementService",
+    "com.google.android.gms/.chimera.PersistentDirectBootAwareApiService",
+    "com.android.bluetooth/.hid.HidDeviceService",
+    "com.google.android.gms/.geotimezone.GeoTimeZoneService",
+    "com.google.android.gms/.location.persistent.LocationPersistentService",
+    "com.google.android.gms/.nearby.discovery.service.DiscoveryService",
+    "com.google.android.gms/com.google.android.location.internal.PendingIntentCallbackService",
+    "com.google.android.gms/.fido.authenticator.service.AuthenticatorService",
+    "com.google.android.gms/com.google.android.location.internal.server.GoogleLocationService",
+    "com.google.android.gms/com.google.android.contextmanager.service.ContextManagerService",
+    "com.android.systemui/.dump.SystemUIAuxiliaryDumpService",
+    "com.google.android.gms/com.google.android.location.network.NetworkLocationService",
+    "com.android.stk/.StkAppService",
+    "com.google.android.gms/com.google.android.location.internal.GoogleLocationManagerService",
+    "com.android.phone/com.android.internal.telephony.dataconnection.CellularDataService",
+    "com.android.server.telecom/.components.TelecomService",
+    "com.google.android.networkstack/com.android.server.NetworkStackService",
+    "com.android.bluetooth/.hfp.HeadsetService",
+    "com.google.android.googlequicksearchbox/com.google.android.voiceinteraction.GsaVoiceInteractionService",
+    "com.android.emulator.multidisplay/.MultiDisplayService",
+    "com.google.android.gms/.crisisalerts.init.CrisisAlertsPersistentService",
+    "com.android.phone/.vvm.RemoteVvmTaskManager",
+    "com.android.ons/.OpportunisticNetworkService",
+    "com.google.android.gms/.common.stats.GmsCoreStatsService",
+    "com.google.android.gms/com.google.android.location.internal.server.HardwareArProviderService",
+    "com.google.android.gms/.dtdi.lifecycle.LifecycleService",
+    "com.google.android.gms/.chimera.GmsInternalBoundBrokerService",
+    "com.android.bluetooth/.map.BluetoothMapService",
+    "com.android.phone/com.android.services.telephony.sip.components.TelephonySipService",
+    "com.google.android.gms/.personalsafety.service.PersonalSafetyService",
+    "com.android.phone/.TelephonyDebugService",
+    "com.android.bluetooth/.hid.HidHostService",
+    "com.google.android.gms/.icing.service.IndexService",
+    "com.android.bluetooth/.opp.BluetoothOppService",
+    "com.android.bluetooth/.pan.PanService",
+    "com.android.bluetooth/.avrcp.AvrcpTargetService",
+    "com.google.android.apps.nexuslauncher/com.android.quickstep.TouchInteractionService",
+    "com.google.android.cellbroadcastservice/com.android.cellbroadcastservice.DefaultCellBroadcastService"
+  ],
+  "width": 1080,
+  "height": 2400,
+  "views": [
+    {
+      "package": "com.amaze.filemanager",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        1
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          0
+        ],
+        [
+          1080,
+          2009
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": -1,
+      "temp_id": 0,
+      "size": "1080*2009",
+      "signature": "[class]android.widget.FrameLayout[resource_id]None[text]None[enabled,,]",
+      "view_str": "66844a1a4c008cfb69d99ca05d96fdbd",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]None"
+    },
+    {
+      "package": "com.amaze.filemanager",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        2
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          0
+        ],
+        [
+          1080,
+          2009
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 0,
+      "temp_id": 1,
+      "size": "1080*2009",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[enabled,,]",
+      "view_str": "c536c69eb6a06f085e9886c2ccbab9fb",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "com.amaze.filemanager",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        3
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          0
+        ],
+        [
+          1080,
+          2009
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 1,
+      "temp_id": 2,
+      "size": "1080*2009",
+      "signature": "[class]android.widget.FrameLayout[resource_id]None[text]None[enabled,,]",
+      "view_str": "84d7be431256dadfb4b972cf0258fa03",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]None"
+    },
+    {
+      "package": "com.amaze.filemanager",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        4
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          0
+        ],
+        [
+          1080,
+          2009
+        ]
+      ],
+      "resource_id": "com.amaze.filemanager:id/action_bar_root",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 2,
+      "temp_id": 3,
+      "size": "1080*2009",
+      "signature": "[class]android.widget.FrameLayout[resource_id]com.amaze.filemanager:id/action_bar_root[text]None[enabled,,]",
+      "view_str": "99b61ea70f649bebe09462a36aa1fade",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]com.amaze.filemanager:id/action_bar_root"
+    },
+    {
+      "package": "com.amaze.filemanager",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        5
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          0
+        ],
+        [
+          1080,
+          2009
+        ]
+      ],
+      "resource_id": "android:id/content",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 3,
+      "temp_id": 4,
+      "size": "1080*2009",
+      "signature": "[class]android.widget.FrameLayout[resource_id]android:id/content[text]None[enabled,,]",
+      "view_str": "e901c8f1cb776fe63ae482338d0b8fd1",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]android:id/content"
+    },
+    {
+      "package": "com.amaze.filemanager",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        6
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          0
+        ],
+        [
+          1080,
+          2009
+        ]
+      ],
+      "resource_id": "com.amaze.filemanager:id/drawer_layout",
+      "checked": false,
+      "text": null,
+      "class": "android.support.v4.widget.DrawerLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 4,
+      "temp_id": 5,
+      "size": "1080*2009",
+      "signature": "[class]android.support.v4.widget.DrawerLayout[resource_id]com.amaze.filemanager:id/drawer_layout[text]None[enabled,,]",
+      "view_str": "f940d9c9308a989a777fdfabcc4d72b4",
+      "content_free_signature": "[class]android.support.v4.widget.DrawerLayout[resource_id]com.amaze.filemanager:id/drawer_layout"
+    },
+    {
+      "package": "com.amaze.filemanager",
+      "visible": true,
+      "checkable": false,
+      "child_count": 4,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        7,
+        22,
+        34,
+        37
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          63
+        ],
+        [
+          1080,
+          2009
+        ]
+      ],
+      "resource_id": "com.amaze.filemanager:id/main_frame",
+      "checked": false,
+      "text": null,
+      "class": "android.view.ViewGroup",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 5,
+      "temp_id": 6,
+      "size": "1080*1946",
+      "signature": "[class]android.view.ViewGroup[resource_id]com.amaze.filemanager:id/main_frame[text]None[enabled,,]",
+      "view_str": "8208032e12bac34a2b0b2f88d3164a84",
+      "content_free_signature": "[class]android.view.ViewGroup[resource_id]com.amaze.filemanager:id/main_frame"
+    },
+    {
+      "package": "com.amaze.filemanager",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        8,
+        15
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          63
+        ],
+        [
+          1080,
+          399
+        ]
+      ],
+      "resource_id": "com.amaze.filemanager:id/lin",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 6,
+      "temp_id": 7,
+      "size": "1080*336",
+      "signature": "[class]android.widget.LinearLayout[resource_id]com.amaze.filemanager:id/lin[text]None[enabled,,]",
+      "view_str": "350be0f5b7c1164e5fe3f7d7aed84276",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]com.amaze.filemanager:id/lin"
+    },
+    {
+      "package": "com.amaze.filemanager",
+      "visible": true,
+      "checkable": false,
+      "child_count": 3,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        9,
+        10,
+        11
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          63
+        ],
+        [
+          1080,
+          210
+        ]
+      ],
+      "resource_id": "com.amaze.filemanager:id/action_bar",
+      "checked": false,
+      "text": null,
+      "class": "android.view.ViewGroup",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 7,
+      "temp_id": 8,
+      "size": "1080*147",
+      "signature": "[class]android.view.ViewGroup[resource_id]com.amaze.filemanager:id/action_bar[text]None[enabled,,]",
+      "view_str": "24b0c6f6d9133c642763e1f9eb9acad0",
+      "content_free_signature": "[class]android.view.ViewGroup[resource_id]com.amaze.filemanager:id/action_bar"
+    },
+    {
+      "package": "com.amaze.filemanager",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "Navigate up",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          63
+        ],
+        [
+          147,
+          210
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageButton",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 8,
+      "temp_id": 9,
+      "size": "147*147",
+      "signature": "[class]android.widget.ImageButton[resource_id]None[text]None[enabled,,]",
+      "view_str": "9410a2f09c44c7e1c6feaf826ba27c18",
+      "content_free_signature": "[class]android.widget.ImageButton[resource_id]None",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "0",
+      "desc": "<button text='Navigate up' bound_box=0,63,147,210></button>"
+    },
+    {
+      "package": "com.amaze.filemanager",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          189,
+          101
+        ],
+        [
+          354,
+          172
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": "Amaze",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 8,
+      "temp_id": 10,
+      "size": "165*71",
+      "signature": "[class]android.widget.TextView[resource_id]None[text]Amaze[enabled,,]",
+      "view_str": "f22bc912a0cac693f7b1f63e398b20cf",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]None",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "1",
+      "desc": "<p bound_box=189,101,354,172>Amaze</p>"
+    },
+    {
+      "package": "com.amaze.filemanager",
+      "visible": true,
+      "checkable": false,
+      "child_count": 3,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        12,
+        13,
+        14
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          723,
+          63
+        ],
+        [
+          1080,
+          210
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.support.v7.widget.LinearLayoutCompat",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 8,
+      "temp_id": 11,
+      "size": "357*147",
+      "signature": "[class]android.support.v7.widget.LinearLayoutCompat[resource_id]None[text]None[enabled,,]",
+      "view_str": "be777d13bfae92202c1b2b7a8af49283",
+      "content_free_signature": "[class]android.support.v7.widget.LinearLayoutCompat[resource_id]None"
+    },
+    {
+      "package": "com.amaze.filemanager",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "Search",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          723,
+          73
+        ],
+        [
+          849,
+          199
+        ]
+      ],
+      "resource_id": "com.amaze.filemanager:id/search",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": true,
+      "parent": 11,
+      "temp_id": 12,
+      "size": "126*126",
+      "signature": "[class]android.widget.TextView[resource_id]com.amaze.filemanager:id/search[text]None[enabled,,]",
+      "view_str": "55883679543ec33250782b97ae928702",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]com.amaze.filemanager:id/search",
+      "allowed_actions": [
+        "touch",
+        "long_touch"
+      ],
+      "special_attrs": [],
+      "local_id": "2",
+      "desc": "<button text='Search' bound_box=723,73,849,199></button>"
+    },
+    {
+      "package": "com.amaze.filemanager",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "Home",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          849,
+          73
+        ],
+        [
+          975,
+          199
+        ]
+      ],
+      "resource_id": "com.amaze.filemanager:id/home",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": true,
+      "parent": 11,
+      "temp_id": 13,
+      "size": "126*126",
+      "signature": "[class]android.widget.TextView[resource_id]com.amaze.filemanager:id/home[text]None[enabled,,]",
+      "view_str": "92da0567bf21ad851e0d580f9b2b3554",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]com.amaze.filemanager:id/home",
+      "allowed_actions": [
+        "touch",
+        "long_touch"
+      ],
+      "special_attrs": [],
+      "local_id": "3",
+      "desc": "<button text='Home' bound_box=849,73,975,199></button>"
+    },
+    {
+      "package": "com.amaze.filemanager",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "More options",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          975,
+          73
+        ],
+        [
+          1080,
+          199
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 11,
+      "temp_id": 14,
+      "size": "105*126",
+      "signature": "[class]android.widget.ImageView[resource_id]None[text]None[enabled,,]",
+      "view_str": "d70031d90cdf50cd1a566df2a5fcdf85",
+      "content_free_signature": "[class]android.widget.ImageView[resource_id]None",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "4",
+      "desc": "<button text='More options' bound_box=975,73,1080,199></button>"
+    },
+    {
+      "package": "com.amaze.filemanager",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        16,
+        17
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          210
+        ],
+        [
+          1080,
+          399
+        ]
+      ],
+      "resource_id": "com.amaze.filemanager:id/buttonbarframe",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 7,
+      "temp_id": 15,
+      "size": "1080*189",
+      "signature": "[class]android.widget.FrameLayout[resource_id]com.amaze.filemanager:id/buttonbarframe[text]None[enabled,,]",
+      "view_str": "679580f39aa63aa8f70092322a2bb06a",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]com.amaze.filemanager:id/buttonbarframe"
+    },
+    {
+      "package": "com.amaze.filemanager",
+      "visible": false,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          210
+        ],
+        [
+          1080,
+          210
+        ]
+      ],
+      "resource_id": "com.amaze.filemanager:id/scroll",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.HorizontalScrollView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 15,
+      "temp_id": 16,
+      "size": "1080*0",
+      "signature": "[class]android.widget.HorizontalScrollView[resource_id]com.amaze.filemanager:id/scroll[text]None[enabled,,]",
+      "view_str": "6496b10654551bad52bf2373fa72b40f",
+      "content_free_signature": "[class]android.widget.HorizontalScrollView[resource_id]com.amaze.filemanager:id/scroll"
+    },
+    {
+      "package": "com.amaze.filemanager",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        18,
+        21
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          228
+        ],
+        [
+          1080,
+          381
+        ]
+      ],
+      "resource_id": "com.amaze.filemanager:id/pathbar",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 15,
+      "temp_id": 17,
+      "size": "1080*153",
+      "signature": "[class]android.widget.LinearLayout[resource_id]com.amaze.filemanager:id/pathbar[text]None[enabled,,]",
+      "view_str": "5b568a2248dd1599882d65452e94cd66",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]com.amaze.filemanager:id/pathbar"
+    },
+    {
+      "package": "com.amaze.filemanager",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        19
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          228
+        ],
+        [
+          1038,
+          304
+        ]
+      ],
+      "resource_id": "com.amaze.filemanager:id/scroll1",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.HorizontalScrollView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 17,
+      "temp_id": 18,
+      "size": "1038*76",
+      "signature": "[class]android.widget.HorizontalScrollView[resource_id]com.amaze.filemanager:id/scroll1[text]None[enabled,,]",
+      "view_str": "51b45667d0140d0667e8e546f6c61ac3",
+      "content_free_signature": "[class]android.widget.HorizontalScrollView[resource_id]com.amaze.filemanager:id/scroll1"
+    },
+    {
+      "package": "com.amaze.filemanager",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        20
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          189,
+          241
+        ],
+        [
+          208,
+          304
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 18,
+      "temp_id": 19,
+      "size": "19*63",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[enabled,,]",
+      "view_str": "9b5f2231bb79689aefc470e5e9c6fefc",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "com.amaze.filemanager",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          189,
+          241
+        ],
+        [
+          208,
+          304
+        ]
+      ],
+      "resource_id": "com.amaze.filemanager:id/fullpath",
+      "checked": false,
+      "text": "/",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 19,
+      "temp_id": 20,
+      "size": "19*63",
+      "signature": "[class]android.widget.TextView[resource_id]com.amaze.filemanager:id/fullpath[text]/[enabled,,]",
+      "view_str": "058e50c15c4d1ed2c2a223acb4c2d813",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]com.amaze.filemanager:id/fullpath",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "5",
+      "desc": "<button bound_box=189,241,208,304>/</button>"
+    },
+    {
+      "package": "com.amaze.filemanager",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          304
+        ],
+        [
+          424,
+          381
+        ]
+      ],
+      "resource_id": "com.amaze.filemanager:id/pathname",
+      "checked": false,
+      "text": "0 Folders 0 Files",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 17,
+      "temp_id": 21,
+      "size": "424*77",
+      "signature": "[class]android.widget.TextView[resource_id]com.amaze.filemanager:id/pathname[text]0 Folders 0 Files[enabled,,]",
+      "view_str": "69d5eb5f70d2fd85a0ca19f4bb217b3f",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]com.amaze.filemanager:id/pathname",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "6",
+      "desc": "<button bound_box=0,304,424,381>0 Folders 0 Files</button>"
+    },
+    {
+      "package": "com.amaze.filemanager",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        23
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          399
+        ],
+        [
+          1080,
+          2009
+        ]
+      ],
+      "resource_id": "com.amaze.filemanager:id/content_frame",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 6,
+      "temp_id": 22,
+      "size": "1080*1610",
+      "signature": "[class]android.widget.FrameLayout[resource_id]com.amaze.filemanager:id/content_frame[text]None[enabled,,]",
+      "view_str": "2e16342a55bea03a8fdb83a3f5ff2934",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]com.amaze.filemanager:id/content_frame"
+    },
+    {
+      "package": "com.amaze.filemanager",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        24,
+        29
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          399
+        ],
+        [
+          1080,
+          2009
+        ]
+      ],
+      "resource_id": "com.amaze.filemanager:id/pager",
+      "checked": false,
+      "text": null,
+      "class": "android.support.v4.view.ViewPager",
+      "scrollable": true,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 22,
+      "temp_id": 23,
+      "size": "1080*1610",
+      "signature": "[class]android.support.v4.view.ViewPager[resource_id]com.amaze.filemanager:id/pager[text]None[enabled,,]",
+      "view_str": "f26d46b3e95dfd779f131cce22a044ec",
+      "content_free_signature": "[class]android.support.v4.view.ViewPager[resource_id]com.amaze.filemanager:id/pager",
+      "allowed_actions": [
+        "scroll up",
+        "scroll down"
+      ],
+      "special_attrs": [],
+      "local_id": "7",
+      "desc": "<scrollbar bound_box=0,399,1080,2009></scrollbar>"
+    },
+    {
+      "package": "com.amaze.filemanager",
+      "visible": false,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        25,
+        26
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          399
+        ],
+        [
+          0,
+          2009
+        ]
+      ],
+      "resource_id": "com.amaze.filemanager:id/main_frag",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 23,
+      "temp_id": 24,
+      "size": "0*1610",
+      "signature": "[class]android.widget.FrameLayout[resource_id]com.amaze.filemanager:id/main_frag[text]None[enabled,,]",
+      "view_str": "7bcafb0e7ea3f76c12b046575d60656f",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]com.amaze.filemanager:id/main_frag"
+    },
+    {
+      "package": "com.amaze.filemanager",
+      "visible": false,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": false,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          399
+        ],
+        [
+          0,
+          2009
+        ]
+      ],
+      "resource_id": "com.amaze.filemanager:id/activity_main_swipe_refresh_layout",
+      "checked": false,
+      "text": null,
+      "class": "android.view.ViewGroup",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 24,
+      "temp_id": 25,
+      "size": "0*1610",
+      "signature": "[class]android.view.ViewGroup[resource_id]com.amaze.filemanager:id/activity_main_swipe_refresh_layout[text]None[,,]",
+      "view_str": "7c2eab04a05a975a8bf338c6c82ebe64",
+      "content_free_signature": "[class]android.view.ViewGroup[resource_id]com.amaze.filemanager:id/activity_main_swipe_refresh_layout"
+    },
+    {
+      "package": "com.amaze.filemanager",
+      "visible": false,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        27,
+        28
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          399
+        ],
+        [
+          0,
+          2009
+        ]
+      ],
+      "resource_id": "com.amaze.filemanager:id/nofilelayout",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.RelativeLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 24,
+      "temp_id": 26,
+      "size": "0*1610",
+      "signature": "[class]android.widget.RelativeLayout[resource_id]com.amaze.filemanager:id/nofilelayout[text]None[enabled,,]",
+      "view_str": "099a2c6f7303503a26708169679cfee7",
+      "content_free_signature": "[class]android.widget.RelativeLayout[resource_id]com.amaze.filemanager:id/nofilelayout"
+    },
+    {
+      "package": "com.amaze.filemanager",
+      "visible": false,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          1190
+        ],
+        [
+          -453,
+          1365
+        ]
+      ],
+      "resource_id": "com.amaze.filemanager:id/image",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 26,
+      "temp_id": 27,
+      "size": "-453*175",
+      "signature": "[class]android.widget.ImageView[resource_id]com.amaze.filemanager:id/image[text]None[enabled,,]",
+      "view_str": "3be31996303433872af281b51689bb4b",
+      "content_free_signature": "[class]android.widget.ImageView[resource_id]com.amaze.filemanager:id/image"
+    },
+    {
+      "package": "com.amaze.filemanager",
+      "visible": false,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          1391
+        ],
+        [
+          -455,
+          1454
+        ]
+      ],
+      "resource_id": "com.amaze.filemanager:id/nofiletext",
+      "checked": false,
+      "text": "No Files",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 26,
+      "temp_id": 28,
+      "size": "-455*63",
+      "signature": "[class]android.widget.TextView[resource_id]com.amaze.filemanager:id/nofiletext[text]No Files[enabled,,]",
+      "view_str": "7ce342b4e131aaca83959effe3012b31",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]com.amaze.filemanager:id/nofiletext"
+    },
+    {
+      "package": "com.amaze.filemanager",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        30,
+        31
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          399
+        ],
+        [
+          1080,
+          2009
+        ]
+      ],
+      "resource_id": "com.amaze.filemanager:id/main_frag",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 23,
+      "temp_id": 29,
+      "size": "1080*1610",
+      "signature": "[class]android.widget.FrameLayout[resource_id]com.amaze.filemanager:id/main_frag[text]None[enabled,,]",
+      "view_str": "7bcafb0e7ea3f76c12b046575d60656f",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]com.amaze.filemanager:id/main_frag"
+    },
+    {
+      "package": "com.amaze.filemanager",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": false,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          399
+        ],
+        [
+          1080,
+          2009
+        ]
+      ],
+      "resource_id": "com.amaze.filemanager:id/activity_main_swipe_refresh_layout",
+      "checked": false,
+      "text": null,
+      "class": "android.view.ViewGroup",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 29,
+      "temp_id": 30,
+      "size": "1080*1610",
+      "signature": "[class]android.view.ViewGroup[resource_id]com.amaze.filemanager:id/activity_main_swipe_refresh_layout[text]None[,,]",
+      "view_str": "7c2eab04a05a975a8bf338c6c82ebe64",
+      "content_free_signature": "[class]android.view.ViewGroup[resource_id]com.amaze.filemanager:id/activity_main_swipe_refresh_layout"
+    },
+    {
+      "package": "com.amaze.filemanager",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        32,
+        33
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          399
+        ],
+        [
+          1080,
+          2009
+        ]
+      ],
+      "resource_id": "com.amaze.filemanager:id/nofilelayout",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.RelativeLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 29,
+      "temp_id": 31,
+      "size": "1080*1610",
+      "signature": "[class]android.widget.RelativeLayout[resource_id]com.amaze.filemanager:id/nofilelayout[text]None[enabled,,]",
+      "view_str": "099a2c6f7303503a26708169679cfee7",
+      "content_free_signature": "[class]android.widget.RelativeLayout[resource_id]com.amaze.filemanager:id/nofilelayout"
+    },
+    {
+      "package": "com.amaze.filemanager",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          452,
+          1190
+        ],
+        [
+          627,
+          1365
+        ]
+      ],
+      "resource_id": "com.amaze.filemanager:id/image",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 31,
+      "temp_id": 32,
+      "size": "175*175",
+      "signature": "[class]android.widget.ImageView[resource_id]com.amaze.filemanager:id/image[text]None[enabled,,]",
+      "view_str": "3be31996303433872af281b51689bb4b",
+      "content_free_signature": "[class]android.widget.ImageView[resource_id]com.amaze.filemanager:id/image"
+    },
+    {
+      "package": "com.amaze.filemanager",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          454,
+          1391
+        ],
+        [
+          625,
+          1454
+        ]
+      ],
+      "resource_id": "com.amaze.filemanager:id/nofiletext",
+      "checked": false,
+      "text": "No Files",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 31,
+      "temp_id": 33,
+      "size": "171*63",
+      "signature": "[class]android.widget.TextView[resource_id]com.amaze.filemanager:id/nofiletext[text]No Files[enabled,,]",
+      "view_str": "7ce342b4e131aaca83959effe3012b31",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]com.amaze.filemanager:id/nofiletext",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "8",
+      "desc": "<p bound_box=454,1391,625,1454>No Files</p>"
+    },
+    {
+      "package": "com.amaze.filemanager",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        35,
+        36
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          500,
+          1243
+        ],
+        [
+          1064,
+          2004
+        ]
+      ],
+      "resource_id": "com.amaze.filemanager:id/menu",
+      "checked": false,
+      "text": null,
+      "class": "android.view.ViewGroup",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 6,
+      "temp_id": 34,
+      "size": "564*761",
+      "signature": "[class]android.view.ViewGroup[resource_id]com.amaze.filemanager:id/menu[text]None[enabled,,]",
+      "view_str": "5a3418b50112cff585657e3c36ed244e",
+      "content_free_signature": "[class]android.view.ViewGroup[resource_id]com.amaze.filemanager:id/menu"
+    },
+    {
+      "package": "com.amaze.filemanager",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          848,
+          1759
+        ],
+        [
+          1064,
+          2004
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageButton",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 34,
+      "temp_id": 35,
+      "size": "216*245",
+      "signature": "[class]android.widget.ImageButton[resource_id]None[text]None[enabled,,]",
+      "view_str": "de1d1f8dc392a16b02c6c9299937fe95",
+      "content_free_signature": "[class]android.widget.ImageButton[resource_id]None"
+    },
+    {
+      "package": "com.amaze.filemanager",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          925,
+          1850
+        ],
+        [
+          988,
+          1913
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 34,
+      "temp_id": 36,
+      "size": "63*63",
+      "signature": "[class]android.widget.ImageView[resource_id]None[text]None[enabled,,]",
+      "view_str": "23b6e01a90bad543a436e381d0490a0e",
+      "content_free_signature": "[class]android.widget.ImageView[resource_id]None"
+    },
+    {
+      "package": "com.amaze.filemanager",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        38
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          512,
+          1946
+        ],
+        [
+          568,
+          2004
+        ]
+      ],
+      "resource_id": "com.amaze.filemanager:id/indicator_layout",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 6,
+      "temp_id": 37,
+      "size": "56*58",
+      "signature": "[class]android.widget.LinearLayout[resource_id]com.amaze.filemanager:id/indicator_layout[text]None[enabled,,]",
+      "view_str": "cc3b1f4f51936231bad8b0689da14248",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]com.amaze.filemanager:id/indicator_layout"
+    },
+    {
+      "package": "com.amaze.filemanager",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          512,
+          1988
+        ],
+        [
+          568,
+          2004
+        ]
+      ],
+      "resource_id": "com.amaze.filemanager:id/indicator",
+      "checked": false,
+      "text": null,
+      "class": "android.view.View",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 37,
+      "temp_id": 38,
+      "size": "56*16",
+      "signature": "[class]android.view.View[resource_id]com.amaze.filemanager:id/indicator[text]None[enabled,,]",
+      "view_str": "c67ae4d38f360038f7d75fccf94fb798",
+      "content_free_signature": "[class]android.view.View[resource_id]com.amaze.filemanager:id/indicator"
+    }
+  ]
+}

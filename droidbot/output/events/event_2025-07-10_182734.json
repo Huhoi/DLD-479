@@ -1,0 +1,49 @@
+{
+  "tag": "2025-07-10_182734",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.amaze.filemanager",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          63
+        ],
+        [
+          1080,
+          2009
+        ]
+      ],
+      "resource_id": "com.amaze.filemanager:id/fab_bg",
+      "checked": false,
+      "text": null,
+      "class": "android.view.View",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 6,
+      "temp_id": 7,
+      "size": "1080*1946",
+      "signature": "[class]android.view.View[resource_id]com.amaze.filemanager:id/fab_bg[text]None[enabled,,]",
+      "view_str": "9be1ede68d1162c3d42ea45f823c6405",
+      "content_free_signature": "[class]android.view.View[resource_id]com.amaze.filemanager:id/fab_bg"
+    }
+  },
+  "start_state": "3418f3771e328439b7c2221e50a4d9c2",
+  "stop_state": "63787d6ff9fe6a55a19c1d37f14d900f",
+  "event_str": "TouchEvent(state=3418f3771e328439b7c2221e50a4d9c2, view=9be1ede68d1162c3d42ea45f823c6405(MainActivity/View-))"
+}

@@ -1,0 +1,51 @@
+{
+  "tag": "2025-07-10_190804",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.amaze.filemanager",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        10
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          133,
+          63
+        ],
+        [
+          789,
+          453
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 8,
+      "temp_id": 9,
+      "size": "656*390",
+      "signature": "[class]android.widget.FrameLayout[resource_id]None[text]None[enabled,,]",
+      "view_str": "898df71e36df8ca51c6725a9f871f278",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]None"
+    }
+  },
+  "start_state": "df95c4144106023b9e6495a40046df10",
+  "stop_state": "aaa9821fa97c819f96002deea30170d4",
+  "event_str": "TouchEvent(state=df95c4144106023b9e6495a40046df10, view=898df71e36df8ca51c6725a9f871f278(MainActivity/FrameLayout-))"
+}

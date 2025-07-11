@@ -1,0 +1,49 @@
+{
+  "tag": "2025-07-10_190625",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.google.android.permissioncontroller",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          1231,
+          299
+        ],
+        [
+          1294,
+          362
+        ]
+      ],
+      "resource_id": "com.android.permissioncontroller:id/permission_icon",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 7,
+      "temp_id": 8,
+      "size": "63*63",
+      "signature": "[class]android.widget.ImageView[resource_id]com.android.permissioncontroller:id/permission_icon[text]None[enabled,,]",
+      "view_str": "0505d880f75a74c9ec05dcdbbfb65762",
+      "content_free_signature": "[class]android.widget.ImageView[resource_id]com.android.permissioncontroller:id/permission_icon"
+    }
+  },
+  "start_state": "c187ffcacc5f30a8b9a3f1d9030546e9",
+  "stop_state": "c187ffcacc5f30a8b9a3f1d9030546e9",
+  "event_str": "TouchEvent(state=c187ffcacc5f30a8b9a3f1d9030546e9, view=0505d880f75a74c9ec05dcdbbfb65762(GrantPermissionsActivity/ImageView-))"
+}

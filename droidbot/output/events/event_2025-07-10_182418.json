@@ -1,0 +1,52 @@
+{
+  "tag": "2025-07-10_182418",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.amaze.filemanager",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        19,
+        20
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          259,
+          579
+        ],
+        [
+          915,
+          678
+        ]
+      ],
+      "resource_id": "com.amaze.filemanager:id/second",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.RelativeLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": true,
+      "parent": 8,
+      "temp_id": 18,
+      "size": "656*99",
+      "signature": "[class]android.widget.RelativeLayout[resource_id]com.amaze.filemanager:id/second[text]None[enabled,,]",
+      "view_str": "13c93f2a93725e0f45136b9be9fed01c",
+      "content_free_signature": "[class]android.widget.RelativeLayout[resource_id]com.amaze.filemanager:id/second"
+    }
+  },
+  "start_state": "46c5453ce3f981d705f273cdcdfab858",
+  "stop_state": "1ceb4e07c15283af197c2436cac4124d",
+  "event_str": "TouchEvent(state=46c5453ce3f981d705f273cdcdfab858, view=13c93f2a93725e0f45136b9be9fed01c(MainActivity/RelativeLayout-))"
+}
