@@ -8,9 +8,11 @@
 - pip install Pillow imagehash
 - cd droidbot
     - pip install e .
+- (Maybe make an install.py?)
 
 # How to Run
 - Have emulator running
-- Run ***startDLD.py*** in DLD (NOT start.py in droidbot)
-- Ctrl + C to cancel whenver. As of right now it runs indefinitely I think
-- Output should be in "DLD/output" (Need to change this later when running for multiple APK's)
+- Be in the root of the project
+- Run ***DLD/startDLD.py apk_path***  (NOT start.py in droidbot)
+- Ctrl + C to stop.
+- Output should be in "output/**apk_name**"

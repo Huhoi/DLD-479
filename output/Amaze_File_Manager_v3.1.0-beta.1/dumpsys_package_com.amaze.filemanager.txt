@@ -1,32 +1,32 @@
 Activity Resolver Table:
   Full MIME Types:
       application/zip:
-        639c262 com.amaze.filemanager/.activities.MainActivity filter 1f5a2ae
+        6518812 com.amaze.filemanager/.activities.MainActivity filter bc135e
           Action: "android.intent.action.VIEW"
           Category: "android.intent.category.DEFAULT"
           StaticType: "application/zip"
           StaticType: "application/x-rar-compressed"
       text/*:
-        dbb784f com.amaze.filemanager/.activities.TextReader filter 3947bdc
+        6af133f com.amaze.filemanager/.activities.TextReader filter 222940c
           Action: "android.intent.action.VIEW"
           Category: "android.intent.category.DEFAULT"
           StaticType: "text"
           mPriority=0, mOrder=0, mHasStaticPartialTypes=true, mHasDynamicPartialTypes=false
       */*:
-        639c262 com.amaze.filemanager/.activities.MainActivity filter 67fc4b0
+        6518812 com.amaze.filemanager/.activities.MainActivity filter 68bb9e0
           Action: "android.intent.action.GET_CONTENT"
           Category: "android.intent.category.OPENABLE"
           Category: "android.intent.category.DEFAULT"
           StaticType: "*"
           mPriority=0, mOrder=0, mHasStaticPartialTypes=true, mHasDynamicPartialTypes=false
       db/*:
-        c1df4e5 com.amaze.filemanager/.activities.DbViewer filter 77d3bba
+        f1ce155 com.amaze.filemanager/.activities.DbViewer filter 8b2076a
           Action: "android.intent.action.VIEW"
           Category: "android.intent.category.DEFAULT"
           StaticType: "db"
           mPriority=0, mOrder=0, mHasStaticPartialTypes=true, mHasDynamicPartialTypes=false
       application/x-rar-compressed:
-        639c262 com.amaze.filemanager/.activities.MainActivity filter 1f5a2ae
+        6518812 com.amaze.filemanager/.activities.MainActivity filter bc135e
           Action: "android.intent.action.VIEW"
           Category: "android.intent.category.DEFAULT"
           StaticType: "application/zip"
@@ -34,12 +34,12 @@ Activity Resolver Table:
 
   Base MIME Types:
       application:
-        639c262 com.amaze.filemanager/.activities.MainActivity filter 1f5a2ae
+        6518812 com.amaze.filemanager/.activities.MainActivity filter bc135e
           Action: "android.intent.action.VIEW"
           Category: "android.intent.category.DEFAULT"
           StaticType: "application/zip"
           StaticType: "application/x-rar-compressed"
-        639c262 com.amaze.filemanager/.activities.MainActivity filter 1f5a2ae
+        6518812 com.amaze.filemanager/.activities.MainActivity filter bc135e
           Action: "android.intent.action.VIEW"
           Category: "android.intent.category.DEFAULT"
           StaticType: "application/zip"
@@ -47,20 +47,20 @@ Activity Resolver Table:
 
   Wild MIME Types:
       *:
-        639c262 com.amaze.filemanager/.activities.MainActivity filter 67fc4b0
+        6518812 com.amaze.filemanager/.activities.MainActivity filter 68bb9e0
           Action: "android.intent.action.GET_CONTENT"
           Category: "android.intent.category.OPENABLE"
           Category: "android.intent.category.DEFAULT"
           StaticType: "*"
           mPriority=0, mOrder=0, mHasStaticPartialTypes=true, mHasDynamicPartialTypes=false
       db:
-        c1df4e5 com.amaze.filemanager/.activities.DbViewer filter 77d3bba
+        f1ce155 com.amaze.filemanager/.activities.DbViewer filter 8b2076a
           Action: "android.intent.action.VIEW"
           Category: "android.intent.category.DEFAULT"
           StaticType: "db"
           mPriority=0, mOrder=0, mHasStaticPartialTypes=true, mHasDynamicPartialTypes=false
       text:
-        dbb784f com.amaze.filemanager/.activities.TextReader filter 3947bdc
+        6af133f com.amaze.filemanager/.activities.TextReader filter 222940c
           Action: "android.intent.action.VIEW"
           Category: "android.intent.category.DEFAULT"
           StaticType: "text"
@@ -68,33 +68,33 @@ Activity Resolver Table:
 
   Non-Data Actions:
       android.intent.action.MAIN:
-        639c262 com.amaze.filemanager/.activities.MainActivity filter 99dcff3
+        6518812 com.amaze.filemanager/.activities.MainActivity filter 8189be3
           Action: "android.intent.action.MAIN"
           Category: "android.intent.category.LAUNCHER"
       android.intent.action.RINGTONE_PICKER:
-        639c262 com.amaze.filemanager/.activities.MainActivity filter 2748f29
+        6518812 com.amaze.filemanager/.activities.MainActivity filter f609499
           Action: "android.intent.action.RINGTONE_PICKER"
           Category: "android.intent.category.DEFAULT"
 
   MIME Typed Actions:
       android.intent.action.VIEW:
-        639c262 com.amaze.filemanager/.activities.MainActivity filter 1f5a2ae
+        6518812 com.amaze.filemanager/.activities.MainActivity filter bc135e
           Action: "android.intent.action.VIEW"
           Category: "android.intent.category.DEFAULT"
           StaticType: "application/zip"
           StaticType: "application/x-rar-compressed"
-        dbb784f com.amaze.filemanager/.activities.TextReader filter 3947bdc
+        6af133f com.amaze.filemanager/.activities.TextReader filter 222940c
           Action: "android.intent.action.VIEW"
           Category: "android.intent.category.DEFAULT"
           StaticType: "text"
           mPriority=0, mOrder=0, mHasStaticPartialTypes=true, mHasDynamicPartialTypes=false
-        c1df4e5 com.amaze.filemanager/.activities.DbViewer filter 77d3bba
+        f1ce155 com.amaze.filemanager/.activities.DbViewer filter 8b2076a
           Action: "android.intent.action.VIEW"
           Category: "android.intent.category.DEFAULT"
           StaticType: "db"
           mPriority=0, mOrder=0, mHasStaticPartialTypes=true, mHasDynamicPartialTypes=false
       android.intent.action.GET_CONTENT:
-        639c262 com.amaze.filemanager/.activities.MainActivity filter 67fc4b0
+        6518812 com.amaze.filemanager/.activities.MainActivity filter 68bb9e0
           Action: "android.intent.action.GET_CONTENT"
           Category: "android.intent.category.OPENABLE"
           Category: "android.intent.category.DEFAULT"
@@ -104,19 +104,19 @@ Activity Resolver Table:
 Receiver Resolver Table:
   Non-Data Actions:
       com.amaze.filemanager.services.ftpservice.FTPReceiver.ACTION_STOP_FTPSERVER:
-        4614a6b com.amaze.filemanager/.services.ftpservice.FTPReceiver filter bdb79c8
+        80ba45b com.amaze.filemanager/.services.ftpservice.FTPReceiver filter 26ae4f8
           Action: "com.amaze.filemanager.services.ftpservice.FTPReceiver.ACTION_START_FTPSERVER"
           Action: "com.amaze.filemanager.services.ftpservice.FTPReceiver.ACTION_STOP_FTPSERVER"
       com.amaze.filemanager.services.ftpservice.FTPReceiver.FTPSERVER_STARTED:
-        43dfa61 com.amaze.filemanager/.ui.notifications.FTPNotification filter 8b35986
+        9173dd1 com.amaze.filemanager/.ui.notifications.FTPNotification filter 4613036
           Action: "com.amaze.filemanager.services.ftpservice.FTPReceiver.FTPSERVER_STARTED"
           Action: "com.amaze.filemanager.services.ftpservice.FTPReceiver.FTPSERVER_STOPPED"
       com.amaze.filemanager.services.ftpservice.FTPReceiver.FTPSERVER_STOPPED:
-        43dfa61 com.amaze.filemanager/.ui.notifications.FTPNotification filter 8b35986
+        9173dd1 com.amaze.filemanager/.ui.notifications.FTPNotification filter 4613036
           Action: "com.amaze.filemanager.services.ftpservice.FTPReceiver.FTPSERVER_STARTED"
           Action: "com.amaze.filemanager.services.ftpservice.FTPReceiver.FTPSERVER_STOPPED"
       com.amaze.filemanager.services.ftpservice.FTPReceiver.ACTION_START_FTPSERVER:
-        4614a6b com.amaze.filemanager/.services.ftpservice.FTPReceiver filter bdb79c8
+        80ba45b com.amaze.filemanager/.services.ftpservice.FTPReceiver filter 26ae4f8
           Action: "com.amaze.filemanager.services.ftpservice.FTPReceiver.ACTION_START_FTPSERVER"
           Action: "com.amaze.filemanager.services.ftpservice.FTPReceiver.ACTION_STOP_FTPSERVER"
 
@@ -124,15 +124,15 @@ Domain verification status:
 
 Key Set Manager:
   [com.amaze.filemanager]
-      Signing KeySets: 43
+      Signing KeySets: 47
 
 Packages:
-  Package [com.amaze.filemanager] (a90d84b):
-    userId=10154
-    pkg=Package{6952228 com.amaze.filemanager}
-    codePath=/data/app/~~vGp4zq_xwGa8Nxq4CvbsVA==/com.amaze.filemanager-3f9Pgx9Hu6Dt_W2tvwRztQ==
-    resourcePath=/data/app/~~vGp4zq_xwGa8Nxq4CvbsVA==/com.amaze.filemanager-3f9Pgx9Hu6Dt_W2tvwRztQ==
-    legacyNativeLibraryDir=/data/app/~~vGp4zq_xwGa8Nxq4CvbsVA==/com.amaze.filemanager-3f9Pgx9Hu6Dt_W2tvwRztQ==/lib
+  Package [com.amaze.filemanager] (13c1e73):
+    userId=10158
+    pkg=Package{7d23130 com.amaze.filemanager}
+    codePath=/data/app/~~Y7R6q3nart5OkWMJ7PYoaQ==/com.amaze.filemanager-kOE3znkidVVb3pjXnqJ8BA==
+    resourcePath=/data/app/~~Y7R6q3nart5OkWMJ7PYoaQ==/com.amaze.filemanager-kOE3znkidVVb3pjXnqJ8BA==
+    legacyNativeLibraryDir=/data/app/~~Y7R6q3nart5OkWMJ7PYoaQ==/com.amaze.filemanager-kOE3znkidVVb3pjXnqJ8BA==/lib
     extractNativeLibs=true
     primaryCpuAbi=null
     secondaryCpuAbi=null
@@ -143,7 +143,7 @@ Packages:
     usesNonSdkApi=false
     splits=[base]
     apkSigningVersion=2
-    applicationInfo=PackageImpl{6952228 com.amaze.filemanager}
+    applicationInfo=PackageImpl{7d23130 com.amaze.filemanager}
     flags=[ DEBUGGABLE HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]
     privateFlags=[ PRIVATE_FLAG_REQUEST_LEGACY_EXTERNAL_STORAGE PRIVATE_FLAG_ALLOW_NATIVE_HEAP_POINTER_TAGGING ]
     forceQueryable=false
@@ -156,10 +156,10 @@ Packages:
     usesLibraryFiles:
       /system/framework/android.test.base.jar
       /system/framework/org.apache.http.legacy.jar
-    timeStamp=2025-07-10 21:50:07
-    firstInstallTime=2025-07-10 21:50:07
-    lastUpdateTime=2025-07-10 21:50:07
-    signatures=PackageSignatures{d7eb41 version:2, signatures:[45e775cf], past signatures:[]}
+    timeStamp=2025-07-11 00:56:50
+    firstInstallTime=2025-07-11 00:56:50
+    lastUpdateTime=2025-07-11 00:56:50
+    signatures=PackageSignatures{a9bc1a9 version:2, signatures:[45e775cf], past signatures:[]}
     installPermissionsFixed=true
     pkgFlags=[ DEBUGGABLE HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]
     requested permissions:
@@ -176,7 +176,7 @@ Packages:
       android.permission.ACCESS_NETWORK_STATE: granted=true
       android.permission.ACCESS_WIFI_STATE: granted=true
       com.android.launcher.permission.INSTALL_SHORTCUT: granted=true
-    User 0: ceDataInode=180277 installed=true hidden=false suspended=false distractionFlags=0 stopped=true notLaunched=true enabled=0 instant=false virtual=false
+    User 0: ceDataInode=180360 installed=true hidden=false suspended=false distractionFlags=0 stopped=true notLaunched=true enabled=0 instant=false virtual=false
       gids=[3003]
       runtime permissions:
         android.permission.READ_EXTERNAL_STORAGE: granted=false, flags=[ REVOKE_WHEN_REQUESTED|USER_SENSITIVE_WHEN_GRANTED|USER_SENSITIVE_WHEN_DENIED|RESTRICTION_INSTALLER_EXEMPT]
@@ -202,7 +202,7 @@ Queries:
   queryable via uses-library:
 
 Package Changes:
-  Sequence number=730
+  Sequence number=743
   User 0:
     seq=0, package=com.google.android.permissioncontroller
     seq=2, package=com.android.systemui
@@ -233,16 +233,16 @@ Package Changes:
     seq=566, package=com.android.vending
     seq=604, package=com.google.android.gsf
     seq=624, package=com.google.android.apps.youtube.music
-    seq=625, package=com.google.android.youtube
-    seq=721, package=io.github.ylimit.droidbotapp
     seq=726, package=com.google.android.gms
-    seq=728, package=com.google.android.apps.docs
-    seq=729, package=com.amaze.filemanager
+    seq=732, package=com.google.android.youtube
+    seq=739, package=com.google.android.apps.docs
+    seq=741, package=io.github.ylimit.droidbotapp
+    seq=742, package=com.amaze.filemanager
 
 
 Dexopt state:
   [com.amaze.filemanager]
-    path: /data/app/~~vGp4zq_xwGa8Nxq4CvbsVA==/com.amaze.filemanager-3f9Pgx9Hu6Dt_W2tvwRztQ==/base.apk
+    path: /data/app/~~Y7R6q3nart5OkWMJ7PYoaQ==/com.amaze.filemanager-kOE3znkidVVb3pjXnqJ8BA==/base.apk
       x86_64: [status=run-from-apk] [reason=unknown]
 
 
@@ -262,42 +262,42 @@ Factory APEX packages:
 
 
 Snapshot statistics
-   Unrecorded-hits: 5735  Cork-level: 0
+   Unrecorded-hits: 5495  Cork-level: 0
    Summary stats               TotBlds     TotUsed     TotCork     BigBlds    ShortLvd     TotTime     MaxTime
-          0:38         now           4        2341           0           0           1           2           1
-          1:38        0:38           0           0           0           0           0           0           0
-          2:38        1:38           0           0           0           0           0           0           0
-          3:38        2:38           0           0           0           0           0           0           0
-          4:38        3:38           0           0           0           0           0           0           0
-          5:38        4:38           0           0           0           0           0           0           0
-          6:38        5:38           0           0           0           0           0           0           0
-          7:38        6:38           0           0           0           0           0           0           0
-          8:38        7:38           0           0           0           0           0           0           0
-          9:38        8:38           0           0           0           0           0           0           0
-      02:52:34         now        1491      983703           0           2         535         366          58
+          0:13         now          11       13111           0           0           2           3           1
+          1:13        0:13          10       38225           0           0           3           6           4
+          2:13        1:13          20       45470           0           0           1          10           4
+          3:13        2:13           0           0           0           0           0           0           0
+         39:21        3:13           0           0           0           0           0           0           0
+         40:21       39:21           0           0           0           0           0           0           0
+         41:21       40:21           0           0           0           0           0           0           0
+         42:21       41:21           0           0           0           0           0           0           0
+         43:21       42:21           0           0           0           0           0           0           0
+         44:21       43:21           0           0           0           0           0           0           0
+      05:59:17         now        1550     1122527           0           2         546         391          58
 
    Build times                  <= 1ms      <= 2ms      <= 5ms     <= 10ms     <= 20ms     <= 50ms    <= 100ms     > 100ms
-          0:38         now           4           0           0           0           0           0           0           0
-          1:38        0:38           0           0           0           0           0           0           0           0
-          2:38        1:38           0           0           0           0           0           0           0           0
-          3:38        2:38           0           0           0           0           0           0           0           0
-          4:38        3:38           0           0           0           0           0           0           0           0
-          5:38        4:38           0           0           0           0           0           0           0           0
-          6:38        5:38           0           0           0           0           0           0           0           0
-          7:38        6:38           0           0           0           0           0           0           0           0
-          8:38        7:38           0           0           0           0           0           0           0           0
-          9:38        8:38           0           0           0           0           0           0           0           0
-      02:52:34         now        1474           6           5           4           0           1           1           0
+          0:13         now          11           0           0           0           0           0           0           0
+          1:13        0:13           9           0           1           0           0           0           0           0
+          2:13        1:13          19           0           1           0           0           0           0           0
+          3:13        2:13           0           0           0           0           0           0           0           0
+         39:21        3:13           0           0           0           0           0           0           0           0
+         40:21       39:21           0           0           0           0           0           0           0           0
+         41:21       40:21           0           0           0           0           0           0           0           0
+         42:21       41:21           0           0           0           0           0           0           0           0
+         43:21       42:21           0           0           0           0           0           0           0           0
+         44:21       43:21           0           0           0           0           0           0           0           0
+      05:59:17         now        1531           6           7           4           0           1           1           0
 
    Use counters                   <= 1        <= 2        <= 5       <= 10       <= 20       <= 50      <= 100       > 100
-          0:38         now           1           0           0           0           0           0           1           2
-          1:38        0:38           0           0           0           0           0           0           0           0
-          2:38        1:38           0           0           0           0           0           0           0           0
-          3:38        2:38           0           0           0           0           0           0           0           0
-          4:38        3:38           0           0           0           0           0           0           0           0
-          5:38        4:38           0           0           0           0           0           0           0           0
-          6:38        5:38           0           0           0           0           0           0           0           0
-          7:38        6:38           0           0           0           0           0           0           0           0
-          8:38        7:38           0           0           0           0           0           0           0           0
-          9:38        8:38           0           0           0           0           0           0           0           0
-      02:52:34         now         134         202         198         314          83          99         111         349
+          0:13         now           1           0           1           0           0           1           1           7
+          1:13        0:13           2           0           1           1           0           0           0           6
+          2:13        1:13           1           0           0           0           0           5           3          11
+          3:13        2:13           0           0           0           0           0           0           0           0
+         39:21        3:13           0           0           0           0           0           0           0           0
+         40:21       39:21           0           0           0           0           0           0           0           0
+         41:21       40:21           0           0           0           0           0           0           0           0
+         42:21       41:21           0           0           0           0           0           0           0           0
+         43:21       42:21           0           0           0           0           0           0           0           0
+         44:21       43:21           0           0           0           0           0           0           0           0
+      05:59:17         now         143         202         200         315          84         106         117         382

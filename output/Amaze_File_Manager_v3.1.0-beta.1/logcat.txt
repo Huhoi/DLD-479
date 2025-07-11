@@ -1,0 +1,596 @@
+--------- beginning of main
+07-11 00:56:49.706  9248  9248 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3420 
+07-11 00:56:49.709   561  1205 W InputManager-JNI: Input channel object '8ac12b1 InputMethod (client)' was disposed without first being removed with the input manager!
+07-11 00:56:49.713  9248  9248 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():109 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+07-11 00:56:49.714  9248  9248 I AbstractOpenableExtension: AbstractOpenableExtension.maybeDestroyExistingKeyboardGroupManager():514 Destroy existing keyboard group manager in fci
+07-11 00:56:49.715  9248  9248 I AbstractOpenableExtension: AbstractOpenableExtension.maybeDestroyExistingKeyboardGroupManager():514 Destroy existing keyboard group manager in eyj
+07-11 00:56:49.725  9248  9248 I AbstractOpenableExtension: AbstractOpenableExtension.maybeDestroyExistingKeyboardGroupManager():514 Destroy existing keyboard group manager in fau
+07-11 00:56:49.726  9248  9248 I KeyboardViewController: KeyboardViewController.clearSubViewControllerInternal():411 Clears keyboard sub view controller for keyboardType: null, viewType: HEADER, viewId: 2131428269(#0x7f0b03ad),which has not been set.
+07-11 00:56:49.729  9248  2444 I JapaneseMozcExtension: JapaneseMozcExtension.onDestroyServiceInternal():81 onDestroyServiceInternal()
+07-11 00:56:49.734  9248  9248 I AbstractOpenableExtension: AbstractOpenableExtension$3.onSuccess():527 KeyboardGroupManager destroyed in fci.
+07-11 00:56:49.737  9248  9248 I AbstractOpenableExtension: AbstractOpenableExtension$3.onSuccess():527 KeyboardGroupManager destroyed in eyj.
+07-11 00:56:49.740  9248  9248 I AbstractOpenableExtension: AbstractOpenableExtension$3.onSuccess():527 KeyboardGroupManager destroyed in fau.
+07-11 00:56:49.759  9248  9256 W putmethod.lati: Reducing the number of considered missed Gc histogram windows from 908 to 100
+--------- beginning of system
+07-11 00:56:49.975   561   602 E RemoteAugmentedAutofillService: Bad service name for flags 1048704: com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiAugmentedAutofillService
+07-11 00:56:50.046  9990  9990 I abb     : StartCommandInProcess(73657474696e67730067657400676c6f settings.get.glo [truncated])
+07-11 00:56:50.046   561   561 W Binder:561_1: type=1400 audit(0.0:1071): avc: denied { getopt } for scontext=u:r:system_server:s0 tcontext=u:r:shell:s0 tclass=unix_stream_socket permissive=0
+07-11 00:56:50.046   561   561 W Binder:561_1: type=1400 audit(0.0:1072): avc: denied { getopt } for scontext=u:r:system_server:s0 tcontext=u:r:shell:s0 tclass=unix_stream_socket permissive=0
+07-11 00:56:50.046   561   561 W Binder:561_1: type=1400 audit(0.0:1073): avc: denied { getopt } for scontext=u:r:system_server:s0 tcontext=u:r:shell:s0 tclass=unix_stream_socket permissive=0
+07-11 00:56:50.056  9990  9990 I abb     : StartCommandInProcess(7061636b61676500696e7374616c6c00 package.install. [truncated])
+07-11 00:56:50.074   561   561 W Binder:561_1: type=1400 audit(0.0:1074): avc: denied { getopt } for scontext=u:r:system_server:s0 tcontext=u:r:shell:s0 tclass=unix_stream_socket permissive=0
+07-11 00:56:50.099   561   633 I PackageManager: Integrity check passed for file:///data/app/vmdl708843743.tmp
+07-11 00:56:50.122  1545  1560 I MediaProvider: Invalidating LocalCallingIdentity cache for package com.amaze.filemanager. Reason: op android:read_external_storage
+07-11 00:56:50.122  1545  1560 I MediaProvider: Invalidating LocalCallingIdentity cache for package com.amaze.filemanager. Reason: op android:read_external_storage
+07-11 00:56:50.123  1545  1560 I MediaProvider: Invalidating LocalCallingIdentity cache for package com.amaze.filemanager. Reason: op android:read_external_storage
+07-11 00:56:50.123  1545  1560 I MediaProvider: Invalidating LocalCallingIdentity cache for package com.amaze.filemanager. Reason: op android:read_external_storage
+07-11 00:56:50.125   493   575 E installd: Couldn't opendir /data/app/vmdl708843743.tmp: No such file or directory
+07-11 00:56:50.125   493   575 E installd: Failed to delete /data/app/vmdl708843743.tmp: No such file or directory
+07-11 00:56:50.129  1545  1545 I MediaProvider: Invalidating LocalCallingIdentity cache for package com.amaze.filemanager. Reason: package android.intent.action.PACKAGE_ADDED
+07-11 00:56:50.130   561   667 I RoleService: Granting default roles...
+07-11 00:56:50.130   561   561 W Binder:561_1: type=1400 audit(0.0:1075): avc: denied { getopt } for scontext=u:r:system_server:s0 tcontext=u:r:shell:s0 tclass=unix_stream_socket permissive=0
+07-11 00:56:50.140   561   673 I InputReader: Reconfiguring input devices, changes=KEYBOARD_LAYOUTS | 
+07-11 00:56:50.141   561   561 I Telecom : DefaultDialerCache: Refreshing default dialer for user 0: now com.android.dialer: DDC.oR@AVI
+07-11 00:56:50.142  2252  2314 I PermissionControllerServiceImpl: Updating user sensitive for uid 10158
+07-11 00:56:50.143  8443  8443 I Finsky  : [2] aebl - Received: android.intent.action.PACKAGE_ADDED, [jqhdxhQhJWn_RE1wcyaAYCyD6PV7TEyGw7JdWxZ9pTk]
+07-11 00:56:50.144  6951  6951 I Finsky:background: [2] aeba - Received: android.intent.action.PACKAGE_ADDED, [jqhdxhQhJWn_RE1wcyaAYCyD6PV7TEyGw7JdWxZ9pTk]
+07-11 00:56:50.150  1554  1554 I GsaVoiceInteractionSrv: O received Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.amaze.filemanager flg=0x4000010 (has extras) }
+07-11 00:56:50.157  6951  7217 I Finsky:background: [95] Wrote row to frosting DB: 257
+07-11 00:56:50.158   561  1660 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.amaze.filemanager flg=0x4000010 (has extras) } to com.google.android.packageinstaller/com.android.packageinstaller.PackageInstalledReceiver
+07-11 00:56:50.158   561   612 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.amaze.filemanager flg=0x4000010 (has extras) } to com.android.vending/com.google.android.finsky.packagemonitor.impl.PackageMonitorReceiverImpl$RegisteredReceiver
+07-11 00:56:50.160  2252  7220 W Role    : Cannot get ApplicationInfo for default holder: com.google.android.contacts
+07-11 00:56:50.130   561   561 W Binder:561_1: type=1400 audit(0.0:1076): avc: denied { getopt } for scontext=u:r:system_server:s0 tcontext=u:r:shell:s0 tclass=unix_stream_socket permissive=0
+07-11 00:56:50.165   561   611 W PackageManager: Failed registering loading progress callback. Package is fully loaded.
+07-11 00:56:50.164  8443  8523 I Finsky  : [72] AIM: AppInfoManager-Perf > OnDeviceAppInfo > cacheHitCount=0, cacheMissCount=1. Missed  in cache (limit 10) : [com.amaze.filemanager]
+07-11 00:56:50.165  8443  8523 I Finsky  : [72] AIM: Got app ownership map. App counts: . Unique apps: 0
+07-11 00:56:50.165  8443  8523 E Finsky  : [72] [Counters] attempted to use a non-positive increment for: 4752
+07-11 00:56:50.166  8443  8515 E Finsky  : [67] [Counters] attempted to use a non-positive increment for: 4753
+07-11 00:56:50.167  8443  8443 I Finsky  : [2] DTU: Received onPackageAdded, replacing: false
+07-11 00:56:50.168  8443  7219 I Finsky  : [332] SCH: Received scheduling request: Id: 12-1, Constraints: [{ L: 15000, D: 86400000, C: CHARGING_NONE, I: IDLE_NONE, N: NET_ANY, B: BATTERY_ANY }]
+07-11 00:56:50.173  2252  7220 W Role    : Cannot get ApplicationInfo for default holder: com.google.android.as
+07-11 00:56:50.174   561   612 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.amaze.filemanager flg=0x4000010 (has extras) } to com.android.vending/com.google.android.finsky.packagemonitor.backgroundimpl.BackgroundPackageMonitorReceiverImpl$RegisteredReceiver
+07-11 00:56:50.174  6951  7217 I Finsky:background: [95] Wrote row to frosting DB: 258
+07-11 00:56:50.185  8443  8509 I Finsky  : [61] AIM: AppInfoManager-Perf > ItemModel > CacheSize=0, cacheHitCount=0, cacheMissCount=1, total appsWithNoServerDataCount=0. Missed  in cache (limit 10) : [com.amaze.filemanager]
+07-11 00:56:50.185  8443  8509 I Finsky  : [61] AIM: AppInfoManager-Perf > ItemModel > ItemStore Called 1 apps cacheOptions = USE_CACHE
+07-11 00:56:50.186  8443  8509 I Finsky  : [61] AIM: ItemModel fetch - unauth(1), auth()
+07-11 00:56:50.186   561   612 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.amaze.filemanager flg=0x4000010 (has extras) } to com.google.android.gms/.chimera.GmsIntentOperationService$PersistentTrustedReceiver
+07-11 00:56:50.186   561   612 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.amaze.filemanager flg=0x4000010 (has extras) } to com.google.android.gms/.games.chimera.GamesSystemBroadcastReceiverProxy
+07-11 00:56:50.186   561   612 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.amaze.filemanager flg=0x4000010 (has extras) } to com.google.android.gms/.gass.chimera.PackageChangeBroadcastReceiver
+07-11 00:56:50.186   561   612 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.amaze.filemanager flg=0x4000010 (has extras) } to com.google.android.googlequicksearchbox/com.google.android.apps.gsa.googlequicksearchbox.GelStubAppWatcher
+07-11 00:56:50.186  8243  7240 I Auth    : (REDACTED) [SupervisedAccountIntentOperationV2] onHandleIntent: %s
+07-11 00:56:50.188  8243  7402 I Dck     : (REDACTED) disableDckSupport: %s
+07-11 00:56:50.188  8243  7402 W Dck     : [WirelessCapabilitiesFeatures] wccSysProp: 0 [CONTEXT service_id=289 ]
+07-11 00:56:50.188  8243  7402 I Dck     : [WirelessCapabilitiesFeatures] wccMendel: 3 [CONTEXT service_id=289 ]
+07-11 00:56:50.188  8243  7402 I Dck     : [WirelessCapabilitiesFeatures] deviceWccOverride: false [CONTEXT service_id=289 ]
+07-11 00:56:50.188  8243  7402 I Dck     : [WirelessCapabilitiesFeatures] replaceSupportedWccWithWccOverride: true [CONTEXT service_id=289 ]
+07-11 00:56:50.188  8243  7402 I Dck     : [WirelessCapabilitiesFeatures] wccOverride: not set [CONTEXT service_id=289 ]
+07-11 00:56:50.188  8243  7402 I Dck     : (REDACTED) [WirelessCapabilitiesFeatures] wcc: %s
+07-11 00:56:50.188  8243  7402 I Dck     : Dck module condition - hasWccSupport: false [CONTEXT service_id=289 ]
+07-11 00:56:50.188  8243  7402 I Dck     : Dck module condition - downloadAllowed: false [CONTEXT service_id=289 ]
+07-11 00:56:50.188  8243  7402 W Dck     : Dck module not eligible for asynchronous downloading [CONTEXT service_id=289 ]
+07-11 00:56:50.195  8243  7248 I NearbyDiscovery: (REDACTED) processGrantSlicePermission: %s
+07-11 00:56:50.195  8243  7250 I Blockstore: (REDACTED) [DataStoreImpl] Clearing Blockstore Data for package %s
+07-11 00:56:50.196  8243  7250 I Blockstore: [DataStoreImpl] Keyless data not found or its IsLastInstallationData = false. [CONTEXT service_id=258 ]
+07-11 00:56:50.196  8260  7228 W GCM     : Unexpected forwarded intent: Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.amaze.filemanager flg=0x4000010 pkg=com.google.android.gms cmp=com.google.android.gms/.chimera.PersistentIntentOperationService (has extras) }
+07-11 00:56:50.196  8260  7228 W NetworkScheduler: Unexpected forwarded intent: Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.amaze.filemanager flg=0x4000010 pkg=com.google.android.gms cmp=com.google.android.gms/.chimera.PersistentIntentOperationService (has extras) }
+07-11 00:56:50.197  8443  8443 I Finsky  : [2] Do not start WearSupportService due to Wear service optimization
+07-11 00:56:50.200  8443  8443 I Finsky  : [2] Clearing split related stale data.
+07-11 00:56:50.204   561   630 E VerityUtils: Failed to measure fs-verity, errno 1: /data/app/~~Y7R6q3nart5OkWMJ7PYoaQ==/com.amaze.filemanager-kOE3znkidVVb3pjXnqJ8BA==/base.apk
+07-11 00:56:50.208  7019  7399 I ProvidersCache: Provider returned no roots. Possibly naughty: com.google.android.apps.docs.storage
+07-11 00:56:50.210  8260  7256 I FontLog : (REDACTED) Package %s has no metadata
+07-11 00:56:50.214  8443  8494 I Finsky  : [47] SCH: Received scheduling request: Id: 37-22, Constraints: [{ L: 0, D: 0, C: CHARGING_NONE, I: IDLE_NONE, N: NET_NONE, B: BATTERY_ANY }]
+07-11 00:56:50.216  8443  8521 E Finsky  : [70] [Counters] attempted to use a non-positive increment for: 4751
+07-11 00:56:50.254  8443  8509 I Finsky  : [61] SCH: Scheduling phonesky job Id: 12-1, CT: 1752220610168, Constraints: [{ L: 15000, D: 86400000, C: CHARGING_NONE, I: IDLE_NONE, N: NET_ANY, B: BATTERY_ANY }]
+07-11 00:56:50.258  8443  8521 I Finsky  : [70] SCH: Scheduling 1 system job(s)
+07-11 00:56:50.258  8443  8521 I Finsky  : [70] SCH: Scheduling system job Id: 9494, L: 14910, D: 72472406, C: false, I: false, N: 1
+07-11 00:56:50.266  8443  8507 I Finsky  : [59] [ContentSync] finished, scheduled=true
+07-11 00:56:50.268  2252  7220 W Role    : Cannot get ApplicationInfo for default holder: com.google.android.as
+07-11 00:56:50.268  2252  7220 W Role    : Cannot get ApplicationInfo for default holder: com.google.android.as
+07-11 00:56:50.268  8443  8509 I Finsky  : [61] SCH: Scheduling phonesky job Id: 37-22, CT: 1752220610214, Constraints: [{ L: 0, D: 0, C: CHARGING_NONE, I: IDLE_NONE, N: NET_NONE, B: BATTERY_ANY }, { L: 0, D: 0, C: CHARGING_NONE, I: IDLE_NONE, N: NET_NONE, B: BATTERY_ANY }]
+07-11 00:56:50.272  8443  8509 I Finsky  : [61] SCH: Scheduling 1 system job(s)
+07-11 00:56:50.272  8443  8509 I Finsky  : [61] SCH: Scheduling expedited system job 9493
+07-11 00:56:50.281  8443  8443 I Finsky  : [2] SCH: job service start with id 9493.
+07-11 00:56:50.290  8443  7219 I Finsky  : [332] SCH: Satisfied jobs for 9493 are: 37-22
+07-11 00:56:50.291  8443  7275 I Finsky  : [341] SCH: Job 37-22 starting
+07-11 00:56:50.291  8443  8443 I Finsky  : [2] Received an install/uninstall event for package com.amaze.filemanager
+07-11 00:56:50.291  8443  8443 I Finsky  : [2] SCH: jobFinished: 37-22. TimeElapsed: 1ms.
+07-11 00:56:50.294  8443  8523 I Finsky  : [72] Not an active Cubes user. Ignoring package install/uninstall event.
+07-11 00:56:50.310  8243  7404 I Icing   : Indexing com.google.android.gms-apps from com.google.android.gms
+07-11 00:56:50.310  8443  8521 I Finsky  : [70] SCH: Scheduling phonesky job Id: 26-1414141414, CT: 1752200163230, Constraints: [{ L: 43199999, D: 44099999, C: CHARGING_NONE, I: IDLE_NONE, N: NET_NONE, B: BATTERY_ANY }]
+07-11 00:56:50.314  8243  7404 I Icing   : Indexing done com.google.android.gms-apps
+07-11 00:56:50.314  8443  8515 I Finsky  : [67] SCH: Scheduling 1 system job(s)
+07-11 00:56:50.314  8443  8515 I Finsky  : [67] SCH: Scheduling system job Id: 9498, L: 22752915, D: 23652915, C: false, I: false, N: 0
+07-11 00:56:50.321  8443  7275 I Finsky  : [341] SCH: job service finished with id 9493.
+07-11 00:56:50.335   561   570 I system_server: Background concurrent copying GC freed 165217(9953KB) AllocSpace objects, 60(3444KB) LOS objects, 44% free, 30MB/54MB, paused 508us,88us total 209.460ms
+07-11 00:56:50.344   561   572 W System  : A resource failed to call close. 
+07-11 00:56:50.357  2252  7220 W Role    : Cannot get ApplicationInfo for default holder: com.google.android.as
+07-11 00:56:50.428  2252  7220 W Role    : Cannot get ApplicationInfo for default holder: com.google.android.as
+07-11 00:56:50.433  2252  7220 W Role    : Cannot get ApplicationInfo for default holder: com.google.android.as
+07-11 00:56:52.126   216   216 I servicemanager: Since 'apexservice' could not be found, trying to start it as a lazy AIDL service
+07-11 00:56:52.241   216   216 I BpBinder: onLastStrongRef automatically unlinking death recipients: <uncached descriptor>
+07-11 00:56:52.243   216   216 I servicemanager: Tried to unregister apexservice, but there is about to be a client.
+07-11 00:56:52.477  1545  3292 W MediaProvider: isAppCloneUserPair for user 0: false
+07-11 00:56:52.497   218   218 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+07-11 00:56:52.497  7439  7441 I Gralloc4: mapper 4.x is not supported
+07-11 00:56:52.548  8260  6897 I NetworkScheduler.Stats: (REDACTED) Task %s/%s started execution. cause:%s exec_start_elapsed_seconds: %s
+07-11 00:56:52.552  8260  4217 I NetworkScheduler.Stats: (REDACTED) Task %s/%s finished executing. cause:%s result: %s elapsed_millis: %s uptime_millis: %s exec_start_elapsed_seconds: %s
+07-11 00:56:53.904   216   216 I servicemanager: Notifying apexservice they have clients: 1
+07-11 00:56:53.918  1545  3703 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005654.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:56:53.928  1545  3703 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005654.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:56:53.982  1545 21499 I MediaProvider: Deleted 0 1 0 0 0 0 0 items on external_primary due to com.android.shell
+07-11 00:56:53.984  8260  8395 I UriTaskContentObserver: (REDACTED) Throttling content uri change event for %s
+07-11 00:56:54.149   561  1205 I ActivityManager: Force stopping com.amaze.filemanager appid=10158 user=0: from pid 7471
+07-11 00:56:54.180   561   602 I ActivityTaskManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10000100 cmp=com.google.android.apps.nexuslauncher/.NexusLauncherActivity (has extras)} from uid 0
+07-11 00:56:54.185   561  2079 W ActivityManager: Unable to start service Intent { act=android.service.smartspace.SmartspaceService cmp=com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiSmartspaceService } U=0: not found
+07-11 00:56:54.185   561  2079 W RemoteSmartspaceService: could not bind to Intent { act=android.service.smartspace.SmartspaceService cmp=com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiSmartspaceService } using flags 67112961
+07-11 00:56:54.185   561   561 W ActivityManager: Unbind failed: could not find connection for android.app.LoadedApk$ServiceDispatcher$InnerConnection@5defe12
+07-11 00:56:55.362  1545  1687 W MediaProvider: isAppCloneUserPair for user 0: false
+07-11 00:56:55.381   218   218 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+07-11 00:56:55.381  7495  7497 I Gralloc4: mapper 4.x is not supported
+07-11 00:56:55.659  1545  3703 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005657.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:56:55.671  1545  3703 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005657.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:56:55.725  1545 21500 I MediaProvider: Deleted 0 1 0 0 0 0 0 items on external_primary due to com.android.shell
+07-11 00:56:55.726  8260  8395 I UriTaskContentObserver: (REDACTED) Throttling content uri change event for %s
+07-11 00:56:56.043  1545  3292 W MediaProvider: isAppCloneUserPair for user 0: false
+07-11 00:56:56.067   218   218 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+07-11 00:56:56.067  7539  7543 I Gralloc4: mapper 4.x is not supported
+07-11 00:56:56.337  1545  3703 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005657.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:56:56.342  1545  3703 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005657.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:56:56.395  1545 21499 I MediaProvider: Deleted 0 1 0 0 0 0 0 items on external_primary due to com.android.shell
+07-11 00:56:56.396  8260  8395 I UriTaskContentObserver: (REDACTED) Throttling content uri change event for %s
+07-11 00:56:56.685  1545  1688 W MediaProvider: isAppCloneUserPair for user 0: false
+07-11 00:56:56.699   218   218 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+07-11 00:56:56.699  7580  7582 I Gralloc4: mapper 4.x is not supported
+07-11 00:56:56.952  1545  3703 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005658.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:56:56.959  1545  3703 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005658.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:56:57.014  1545 21500 I MediaProvider: Deleted 0 1 0 0 0 0 0 items on external_primary due to com.android.shell
+07-11 00:56:57.015  8260  8395 I UriTaskContentObserver: (REDACTED) Throttling content uri change event for %s
+07-11 00:56:57.166   561  2079 I ActivityTaskManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.amaze.filemanager/.activities.MainActivity} from uid 2000
+07-11 00:56:57.167   561  2079 W ActivityTaskManager: Can't find TaskDisplayArea to determine support for multi window. Task id=23 attached=false
+07-11 00:56:57.184   561   613 I ActivityManager: Start proc 7612:com.amaze.filemanager/u0a158 for pre-top-activity {com.amaze.filemanager/com.amaze.filemanager.activities.MainActivity}
+07-11 00:56:57.191  7612  7612 I aze.filemanage: Late-enabling -Xcheck:jni
+07-11 00:56:57.201  7612  7612 W aze.filemanage: Unexpected CPU variant for X86 using defaults: x86_64
+07-11 00:56:57.207  1795  1809 I adbd    : jdwp connection from 7612
+07-11 00:56:57.284  1554  1554 I GsaVoiceInteractionSrv: Handling ACTION_STOP_HOTWORD
+07-11 00:56:57.284  1554  1554 E HwDetectorWithState: a: 3
+07-11 00:56:57.357   561   896 I ActivityTaskManager: START u0 {act=android.content.pm.action.REQUEST_PERMISSIONS pkg=com.google.android.permissioncontroller cmp=com.google.android.permissioncontroller/com.android.permissioncontroller.permission.ui.GrantPermissionsActivity (has extras)} from uid 10158
+07-11 00:56:57.382  7612  7612 W aze.filemanage: Accessing hidden method Landroid/view/View;->computeFitSystemWindows(Landroid/graphics/Rect;Landroid/graphics/Rect;)Z (unsupported, reflection, allowed)
+07-11 00:56:57.383  7612  7612 W aze.filemanage: Accessing hidden method Landroid/view/ViewGroup;->makeOptionalFitsSystemWindows()V (unsupported, reflection, allowed)
+07-11 00:56:57.550   561  2079 W ActivityManager: Unable to start service Intent { act=android.service.smartspace.SmartspaceService cmp=com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiSmartspaceService } U=0: not found
+07-11 00:56:57.550   561  2079 W RemoteSmartspaceService: could not bind to Intent { act=android.service.smartspace.SmartspaceService cmp=com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiSmartspaceService } using flags 67112961
+07-11 00:56:57.552   561   561 W ActivityManager: Unbind failed: could not find connection for android.app.LoadedApk$ServiceDispatcher$InnerConnection@a8fcfc4
+07-11 00:56:57.557  8735  8735 I A       : onApplyWindowInsets: systemWindowInsets=Insets{left=0, top=63, right=0, bottom=126}
+07-11 00:56:57.557  8735  8735 I A       : onApplyWindowInsets: systemWindowInsets=Insets{left=0, top=63, right=0, bottom=126}
+07-11 00:56:57.718   561  2079 W ActivityTaskManager: Tried to set launchTime (0) < mLastActivityLaunchTime (10833846)
+07-11 00:56:57.868  7612  7612 W FragmentManager: moveToState: Fragment state for Main{931f46a #1 id=0x7f0f0139} not updated inline; expected state 3 found 2
+07-11 00:56:57.866  7612  7612 W com.amaze.filemanager: type=1400 audit(0.0:1078): avc: denied { read } for comm=4173796E635461736B202332 name="/" dev="dm-4" ino=2 scontext=u:r:untrusted_app_25:s0:c512,c768 tcontext=u:object_r:rootfs:s0 tclass=dir permissive=0 app=com.amaze.filemanager
+07-11 00:56:57.931   452   549 W ServiceManager: Permission failure: android.permission.ACCESS_SURFACE_FLINGER from uid=10158 pid=7612
+07-11 00:56:57.931   452   549 W ServiceManager: Permission failure: android.permission.ROTATE_SURFACE_FLINGER from uid=10158 pid=7612
+07-11 00:56:57.953  7612  7612 E RecyclerView: No adapter attached; skipping layout
+07-11 00:56:57.953  7612  7612 E RecyclerView: No adapter attached; skipping layout
+07-11 00:56:57.965   218   218 I hwservicemanager: getTransport: Cannot find entry android.hardware.configstore@1.0::ISurfaceFlingerConfigs/default in either framework or device VINTF manifest.
+07-11 00:56:57.966  7612  7632 W OpenGLRenderer: Failed to choose config with EGL_SWAP_BEHAVIOR_PRESERVED, retrying without...
+07-11 00:56:57.974  7612  7632 W OpenGLRenderer: Failed to initialize 101010-2 format, error = EGL_SUCCESS
+07-11 00:56:57.980  7612  7612 W View    : requestLayout() improperly called by android.widget.FrameLayout{820dc V.E...... ......ID 0,147-1080,336 #7f0f00c6 app:id/buttonbarframe} during layout: running second layout pass
+07-11 00:56:57.980  7612  7612 W View    : requestLayout() improperly called by android.support.v7.widget.Toolbar{845f7d4 V.E...... ......ID 0,0-1080,147 #7f0f0060 app:id/action_bar} during layout: running second layout pass
+07-11 00:56:57.981  7612  7612 E RecyclerView: No adapter attached; skipping layout
+07-11 00:56:57.981  7612  7612 E RecyclerView: No adapter attached; skipping layout
+07-11 00:56:58.047   452   549 E HWComposer: getSupportedContentTypes: getSupportedContentTypes failed for display 4619827259835644672: Unsupported (8)
+07-11 00:56:58.049   218   218 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+07-11 00:56:58.051  7612  7632 I Gralloc4: mapper 4.x is not supported
+07-11 00:56:58.054   218   218 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.allocator@4.0::IAllocator/default in either framework or device VINTF manifest.
+07-11 00:56:58.055  7612  7632 W Gralloc4: allocator 4.x is not supported
+07-11 00:56:58.124   561   601 I ActivityTaskManager: Displayed com.google.android.permissioncontroller/com.android.permissioncontroller.permission.ui.GrantPermissionsActivity: +953ms
+07-11 00:56:58.280  7612  7612 W aze.filemanage: Accessing hidden field Landroid/view/View;->mAccessibilityDelegate:Landroid/view/View$AccessibilityDelegate; (unsupported, reflection, allowed)
+07-11 00:56:58.390  1545  1688 W MediaProvider: isAppCloneUserPair for user 0: false
+07-11 00:56:58.407   218   218 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+07-11 00:56:58.407  7698  7700 I Gralloc4: mapper 4.x is not supported
+07-11 00:56:58.448   561  2605 W InputManager-JNI: Input channel object '9f1a21b Splash Screen com.amaze.filemanager (client)' was disposed without first being removed with the input manager!
+07-11 00:56:58.574  1545  3703 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005700.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:56:58.578  1545  3703 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005700.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:56:58.639  1545 21500 I MediaProvider: Deleted 0 1 0 0 0 0 0 items on external_primary due to com.android.shell
+07-11 00:56:58.640  8260  8395 I UriTaskContentObserver: (REDACTED) Throttling content uri change event for %s
+07-11 00:56:58.981  1545 21499 W MediaProvider: isAppCloneUserPair for user 0: false
+07-11 00:56:58.999   218   218 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+07-11 00:56:58.999  7735  7737 I Gralloc4: mapper 4.x is not supported
+07-11 00:56:59.158  1545  3703 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005700.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:56:59.162  1545  3703 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005700.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:56:59.211  7612  7623 W System  : A resource failed to call close. 
+07-11 00:56:59.211  7612  7623 W System  : A resource failed to call close. 
+07-11 00:56:59.212  7612  7623 W System  : A resource failed to call close. 
+07-11 00:56:59.212  7612  7623 W System  : A resource failed to call close. 
+07-11 00:56:59.213  7612  7623 W System  : A resource failed to call close. 
+07-11 00:56:59.213  7612  7623 W System  : A resource failed to call close. 
+07-11 00:56:59.213  7612  7623 W System  : A resource failed to call close. 
+07-11 00:56:59.224  8260  8395 I UriTaskContentObserver: (REDACTED) Throttling content uri change event for %s
+07-11 00:56:59.224  1545  1687 I MediaProvider: Deleted 0 1 0 0 0 0 0 items on external_primary due to com.android.shell
+07-11 00:56:59.549  1545 21500 W MediaProvider: isAppCloneUserPair for user 0: false
+07-11 00:56:59.567   218   218 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+07-11 00:56:59.567  7776  7778 I Gralloc4: mapper 4.x is not supported
+07-11 00:56:59.709  1545  3703 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005701.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:56:59.713  1545  3703 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005701.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:56:59.763  1545  3292 I MediaProvider: Deleted 0 1 0 0 0 0 0 items on external_primary due to com.android.shell
+07-11 00:56:59.764  8260  8395 I UriTaskContentObserver: (REDACTED) Throttling content uri change event for %s
+07-11 00:57:00.329   400   400 E android.hardware.power.stats@1.0-service-mock: Failed to getEnergyData
+07-11 00:57:01.702  1545  1687 W MediaProvider: isAppCloneUserPair for user 0: false
+07-11 00:57:01.719   218   218 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+07-11 00:57:01.719  7874  7876 I Gralloc4: mapper 4.x is not supported
+07-11 00:57:01.868  1545  3703 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005703.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:01.874  1545  3703 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005703.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:01.923  1545  1688 I MediaProvider: Deleted 0 1 0 0 0 0 0 items on external_primary due to com.android.shell
+07-11 00:57:01.924  8260  8395 I UriTaskContentObserver: (REDACTED) Throttling content uri change event for %s
+07-11 00:57:02.295  1545  3292 W MediaProvider: isAppCloneUserPair for user 0: false
+07-11 00:57:02.313   218   218 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+07-11 00:57:02.313  7911  7913 I Gralloc4: mapper 4.x is not supported
+07-11 00:57:02.459  1545  3703 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005704.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:02.463  1545  3703 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005704.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:02.514  1545 21499 I MediaProvider: Deleted 0 1 0 0 0 0 0 items on external_primary due to com.android.shell
+07-11 00:57:02.514  8260  8395 I UriTaskContentObserver: (REDACTED) Throttling content uri change event for %s
+07-11 00:57:02.814  1545 21500 W MediaProvider: isAppCloneUserPair for user 0: false
+07-11 00:57:02.828   218   218 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+07-11 00:57:02.828  7950  7952 I Gralloc4: mapper 4.x is not supported
+07-11 00:57:02.972  1545  3703 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005704.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:02.975  1545  3703 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005704.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:03.026  1545  1688 I MediaProvider: Deleted 0 1 0 0 0 0 0 items on external_primary due to com.android.shell
+07-11 00:57:03.027  8260  8395 I UriTaskContentObserver: (REDACTED) Throttling content uri change event for %s
+07-11 00:57:04.038  7019  8034 I ProvidersCache: Provider returned no roots. Possibly naughty: com.google.android.apps.docs.storage
+07-11 00:57:04.930  1545 21499 W MediaProvider: isAppCloneUserPair for user 0: false
+07-11 00:57:04.948   218   218 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+07-11 00:57:04.949  8051  8053 I Gralloc4: mapper 4.x is not supported
+07-11 00:57:05.097  1545  3703 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005706.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:05.101  1545  3703 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005706.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:05.116   561   613 I ActivityManager: Start proc 8058:com.google.android.partnersetup/u0a94 for service {com.google.android.partnersetup/com.google.android.partnersetup.InstalledAppJobService}
+07-11 00:57:05.120  8058  8058 W id.partnersetu: Unexpected CPU variant for X86 using defaults: x86_64
+07-11 00:57:05.124  8058  8058 E id.partnersetu: Not starting debugger since process cannot load the jdwp agent.
+07-11 00:57:05.155  1545  1687 I MediaProvider: Deleted 0 1 0 0 0 0 0 items on external_primary due to com.android.shell
+07-11 00:57:05.156  8260  8395 I UriTaskContentObserver: (REDACTED) Throttling content uri change event for %s
+07-11 00:57:05.188  8443  8443 I Finsky  : [2] SCH: job service start with id 9494.
+07-11 00:57:05.194   561  2605 I ActivityManager: Killing 1746:com.google.android.gm/u0a121 (adj 975): empty #17
+07-11 00:57:05.194  8443  7219 I Finsky  : [332] SCH: Satisfied jobs for 9494 are: 12-1
+07-11 00:57:05.200  8443  7275 I Finsky  : [341] SCH: Job 12-1 starting
+07-11 00:57:05.201  8443  8443 I Finsky  : [2] [ContentSync] job started
+07-11 00:57:05.204   561   614 I libprocessgroup: Successfully killed process cgroup uid 10121 pid 1746 in 0ms
+07-11 00:57:05.210   368   368 I Zygote  : Process 1746 exited due to signal 9 (Killed)
+07-11 00:57:05.229  8443  7284 I Finsky  : [343] App states replicator found 9 unowned apps
+07-11 00:57:05.230  8443  7284 I Finsky  : [343] Completed 0 account content syncs with 0 successful.
+07-11 00:57:05.230  8443  8443 I Finsky  : [2] [ContentSync] Installation state replication succeeded.
+07-11 00:57:05.230  8443  8443 I Finsky  : [2] SCH: jobFinished: 12-1. TimeElapsed: 30ms.
+07-11 00:57:05.243  8443  8521 I Finsky  : [70] SCH: Scheduling phonesky job Id: 1-1337, CT: 1752213663410, Constraints: [{ L: 36219254, D: 79419254, C: CHARGING_NONE, I: IDLE_NONE, N: NET_ANY, B: BATTERY_ANY }]
+07-11 00:57:05.246  8443  8515 I Finsky  : [67] SCH: Scheduling 1 system job(s)
+07-11 00:57:05.246  8443  8515 I Finsky  : [67] SCH: Scheduling system job Id: 9499, L: 29257418, D: 72457418, C: false, I: false, N: 1
+07-11 00:57:05.253  8443  7275 I Finsky  : [341] SCH: job service finished with id 9494.
+07-11 00:57:05.259   561   572 W System  : A resource failed to call release. 
+07-11 00:57:05.464  1545  3292 W MediaProvider: isAppCloneUserPair for user 0: false
+07-11 00:57:05.479   218   218 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+07-11 00:57:05.479  8108  8110 I Gralloc4: mapper 4.x is not supported
+07-11 00:57:05.770  1545  3703 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005707.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:05.776  1545  3703 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005707.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:05.780  7019  8118 I ProvidersCache: Provider returned no roots. Possibly naughty: com.google.android.apps.docs.storage
+07-11 00:57:05.828  1545  1688 I MediaProvider: Deleted 0 1 0 0 0 0 0 items on external_primary due to com.android.shell
+07-11 00:57:05.829  8260  8395 I UriTaskContentObserver: (REDACTED) Throttling content uri change event for %s
+07-11 00:57:06.130  1545  1687 W MediaProvider: isAppCloneUserPair for user 0: false
+07-11 00:57:06.145   218   218 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+07-11 00:57:06.145  8152  8154 I Gralloc4: mapper 4.x is not supported
+07-11 00:57:06.284  1545  3703 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005708.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:06.296  1545  3703 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005708.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:06.337  1545 21500 I MediaProvider: Deleted 0 1 0 0 0 0 0 items on external_primary due to com.android.shell
+07-11 00:57:06.337  8260  8395 I UriTaskContentObserver: (REDACTED) Throttling content uri change event for %s
+07-11 00:57:06.445  7019  8178 I ProvidersCache: Provider returned no roots. Possibly naughty: com.google.android.apps.docs.storage
+07-11 00:57:07.065  7019  8240 I ProvidersCache: Provider returned no roots. Possibly naughty: com.google.android.apps.docs.storage
+07-11 00:57:07.210  1545 17415 I MediaProvider: Invalidating LocalCallingIdentity cache for package com.amaze.filemanager. Reason: op android:read_external_storage
+07-11 00:57:07.213  1545 17415 I MediaProvider: Invalidating LocalCallingIdentity cache for package com.amaze.filemanager. Reason: op android:read_external_storage
+07-11 00:57:07.214  1545 17415 I MediaProvider: Invalidating LocalCallingIdentity cache for package com.amaze.filemanager. Reason: op android:read_external_storage
+07-11 00:57:07.216  1545 17415 I MediaProvider: Invalidating LocalCallingIdentity cache for package com.amaze.filemanager. Reason: op android:read_external_storage
+07-11 00:57:07.345  7612  7612 W SQLiteLog: (28) double-quoted string literal: "1"
+07-11 00:57:07.349  7612  7612 W SQLiteLog: (28) double-quoted string literal: "2"
+07-11 00:57:07.557   561   604 I ActivityManager: Killing 1516:com.google.android.apps.youtube.music/u0a111 (adj 935): empty #17
+07-11 00:57:07.561   561   614 I libprocessgroup: Successfully killed process cgroup uid 10111 pid 1516 in 0ms
+07-11 00:57:07.572   368   368 I Zygote  : Process 1516 exited due to signal 9 (Killed)
+07-11 00:57:07.598  7612  7620 I aze.filemanage: JIT allocated 77KB for compiled code of void android.view.View.<init>(android.content.Context, android.util.AttributeSet, int, int)
+07-11 00:57:07.630   561  2088 W InputManager-JNI: Input channel object 'f044d1d com.google.android.permissioncontroller/com.android.permissioncontroller.permission.ui.GrantPermissionsActivity (client)' was disposed without first being removed with the input manager!
+07-11 00:57:08.370  1545 21500 W MediaProvider: isAppCloneUserPair for user 0: false
+07-11 00:57:08.391   218   218 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+07-11 00:57:08.391  8346  8353 I Gralloc4: mapper 4.x is not supported
+07-11 00:57:08.682  1545  3703 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005710.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:08.691  1545  3703 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005710.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:08.692  7019  8368 I ProvidersCache: Provider returned no roots. Possibly naughty: com.google.android.apps.docs.storage
+07-11 00:57:08.742  1545  1688 I MediaProvider: Deleted 0 1 0 0 0 0 0 items on external_primary due to com.android.shell
+07-11 00:57:08.742  8260  8395 I UriTaskContentObserver: (REDACTED) Throttling content uri change event for %s
+07-11 00:57:08.904   216   216 I servicemanager: Notifying apexservice they have clients: 0
+07-11 00:57:08.907   216   216 I BpBinder: onLastStrongRef automatically unlinking death recipients: <uncached descriptor>
+07-11 00:57:09.057  1545 21499 W MediaProvider: isAppCloneUserPair for user 0: false
+07-11 00:57:09.072   218   218 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+07-11 00:57:09.072  8421  8423 I Gralloc4: mapper 4.x is not supported
+07-11 00:57:09.214  1545  3703 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005710.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:09.221  1545  3703 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005710.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:09.274  8260  8395 I UriTaskContentObserver: (REDACTED) Throttling content uri change event for %s
+07-11 00:57:09.275  1545  1687 I MediaProvider: Deleted 0 1 0 0 0 0 0 items on external_primary due to com.android.shell
+07-11 00:57:09.287  7019  8442 I ProvidersCache: Provider returned no roots. Possibly naughty: com.google.android.apps.docs.storage
+07-11 00:57:09.324  6951  6974 I Finsky:background: [50] Stats for Executor: LightweightExecutor teo@42d8630[Running, pool size = 4, active threads = 0, queued tasks = 0, completed tasks = 18]
+07-11 00:57:09.417  6951  6974 I Finsky:background: [50] Stats for Executor: bgExecutor teo@f64f2a9[Running, pool size = 4, active threads = 0, queued tasks = 0, completed tasks = 49]
+07-11 00:57:09.417  6951  6974 I Finsky:background: [50] Stats for Executor: BlockingExecutor teo@7a1002e[Running, pool size = 1, active threads = 0, queued tasks = 0, completed tasks = 9]
+07-11 00:57:09.635  1545  1688 W MediaProvider: isAppCloneUserPair for user 0: false
+07-11 00:57:09.651   218   218 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+07-11 00:57:09.651  8498  8500 I Gralloc4: mapper 4.x is not supported
+07-11 00:57:09.814  7019  8531 I ProvidersCache: Provider returned no roots. Possibly naughty: com.google.android.apps.docs.storage
+07-11 00:57:09.818  1545  3703 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005711.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:09.832  1545  3703 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005711.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:09.881  1545  3292 I MediaProvider: Deleted 0 1 0 0 0 0 0 items on external_primary due to com.android.shell
+07-11 00:57:09.882  8260  8395 I UriTaskContentObserver: (REDACTED) Throttling content uri change event for %s
+07-11 00:57:10.698  8260  8260 W ThreadPoolForeg: type=1400 audit(0.0:1079): avc: denied { write } for name="traced_producer" dev="tmpfs" ino=561 scontext=u:r:gmscore_app:s0:c512,c768 tcontext=u:object_r:traced_producer_socket:s0 tclass=sock_file permissive=0 app=com.google.android.gms
+07-11 00:57:11.893  1545  1687 W MediaProvider: isAppCloneUserPair for user 0: false
+07-11 00:57:11.915   218   218 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+07-11 00:57:11.915  8661  8664 I Gralloc4: mapper 4.x is not supported
+07-11 00:57:11.954  7019  8669 I ProvidersCache: Provider returned no roots. Possibly naughty: com.google.android.apps.docs.storage
+07-11 00:57:12.154  1545  3703 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005713.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:12.159  1545  3703 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005713.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:12.229  1545  1688 I MediaProvider: Deleted 0 1 0 0 0 0 0 items on external_primary due to com.android.shell
+07-11 00:57:12.232  8260  8395 I UriTaskContentObserver: (REDACTED) Throttling content uri change event for %s
+07-11 00:57:12.540  7019  8724 I ProvidersCache: Provider returned no roots. Possibly naughty: com.google.android.apps.docs.storage
+07-11 00:57:12.546  1545 21499 W MediaProvider: isAppCloneUserPair for user 0: false
+07-11 00:57:12.563   218   218 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+07-11 00:57:12.563  8719  8727 I Gralloc4: mapper 4.x is not supported
+07-11 00:57:12.768  1545  3703 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005714.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:12.773  1545  3703 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005714.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:12.826  1545  3292 I MediaProvider: Deleted 0 1 0 0 0 0 0 items on external_primary due to com.android.shell
+07-11 00:57:12.827  8260  8395 I UriTaskContentObserver: (REDACTED) Throttling content uri change event for %s
+07-11 00:57:13.073  7019  8779 I ProvidersCache: Provider returned no roots. Possibly naughty: com.google.android.apps.docs.storage
+07-11 00:57:13.160  1545 21500 W MediaProvider: isAppCloneUserPair for user 0: false
+07-11 00:57:13.175   218   218 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+07-11 00:57:13.175  8788  8796 I Gralloc4: mapper 4.x is not supported
+07-11 00:57:13.387  1545  3703 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005715.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:13.393  1545  3703 W ExifInterface: Invalid image: ExifInterface got an unsupported image format file(ExifInterface supports JPEG and some RAW image formats only) or a corrupted JPEG file to ExifInterface.
+07-11 00:57:13.393  1545  3703 W ExifInterface: java.io.IOException: Encountered corrupt PNG file.
+07-11 00:57:13.393  1545  3703 W ExifInterface: 	at android.media.ExifInterface.getPngAttributes(ExifInterface.java:3432)
+07-11 00:57:13.393  1545  3703 W ExifInterface: 	at android.media.ExifInterface.loadAttributes(ExifInterface.java:2009)
+07-11 00:57:13.393  1545  3703 W ExifInterface: 	at android.media.ExifInterface.<init>(ExifInterface.java:1641)
+07-11 00:57:13.393  1545  3703 W ExifInterface: 	at android.media.ExifInterface.<init>(ExifInterface.java:1592)
+07-11 00:57:13.393  1545  3703 W ExifInterface: 	at com.android.providers.media.scan.ModernMediaScanner.scanItemImage(ModernMediaScanner.java:1367)
+07-11 00:57:13.393  1545  3703 W ExifInterface: 	at com.android.providers.media.scan.ModernMediaScanner.scanItem(ModernMediaScanner.java:1003)
+07-11 00:57:13.393  1545  3703 W ExifInterface: 	at com.android.providers.media.scan.ModernMediaScanner.access$1200(ModernMediaScanner.java:146)
+07-11 00:57:13.393  1545  3703 W ExifInterface: 	at com.android.providers.media.scan.ModernMediaScanner$Scan.visitFile(ModernMediaScanner.java:801)
+07-11 00:57:13.393  1545  3703 W ExifInterface: 	at com.android.providers.media.scan.ModernMediaScanner$Scan.visitFile(ModernMediaScanner.java:320)
+07-11 00:57:13.393  1545  3703 W ExifInterface: 	at java.nio.file.Files.walkFileTree(Files.java:2670)
+07-11 00:57:13.393  1545  3703 W ExifInterface: 	at java.nio.file.Files.walkFileTree(Files.java:2742)
+07-11 00:57:13.393  1545  3703 W ExifInterface: 	at com.android.providers.media.scan.ModernMediaScanner$Scan.walkFileTree(ModernMediaScanner.java:439)
+07-11 00:57:13.393  1545  3703 W ExifInterface: 	at com.android.providers.media.scan.ModernMediaScanner$Scan.runInternal(ModernMediaScanner.java:402)
+07-11 00:57:13.393  1545  3703 W ExifInterface: 	at com.android.providers.media.scan.ModernMediaScanner$Scan.run(ModernMediaScanner.java:391)
+07-11 00:57:13.393  1545  3703 W ExifInterface: 	at com.android.providers.media.scan.ModernMediaScanner.scanFile(ModernMediaScanner.java:263)
+07-11 00:57:13.393  1545  3703 W ExifInterface: 	at com.android.providers.media.MediaProvider.scanFile(MediaProvider.java:1273)
+07-11 00:57:13.393  1545  3703 W ExifInterface: 	at com.android.providers.media.MediaProvider.scanFile(MediaProvider.java:1269)
+07-11 00:57:13.393  1545  3703 W ExifInterface: 	at com.android.providers.media.MediaService.onScanFile(MediaService.java:215)
+07-11 00:57:13.393  1545  3703 W ExifInterface: 	at com.android.providers.media.MediaService.onHandleWork(MediaService.java:85)
+07-11 00:57:13.393  1545  3703 W ExifInterface: 	at androidx.core.app.JobIntentService$CommandProcessor.doInBackground(JobIntentService.java:396)
+07-11 00:57:13.393  1545  3703 W ExifInterface: 	at androidx.core.app.JobIntentService$CommandProcessor.doInBackground(JobIntentService.java:387)
+07-11 00:57:13.393  1545  3703 W ExifInterface: 	at android.os.AsyncTask$3.call(AsyncTask.java:394)
+07-11 00:57:13.393  1545  3703 W ExifInterface: 	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+07-11 00:57:13.393  1545  3703 W ExifInterface: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+07-11 00:57:13.393  1545  3703 W ExifInterface: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+07-11 00:57:13.393  1545  3703 W ExifInterface: 	at java.lang.Thread.run(Thread.java:920)
+07-11 00:57:13.398  1545  3703 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005715.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:13.447  1545  1688 I MediaProvider: Deleted 0 1 0 0 0 0 0 items on external_primary due to com.android.shell
+07-11 00:57:13.448  8260  8395 I UriTaskContentObserver: (REDACTED) Throttling content uri change event for %s
+07-11 00:57:15.208  7019  8908 I ProvidersCache: Provider returned no roots. Possibly naughty: com.google.android.apps.docs.storage
+07-11 00:57:15.425  1545  1687 W MediaProvider: isAppCloneUserPair for user 0: false
+07-11 00:57:15.442   218   218 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+07-11 00:57:15.442  8923  8925 I Gralloc4: mapper 4.x is not supported
+07-11 00:57:15.646  1545  3703 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005717.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:15.651  1545  3703 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005717.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:15.702  1545  3292 I MediaProvider: Deleted 0 1 0 0 0 0 0 items on external_primary due to com.android.shell
+07-11 00:57:15.703  8260  8395 I UriTaskContentObserver: (REDACTED) Throttling content uri change event for %s
+07-11 00:57:15.877  7019  8951 I ProvidersCache: Provider returned no roots. Possibly naughty: com.google.android.apps.docs.storage
+07-11 00:57:16.020  1545 21500 W MediaProvider: isAppCloneUserPair for user 0: false
+07-11 00:57:16.038   218   218 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+07-11 00:57:16.038  8966  8968 I Gralloc4: mapper 4.x is not supported
+07-11 00:57:16.256  1545  3703 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005717.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:16.260  1545  3703 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005717.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:16.312  1545 21499 I MediaProvider: Deleted 0 1 0 0 0 0 0 items on external_primary due to com.android.shell
+07-11 00:57:16.313  8260  8395 I UriTaskContentObserver: (REDACTED) Throttling content uri change event for %s
+07-11 00:57:16.371  7019  8984 I ProvidersCache: Provider returned no roots. Possibly naughty: com.google.android.apps.docs.storage
+07-11 00:57:16.523  6951  7183 I PlayCommon: [94] Preparing logs for uploading
+07-11 00:57:16.526  6951  7183 I PlayCommon: [94] Connecting to server for timestamp: https://play.googleapis.com/play/log/timestamp
+07-11 00:57:16.625  6951  7183 W PlayCommon: [94] No account for auth token provided
+07-11 00:57:16.625  6951  7183 I PlayCommon: [94] Connecting to server: https://play.googleapis.com/play/log?format=raw&proto_v2=true
+07-11 00:57:16.626  1545  3292 W MediaProvider: isAppCloneUserPair for user 0: false
+07-11 00:57:16.640   218   218 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+07-11 00:57:16.641  9014  9016 I Gralloc4: mapper 4.x is not supported
+07-11 00:57:16.690  6951  7183 I PlayCommon: [94] Successfully uploaded logs.
+07-11 00:57:16.845  1545  3703 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005718.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:16.851  1545  3703 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005718.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:16.899  1545  1688 I MediaProvider: Deleted 0 1 0 0 0 0 0 items on external_primary due to com.android.shell
+07-11 00:57:16.900  8260  8395 I UriTaskContentObserver: (REDACTED) Throttling content uri change event for %s
+07-11 00:57:17.200   561   572 W System  : A resource failed to call close. 
+07-11 00:57:17.438  8243  8243 W ThreadPoolForeg: type=1400 audit(0.0:1080): avc: denied { write } for name="traced_producer" dev="tmpfs" ino=561 scontext=u:r:gmscore_app:s0:c512,c768 tcontext=u:object_r:traced_producer_socket:s0 tclass=sock_file permissive=0 app=com.google.android.gms
+07-11 00:57:18.790  7019  9144 I ProvidersCache: Provider returned no roots. Possibly naughty: com.google.android.apps.docs.storage
+07-11 00:57:18.841  1545  1688 W MediaProvider: isAppCloneUserPair for user 0: false
+07-11 00:57:18.855   218   218 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+07-11 00:57:18.856  9147  9149 I Gralloc4: mapper 4.x is not supported
+07-11 00:57:19.003  1545  3703 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005720.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:19.007  1545  3703 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005720.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:19.057  1545 21500 I MediaProvider: Deleted 0 1 0 0 0 0 0 items on external_primary due to com.android.shell
+07-11 00:57:19.059  8260  8395 I UriTaskContentObserver: (REDACTED) Throttling content uri change event for %s
+07-11 00:57:19.309  7019  9190 I ProvidersCache: Provider returned no roots. Possibly naughty: com.google.android.apps.docs.storage
+07-11 00:57:19.397  1545  3292 W MediaProvider: isAppCloneUserPair for user 0: false
+07-11 00:57:19.411   218   218 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+07-11 00:57:19.412  9200  9204 I Gralloc4: mapper 4.x is not supported
+07-11 00:57:19.557  1545  3703 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005721.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:19.561  1545  3703 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005721.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:19.619  8260  8395 I UriTaskContentObserver: (REDACTED) Throttling content uri change event for %s
+07-11 00:57:19.619  1545  1687 I MediaProvider: Deleted 0 1 0 0 0 0 0 items on external_primary due to com.android.shell
+07-11 00:57:19.932  1545 21500 W MediaProvider: isAppCloneUserPair for user 0: false
+07-11 00:57:19.938  7019  9274 I ProvidersCache: Provider returned no roots. Possibly naughty: com.google.android.apps.docs.storage
+07-11 00:57:19.946   218   218 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+07-11 00:57:19.946  9265  9277 I Gralloc4: mapper 4.x is not supported
+07-11 00:57:20.101  1545  3703 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005721.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:20.106  1545  3703 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005721.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:20.153  1545 21499 I MediaProvider: Deleted 0 1 0 0 0 0 0 items on external_primary due to com.android.shell
+07-11 00:57:20.154  8260  8395 I UriTaskContentObserver: (REDACTED) Throttling content uri change event for %s
+07-11 00:57:21.569  7612  7612 I AssistStructure: Flattened final assist data: 19936 bytes, containing 1 windows, 215 views
+07-11 00:57:21.673   561   561 E RemoteAugmentedAutofillService: Bad service name for flags 1048704: com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiAugmentedAutofillService
+07-11 00:57:21.676   452  1218 W ServiceManager: Permission failure: android.permission.ACCESS_SURFACE_FLINGER from uid=10157 pid=7255
+07-11 00:57:21.677   452  1218 W ServiceManager: Permission failure: android.permission.ROTATE_SURFACE_FLINGER from uid=10157 pid=7255
+07-11 00:57:21.711   218   218 I hwservicemanager: getTransport: Cannot find entry android.hardware.configstore@1.0::ISurfaceFlingerConfigs/default in either framework or device VINTF manifest.
+07-11 00:57:21.712  7255  7350 W OpenGLRenderer: Failed to choose config with EGL_SWAP_BEHAVIOR_PRESERVED, retrying without...
+07-11 00:57:21.712  7255  7350 W OpenGLRenderer: Failed to initialize 101010-2 format, error = EGL_SUCCESS
+07-11 00:57:21.749   452  1218 E HWComposer: getSupportedContentTypes: getSupportedContentTypes failed for display 4619827259835644672: Unsupported (8)
+07-11 00:57:21.750   218   218 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+07-11 00:57:21.750  7255  7350 I Gralloc4: mapper 4.x is not supported
+07-11 00:57:21.752   218   218 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.allocator@4.0::IAllocator/default in either framework or device VINTF manifest.
+07-11 00:57:21.752  7255  7350 W Gralloc4: allocator 4.x is not supported
+07-11 00:57:22.120  1545  1687 W MediaProvider: isAppCloneUserPair for user 0: false
+07-11 00:57:22.133   218   218 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+07-11 00:57:22.133  9424  9427 I Gralloc4: mapper 4.x is not supported
+07-11 00:57:22.143   561  2079 W UriGrantsManagerService: No permission grants found for com.google.android.apps.photos
+07-11 00:57:22.143   561  2079 W UriGrantsManagerService: No permission grants found for com.google.android.apps.photos
+07-11 00:57:22.176   561   765 W UriGrantsManagerService: No permission grants found for com.google.android.apps.photos
+07-11 00:57:22.177   561   765 W UriGrantsManagerService: No permission grants found for com.google.android.apps.photos
+07-11 00:57:22.196   561  2079 W UriGrantsManagerService: No permission grants found for com.google.android.apps.photos
+07-11 00:57:22.196   561   765 W UriGrantsManagerService: No permission grants found for com.google.android.apps.photos
+07-11 00:57:22.274  1545  3703 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005724.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:22.281  1545  3703 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005724.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:22.304  7019  9437 I ProvidersCache: Provider returned no roots. Possibly naughty: com.google.android.apps.docs.storage
+07-11 00:57:22.328  1545  1688 I MediaProvider: Deleted 0 1 0 0 0 0 0 items on external_primary due to com.android.shell
+07-11 00:57:22.329  8260  8395 I UriTaskContentObserver: (REDACTED) Throttling content uri change event for %s
+07-11 00:57:22.509  8260  4217 I NetworkScheduler.Stats: (REDACTED) Task %s/%s started execution. cause:%s exec_start_elapsed_seconds: %s
+07-11 00:57:22.512  8260  7442 I NetworkScheduler.Stats: (REDACTED) Task %s/%s finished executing. cause:%s result: %s elapsed_millis: %s uptime_millis: %s exec_start_elapsed_seconds: %s
+07-11 00:57:22.556  8243  9467 I GmscoreIpa: Starting mediastore instant index [CONTEXT service_id=255 ]
+07-11 00:57:22.649  1545 21499 W MediaProvider: isAppCloneUserPair for user 0: false
+07-11 00:57:22.664   218   218 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+07-11 00:57:22.664  9475  9477 I Gralloc4: mapper 4.x is not supported
+07-11 00:57:22.803  1545  3703 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005724.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:22.808  1545  3703 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005724.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:22.852  7019  9486 I ProvidersCache: Provider returned no roots. Possibly naughty: com.google.android.apps.docs.storage
+07-11 00:57:22.857  1545  3292 I MediaProvider: Deleted 0 1 0 0 0 0 0 items on external_primary due to com.android.shell
+07-11 00:57:22.858  8260  8395 I UriTaskContentObserver: (REDACTED) Throttling content uri change event for %s
+07-11 00:57:23.175  1545  1687 W MediaProvider: isAppCloneUserPair for user 0: false
+07-11 00:57:23.190   218   218 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+07-11 00:57:23.190  9518  9520 I Gralloc4: mapper 4.x is not supported
+07-11 00:57:23.328  1545  3703 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005725.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:23.332  1545  3703 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005725.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:23.381  8260  8395 I UriTaskContentObserver: (REDACTED) Throttling content uri change event for %s
+07-11 00:57:23.381  1545 21500 I MediaProvider: Deleted 0 1 0 0 0 0 0 items on external_primary due to com.android.shell
+07-11 00:57:23.498  7019  9544 I ProvidersCache: Provider returned no roots. Possibly naughty: com.google.android.apps.docs.storage
+07-11 00:57:25.304  1545  3292 W MediaProvider: isAppCloneUserPair for user 0: false
+07-11 00:57:25.321   218   218 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+07-11 00:57:25.321  9627  9630 I Gralloc4: mapper 4.x is not supported
+07-11 00:57:25.467  1545  3703 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005727.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:25.476  1545  3703 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005727.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:25.519  1545  1688 I MediaProvider: Deleted 0 1 0 0 0 0 0 items on external_primary due to com.android.shell
+07-11 00:57:25.520  8260  8395 I UriTaskContentObserver: (REDACTED) Throttling content uri change event for %s
+07-11 00:57:25.756  7019  9662 I ProvidersCache: Provider returned no roots. Possibly naughty: com.google.android.apps.docs.storage
+07-11 00:57:25.850  1545 21500 W MediaProvider: isAppCloneUserPair for user 0: false
+07-11 00:57:25.866   218   218 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+07-11 00:57:25.866  9673  9675 I Gralloc4: mapper 4.x is not supported
+07-11 00:57:26.009  1545  3703 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005727.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:26.015  1545  3703 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005727.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:26.066  1545 21499 I MediaProvider: Deleted 0 1 0 0 0 0 0 items on external_primary due to com.android.shell
+07-11 00:57:26.068  8260  8395 I UriTaskContentObserver: (REDACTED) Throttling content uri change event for %s
+07-11 00:57:26.362  7019  9714 I ProvidersCache: Provider returned no roots. Possibly naughty: com.google.android.apps.docs.storage
+07-11 00:57:26.395  1545  1687 W MediaProvider: isAppCloneUserPair for user 0: false
+07-11 00:57:26.410   218   218 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+07-11 00:57:26.410  9713  9718 I Gralloc4: mapper 4.x is not supported
+07-11 00:57:26.560  1545  3703 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005728.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:26.564  1545  3703 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005728.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:26.617  8260  8395 I UriTaskContentObserver: (REDACTED) Throttling content uri change event for %s
+07-11 00:57:26.617  1545  1688 I MediaProvider: Deleted 0 1 0 0 0 0 0 items on external_primary due to com.android.shell
+07-11 00:57:26.955  7019  9773 I ProvidersCache: Provider returned no roots. Possibly naughty: com.google.android.apps.docs.storage
+07-11 00:57:28.549  1545  1688 W MediaProvider: isAppCloneUserPair for user 0: false
+07-11 00:57:28.565   218   218 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+07-11 00:57:28.566  9833  9835 I Gralloc4: mapper 4.x is not supported
+07-11 00:57:28.712  1545  3703 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005730.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:28.716  1545  3703 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005730.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:28.766  1545 21500 I MediaProvider: Deleted 0 1 0 0 0 0 0 items on external_primary due to com.android.shell
+07-11 00:57:28.768  8260  8395 I UriTaskContentObserver: (REDACTED) Throttling content uri change event for %s
+07-11 00:57:29.097  1545  3292 W MediaProvider: isAppCloneUserPair for user 0: false
+07-11 00:57:29.113   218   218 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+07-11 00:57:29.113  9873  9875 I Gralloc4: mapper 4.x is not supported
+07-11 00:57:29.145  7019  9879 I ProvidersCache: Provider returned no roots. Possibly naughty: com.google.android.apps.docs.storage
+07-11 00:57:29.278  1545  3703 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005730.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:29.285  1545  3703 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005730.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:29.356  1545  1687 I MediaProvider: Deleted 0 1 0 0 0 0 0 items on external_primary due to com.android.shell
+07-11 00:57:29.357  8260  8395 I UriTaskContentObserver: (REDACTED) Throttling content uri change event for %s
+07-11 00:57:29.641  7019  9921 I ProvidersCache: Provider returned no roots. Possibly naughty: com.google.android.apps.docs.storage
+07-11 00:57:29.661  1545 21499 W MediaProvider: isAppCloneUserPair for user 0: false
+07-11 00:57:29.679   218   218 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+07-11 00:57:29.680  9916  9923 I Gralloc4: mapper 4.x is not supported
+07-11 00:57:29.822  1545  3703 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005731.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:29.827  1545  3703 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005731.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:29.874  1545 21500 I MediaProvider: Deleted 0 1 0 0 0 0 0 items on external_primary due to com.android.shell
+07-11 00:57:29.875  8260  8395 I UriTaskContentObserver: (REDACTED) Throttling content uri change event for %s
+07-11 00:57:30.183  7019  9978 I ProvidersCache: Provider returned no roots. Possibly naughty: com.google.android.apps.docs.storage
+07-11 00:57:30.645  7612  7612 W aze.filemanage: Accessing hidden method Landroid/widget/PopupWindow;->setClipToScreenEnabled(Z)V (unsupported, reflection, allowed)
+07-11 00:57:30.655  7612  7612 W aze.filemanage: Accessing hidden field Landroid/widget/AbsListView;->mIsChildViewEnabled:Z (unsupported, reflection, allowed)
+07-11 00:57:31.810  1545  1688 W MediaProvider: isAppCloneUserPair for user 0: false
+07-11 00:57:31.827   218   218 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+07-11 00:57:31.827 10048 10050 I Gralloc4: mapper 4.x is not supported
+07-11 00:57:31.972  1545  3703 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005733.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:31.976  1545  3703 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005733.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:32.023  1545  1687 I MediaProvider: Deleted 0 1 0 0 0 0 0 items on external_primary due to com.android.shell
+07-11 00:57:32.024  8260  8395 I UriTaskContentObserver: (REDACTED) Throttling content uri change event for %s
+07-11 00:57:32.329  1545 21500 W MediaProvider: isAppCloneUserPair for user 0: false
+07-11 00:57:32.349   218   218 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+07-11 00:57:32.349 10089 10091 I Gralloc4: mapper 4.x is not supported
+07-11 00:57:32.373  7019 10095 I ProvidersCache: Provider returned no roots. Possibly naughty: com.google.android.apps.docs.storage
+07-11 00:57:32.509  1545  3703 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005734.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:32.521  1545  3703 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005734.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:32.579  1545  3292 I MediaProvider: Deleted 0 1 0 0 0 0 0 items on external_primary due to com.android.shell
+07-11 00:57:32.580  8260  8395 I UriTaskContentObserver: (REDACTED) Throttling content uri change event for %s
+07-11 00:57:32.882  1545  1687 W MediaProvider: isAppCloneUserPair for user 0: false
+07-11 00:57:32.898   218   218 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+07-11 00:57:32.899 10133 10135 I Gralloc4: mapper 4.x is not supported
+07-11 00:57:32.926  7019 10139 I ProvidersCache: Provider returned no roots. Possibly naughty: com.google.android.apps.docs.storage
+07-11 00:57:33.043  1545  3703 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005734.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:33.047  1545  3703 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005734.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:33.096  1545 21499 I MediaProvider: Deleted 0 1 0 0 0 0 0 items on external_primary due to com.android.shell
+07-11 00:57:33.097  8260  8395 I UriTaskContentObserver: (REDACTED) Throttling content uri change event for %s
+07-11 00:57:33.429  7019 10187 I ProvidersCache: Provider returned no roots. Possibly naughty: com.google.android.apps.docs.storage
+07-11 00:57:34.271   561  2605 W InputManager-JNI: Input channel object '4530a7a PopupWindow:f416c3c (client)' was disposed without first being removed with the input manager!
+07-11 00:57:35.098  1545  3292 W MediaProvider: isAppCloneUserPair for user 0: false
+07-11 00:57:35.114   218   218 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+07-11 00:57:35.114 10271 10273 I Gralloc4: mapper 4.x is not supported
+07-11 00:57:35.262  1545  3703 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005736.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:35.266  1545  3703 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005736.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:35.327  8260  8395 I UriTaskContentObserver: (REDACTED) Throttling content uri change event for %s
+07-11 00:57:35.327  1545  1688 I MediaProvider: Deleted 0 1 0 0 0 0 0 items on external_primary due to com.android.shell
+07-11 00:57:35.541  7019 10307 I ProvidersCache: Provider returned no roots. Possibly naughty: com.google.android.apps.docs.storage
+07-11 00:57:35.644  1545 21499 W MediaProvider: isAppCloneUserPair for user 0: false
+07-11 00:57:35.657   218   218 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+07-11 00:57:35.657 10316 10318 I Gralloc4: mapper 4.x is not supported
+07-11 00:57:35.826  1545  3703 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005737.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:35.831  1545  3703 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005737.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:35.883  1545 21500 I MediaProvider: Deleted 0 1 0 0 0 0 0 items on external_primary due to com.android.shell
+07-11 00:57:35.883  8260  8395 I UriTaskContentObserver: (REDACTED) Throttling content uri change event for %s
+07-11 00:57:36.123  7019 10353 I ProvidersCache: Provider returned no roots. Possibly naughty: com.google.android.apps.docs.storage
+07-11 00:57:36.207  1545  1688 W MediaProvider: isAppCloneUserPair for user 0: false
+07-11 00:57:36.223   218   218 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+07-11 00:57:36.224 10359 10361 I Gralloc4: mapper 4.x is not supported
+07-11 00:57:36.394  1545  3703 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005738.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:36.400  1545  3703 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005738.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:36.453  1545  1687 I MediaProvider: Deleted 0 1 0 0 0 0 0 items on external_primary due to com.android.shell
+07-11 00:57:36.453  8260  8395 I UriTaskContentObserver: (REDACTED) Throttling content uri change event for %s
+07-11 00:57:36.671  7019 10399 I ProvidersCache: Provider returned no roots. Possibly naughty: com.google.android.apps.docs.storage
+07-11 00:57:37.622   561  2088 W InputManager-JNI: Input channel object 'b9252bf PopupWindow:2277d8a (client)' was disposed without first being removed with the input manager!
+07-11 00:57:38.430  1545 21500 W MediaProvider: isAppCloneUserPair for user 0: false
+07-11 00:57:38.446   218   218 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+07-11 00:57:38.446 10474 10476 I Gralloc4: mapper 4.x is not supported
+07-11 00:57:38.600  1545  3703 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005740.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:38.604  1545  3703 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005740.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:38.654  1545  3292 I MediaProvider: Deleted 0 1 0 0 0 0 0 items on external_primary due to com.android.shell
+07-11 00:57:38.656  8260  8395 I UriTaskContentObserver: (REDACTED) Throttling content uri change event for %s
+07-11 00:57:38.788  7019 10502 I ProvidersCache: Provider returned no roots. Possibly naughty: com.google.android.apps.docs.storage
+07-11 00:57:38.964  1545  1687 W MediaProvider: isAppCloneUserPair for user 0: false
+07-11 00:57:38.986   218   218 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+07-11 00:57:38.986 10519 10521 I Gralloc4: mapper 4.x is not supported
+07-11 00:57:39.181  1545  3703 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005740.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:39.190  1545  3703 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005740.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:39.246  1545 21499 I MediaProvider: Deleted 0 1 0 0 0 0 0 items on external_primary due to com.android.shell
+07-11 00:57:39.247  8260  8395 I UriTaskContentObserver: (REDACTED) Throttling content uri change event for %s
+07-11 00:57:39.372  7019 10545 I ProvidersCache: Provider returned no roots. Possibly naughty: com.google.android.apps.docs.storage
+07-11 00:57:39.564  1545  1688 W MediaProvider: isAppCloneUserPair for user 0: false
+07-11 00:57:39.585   218   218 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+07-11 00:57:39.585 10562 10566 I Gralloc4: mapper 4.x is not supported
+07-11 00:57:39.727  1545  3703 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005741.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:39.731  1545  3703 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-11_005741.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-11 00:57:39.784  1545  3292 I MediaProvider: Deleted 0 1 0 0 0 0 0 items on external_primary due to com.android.shell
+07-11 00:57:39.785  8260  8395 I UriTaskContentObserver: (REDACTED) Throttling content uri change event for %s
+07-11 00:57:39.918  7019 10592 I ProvidersCache: Provider returned no roots. Possibly naughty: com.google.android.apps.docs.storage

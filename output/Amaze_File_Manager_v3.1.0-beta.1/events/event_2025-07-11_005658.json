@@ -1,0 +1,11 @@
+{
+  "tag": "2025-07-11_005658",
+  "event": {
+    "event_type": "intent",
+    "log_lines": null,
+    "intent": "am start com.amaze.filemanager/com.amaze.filemanager.activities.MainActivity"
+  },
+  "start_state": "ef56e107bec7732135b94e1dc2bcfff1",
+  "stop_state": "c187ffcacc5f30a8b9a3f1d9030546e9",
+  "event_str": "IntentEvent(intent='am start com.amaze.filemanager/com.amaze.filemanager.activities.MainActivity')"
+}
