@@ -10,7 +10,7 @@ def detect_crashes(output_dir, similarity_threshold=5):
     Detect app crashes by checking if homescreen appears again after initial state.
     
     Args:
-        output_dir: Path to the output directory (e.g., "output/apkName")
+        output_dir: Path to the output directory (e.g., "output/apk_name")
         similarity_threshold: Maximum hash difference to consider states similar (fixed at 5)
         
     Returns:
