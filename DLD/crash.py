@@ -16,7 +16,7 @@ def detect_crashes(states_path, events_path, similarity_threshold=5):
         List of event indices where crashes were detected
     """
     # Get all state and event files
-    state_files = sorted([f for f in os.listdir(states_path) if f.endswith('.png')])
+    state_files = sorted([f for f in os.listdir(states_path) if f.endswith('.png') or f.endswith('.jpg')])
     event_files = sorted([f for f in os.listdir(events_path) if f.endswith('.json')])
     
     if not state_files or not event_files:
