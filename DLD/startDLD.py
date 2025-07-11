@@ -1,9 +1,6 @@
 import subprocess
 import threading
 import time
-import random
-import signal
-import sys
 import argparse
 import os
 from typing import Optional
@@ -18,12 +15,6 @@ class ProcessManager:
         self.droidbot_process: Optional[subprocess.Popen] = None
         self.rotation_process: Optional[subprocess.Popen] = None
         self.should_stop = False
-        signal.signal(signal.SIGINT, self._handle_signal)
-        signal.signal(signal.SIGTERM, self._handle_signal)
-
-    def _handle_signal(self, signum, frame):
-        self.should_stop = True
-        self.cleanup()
 
     def run_droidbot(self):
         """Run DroidBot in a subprocess"""
@@ -39,25 +30,10 @@ class ProcessManager:
         self.droidbot_process.wait()
 
     def run_rotation(self):
-        """Run continuous rotation in a subprocess"""
-        while not self.should_stop:
-            try:
-                orientation = random.choice(["portrait", "landscape"])
-                print(f"Rotating to {orientation}...")
-                subprocess.run(
-                    ["adb", "emu", "rotate", orientation],
-                    check=True,
-                    timeout=5
-                )
-                sleep_time = random.uniform(3, 8)
-                end_time = time.time() + sleep_time
-                while time.time() < end_time and not self.should_stop:
-                    time.sleep(0.1)
-            except (subprocess.TimeoutExpired, subprocess.CalledProcessError) as e:
-                print(f"Rotation error: {e}")
-                time.sleep(2)
-            except KeyboardInterrupt:
-                break
+        """Run rotation using rotate.py script"""
+        cmd = ["python", "rotate.py"]
+        self.rotation_process = subprocess.Popen(cmd)
+        self.rotation_process.wait()
 
     def cleanup(self):
         """Clean up processes"""
@@ -69,8 +45,15 @@ class ProcessManager:
             except subprocess.TimeoutExpired:
                 self.droidbot_process.kill()
         
+        if self.rotation_process and self.rotation_process.poll() is None:
+            self.rotation_process.terminate()
+            try:
+                self.rotation_process.wait(timeout=5)
+            except subprocess.TimeoutExpired:
+                self.rotation_process.kill()
+        
+        # Reset to portrait if rotation was enabled
         if self.rotate:
-            # Reset to portrait if rotation was enabled
             subprocess.run(["adb", "emu", "rotate", "portrait"], timeout=5)
 
     def run(self):
@@ -88,16 +71,23 @@ class ProcessManager:
         droidbot_thread.daemon = True
         droidbot_thread.start()
 
-        # Run rotation in main thread if enabled
+        # Start rotation in a separate process if enabled
+        rotation_thread = None
+        if self.rotate:
+            rotation_thread = threading.Thread(target=self.run_rotation)
+            rotation_thread.daemon = True
+            rotation_thread.start()
+
         try:
-            if self.rotate:
-                self.run_rotation()
-            else:
-                while droidbot_thread.is_alive() and not self.should_stop:
-                    time.sleep(0.5)
+            while droidbot_thread.is_alive() and not self.should_stop:
+                time.sleep(0.5)
+        except KeyboardInterrupt:
+            self.should_stop = True
         finally:
             self.cleanup()
             droidbot_thread.join(timeout=5)
+            if rotation_thread:
+                rotation_thread.join(timeout=5)
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Run DroidBot with optional screen rotations.')
