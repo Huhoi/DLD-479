@@ -22,7 +22,7 @@ class ProcessManager:
         """Run DroidBot in a subprocess"""
         cmd = [
             "droidbot",
-            "-a", "droidbot/APK/Amaze_File_Manager_v3.1.0-beta.1.apk",
+            "-a", "DLD/APK/Amaze_File_Manager_v3.1.0-beta.1.apk",
             "-o", "DLD/output"
         ]
         self.droidbot_process = subprocess.Popen(cmd)

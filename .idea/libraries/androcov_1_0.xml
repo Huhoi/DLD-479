@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="androcov-1.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/droidbot/droidbot/resources/androcov-1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

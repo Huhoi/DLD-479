@@ -1,0 +1,719 @@
+--------- beginning of system
+07-10 21:50:06.756   561   561 W Looper  : Slow dispatch took 248ms main h=android.os.Handler c=android.database.ContentObserver$$ExternalSyntheticLambda0@40cf5d8 m=0
+07-10 21:50:06.759   561   561 W Looper  : Slow delivery took 248ms main h=com.android.providers.settings.SettingsProvider$SettingsRegistry$MyHandler c=null m=1
+07-10 21:50:06.760   561   561 W Looper  : Drained
+--------- beginning of main
+07-10 21:50:06.774  9248  9248 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3420 
+07-10 21:50:06.845   561  2603 W InputManager-JNI: Input channel object '621cfa4 InputMethod (client)' was disposed without first being removed with the input manager!
+07-10 21:50:06.884  9248  9248 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():109 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+07-10 21:50:06.895  9248  9248 I AbstractOpenableExtension: AbstractOpenableExtension.maybeDestroyExistingKeyboardGroupManager():514 Destroy existing keyboard group manager in fci
+07-10 21:50:06.900  9248  9248 I AbstractOpenableExtension: AbstractOpenableExtension.maybeDestroyExistingKeyboardGroupManager():514 Destroy existing keyboard group manager in eyj
+07-10 21:50:06.928  9248  9248 I AbstractOpenableExtension: AbstractOpenableExtension.maybeDestroyExistingKeyboardGroupManager():514 Destroy existing keyboard group manager in fau
+07-10 21:50:06.929  9248  9248 I KeyboardViewController: KeyboardViewController.clearSubViewControllerInternal():411 Clears keyboard sub view controller for keyboardType: null, viewType: HEADER, viewId: 2131428269(#0x7f0b03ad),which has not been set.
+07-10 21:50:06.934  9248 28342 I JapaneseMozcExtension: JapaneseMozcExtension.onDestroyServiceInternal():81 onDestroyServiceInternal()
+07-10 21:50:06.935  9248  9248 I AbstractOpenableExtension: AbstractOpenableExtension$3.onSuccess():527 KeyboardGroupManager destroyed in fci.
+07-10 21:50:06.937  9248  9248 I AbstractOpenableExtension: AbstractOpenableExtension$3.onSuccess():527 KeyboardGroupManager destroyed in eyj.
+07-10 21:50:06.941  9248  9248 I AbstractOpenableExtension: AbstractOpenableExtension$3.onSuccess():527 KeyboardGroupManager destroyed in fau.
+07-10 21:50:07.082   561   602 E RemoteAugmentedAutofillService: Bad service name for flags 1048704: com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiAugmentedAutofillService
+07-10 21:50:07.155  9990  9990 I abb     : StartCommandInProcess(73657474696e67730067657400676c6f settings.get.glo [truncated])
+07-10 21:50:07.153   561   561 W Binder:561_1F: type=1400 audit(0.0:267): avc: denied { getopt } for scontext=u:r:system_server:s0 tcontext=u:r:shell:s0 tclass=unix_stream_socket permissive=0
+07-10 21:50:07.164  9990  9990 I abb     : StartCommandInProcess(7061636b61676500696e7374616c6c00 package.install. [truncated])
+07-10 21:50:07.153   561   561 W Binder:561_1F: type=1400 audit(0.0:268): avc: denied { getopt } for scontext=u:r:system_server:s0 tcontext=u:r:shell:s0 tclass=unix_stream_socket permissive=0
+07-10 21:50:07.153   561   561 W Binder:561_1F: type=1400 audit(0.0:269): avc: denied { getopt } for scontext=u:r:system_server:s0 tcontext=u:r:shell:s0 tclass=unix_stream_socket permissive=0
+07-10 21:50:07.217   561   561 W Binder:561_1F: type=1400 audit(0.0:270): avc: denied { getopt } for scontext=u:r:system_server:s0 tcontext=u:r:shell:s0 tclass=unix_stream_socket permissive=0
+07-10 21:50:07.256   561   633 I PackageManager: Integrity check passed for file:///data/app/vmdl662117994.tmp
+07-10 21:50:07.319  1545 14097 I MediaProvider: Invalidating LocalCallingIdentity cache for package com.amaze.filemanager. Reason: op android:read_external_storage
+07-10 21:50:07.323  1545 14097 I MediaProvider: Invalidating LocalCallingIdentity cache for package com.amaze.filemanager. Reason: op android:read_external_storage
+07-10 21:50:07.323  1545 14097 I MediaProvider: Invalidating LocalCallingIdentity cache for package com.amaze.filemanager. Reason: op android:read_external_storage
+07-10 21:50:07.325  1545 14097 I MediaProvider: Invalidating LocalCallingIdentity cache for package com.amaze.filemanager. Reason: op android:read_external_storage
+07-10 21:50:07.343   493   575 E installd: Couldn't opendir /data/app/vmdl662117994.tmp: No such file or directory
+07-10 21:50:07.343   493   575 E installd: Failed to delete /data/app/vmdl662117994.tmp: No such file or directory
+07-10 21:50:07.345   561   561 W Binder:561_1F: type=1400 audit(0.0:271): avc: denied { getopt } for scontext=u:r:system_server:s0 tcontext=u:r:shell:s0 tclass=unix_stream_socket permissive=0
+07-10 21:50:07.345   561   561 W Binder:561_1F: type=1400 audit(0.0:272): avc: denied { getopt } for scontext=u:r:system_server:s0 tcontext=u:r:shell:s0 tclass=unix_stream_socket permissive=0
+07-10 21:50:07.361   561   667 I RoleService: Granting default roles...
+07-10 21:50:07.362  1545  1545 I MediaProvider: Invalidating LocalCallingIdentity cache for package com.amaze.filemanager. Reason: package android.intent.action.PACKAGE_ADDED
+07-10 21:50:07.345   561   561 W Binder:561_1F: type=1400 audit(0.0:273): avc: denied { getopt } for scontext=u:r:system_server:s0 tcontext=u:r:shell:s0 tclass=unix_stream_socket permissive=0
+07-10 21:50:07.377  1554  1554 I GsaVoiceInteractionSrv: O received Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.amaze.filemanager flg=0x4000010 (has extras) }
+07-10 21:50:07.385  8443  8443 I Finsky  : [2] aebl - Received: android.intent.action.PACKAGE_ADDED, [jqhdxhQhJWn_RE1wcyaAYCyD6PV7TEyGw7JdWxZ9pTk]
+07-10 21:50:07.388   561  4920 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.amaze.filemanager flg=0x4000010 (has extras) } to com.google.android.packageinstaller/com.android.packageinstaller.PackageInstalledReceiver
+07-10 21:50:07.390   561   673 I InputReader: Reconfiguring input devices, changes=KEYBOARD_LAYOUTS | 
+07-10 21:50:07.395   561   612 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.amaze.filemanager flg=0x4000010 (has extras) } to com.android.vending/com.google.android.finsky.packagemonitor.impl.PackageMonitorReceiverImpl$RegisteredReceiver
+07-10 21:50:07.403   561   561 I Telecom : DefaultDialerCache: Refreshing default dialer for user 0: now com.android.dialer: DDC.oR@ASQ
+07-10 21:50:07.410 27209 27229 W System  : A resource failed to call close. 
+07-10 21:50:07.411 27209 27229 W System  : A resource failed to call close. 
+07-10 21:50:07.411 27209 27229 W System  : A resource failed to call close. 
+07-10 21:50:07.411 27209 27229 W System  : A resource failed to call close. 
+07-10 21:50:07.454  8443  8523 I Finsky  : [72] AIM: AppInfoManager-Perf > OnDeviceAppInfo > cacheHitCount=0, cacheMissCount=1. Missed  in cache (limit 10) : [com.amaze.filemanager]
+07-10 21:50:07.456  8443  8523 I Finsky  : [72] AIM: Got app ownership map. App counts: . Unique apps: 0
+07-10 21:50:07.456  8443  8523 E Finsky  : [72] [Counters] attempted to use a non-positive increment for: 4752
+07-10 21:50:07.458   561   612 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.amaze.filemanager flg=0x4000010 (has extras) } to com.android.vending/com.google.android.finsky.packagemonitor.backgroundimpl.BackgroundPackageMonitorReceiverImpl$RegisteredReceiver
+07-10 21:50:07.459  8443  8523 E Finsky  : [72] [Counters] attempted to use a non-positive increment for: 4753
+07-10 21:50:07.465 27174 27286 W DynamiteModule: Local module descriptor class for com.google.android.gms.googlecertificates not found.
+07-10 21:50:07.468  8443  8443 I Finsky  : [2] SCH: Received scheduling request: Id: 12-1, Constraints: [{ L: 15000, D: 86400000, C: CHARGING_NONE, I: IDLE_NONE, N: NET_ANY, B: BATTERY_ANY }]
+07-10 21:50:07.469  8443  8443 I Finsky  : [2] DTU: Received onPackageAdded, replacing: false
+07-10 21:50:07.477  8443  8443 I Finsky  : [2] Do not start WearSupportService due to Wear service optimization
+07-10 21:50:07.497  8443  8443 I Finsky  : [2] Clearing split related stale data.
+07-10 21:50:07.512   561   612 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.amaze.filemanager flg=0x4000010 (has extras) } to com.google.android.gms/.chimera.GmsIntentOperationService$PersistentTrustedReceiver
+07-10 21:50:07.512   561   612 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.amaze.filemanager flg=0x4000010 (has extras) } to com.google.android.gms/.games.chimera.GamesSystemBroadcastReceiverProxy
+07-10 21:50:07.516 27174 27286 W .apps.wellbein: ClassLoaderContext classpath size mismatch. expected=14, found=0 (DLC[];PCL[base.apk*4200896048:base.apk!classes2.dex*2648861978:base.apk!classes3.dex*867742970:base.apk!classes4.dex*3647326299:base.apk!classes5.dex*1474987778:base.apk!classes6.dex*2774851643:base.apk!classes7.dex*1405854162:base.apk!classes8.dex*818860920:base.apk!classes9.dex*1720315296:base.apk!classes10.dex*3535340176:base.apk!classes11.dex*1720366269:base.apk!classes12.dex*1484636670:base.apk!classes13.dex*1342963717:base.apk!classes14.dex*4198893896]{PCL[/system/framework/org.apache.http.legacy.jar*2058259660]#PCL[/system/framework/com.android.media.remotedisplay.jar*3472798122]#PCL[/system/framework/com.android.location.provider.jar*3633238673]#PCL[/system_ext/framework/androidx.window.sidecar.jar*3539530913]#PCL[/system/framework/org.apache.http.legacy.jar*2058259660]} | DLC[];PCL[])
+07-10 21:50:07.517   561   612 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.amaze.filemanager flg=0x4000010 (has extras) } to com.google.android.gms/.gass.chimera.PackageChangeBroadcastReceiver
+07-10 21:50:07.517   561   612 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.amaze.filemanager flg=0x4000010 (has extras) } to com.google.android.googlequicksearchbox/com.google.android.apps.gsa.googlequicksearchbox.GelStubAppWatcher
+07-10 21:50:07.529 27174 27286 I DynamiteModule: Considering local module com.google.android.gms.googlecertificates:0 and remote module com.google.android.gms.googlecertificates:7
+07-10 21:50:07.529 27174 27286 I DynamiteModule: Selected remote version of com.google.android.gms.googlecertificates, version >= 7
+07-10 21:50:07.541  8443  8515 I Finsky  : [67] AIM: AppInfoManager-Perf > ItemModel > CacheSize=0, cacheHitCount=0, cacheMissCount=1, total appsWithNoServerDataCount=0. Missed  in cache (limit 10) : [com.amaze.filemanager]
+07-10 21:50:07.574  8443  8515 I Finsky  : [67] AIM: AppInfoManager-Perf > ItemModel > ItemStore Called 1 apps cacheOptions = USE_CACHE
+07-10 21:50:07.576  8443  8515 I Finsky  : [67] AIM: ItemModel fetch - unauth(1), auth()
+07-10 21:50:07.587  8443  8495 I Finsky  : [48] SCH: Received scheduling request: Id: 37-14, Constraints: [{ L: 0, D: 0, C: CHARGING_NONE, I: IDLE_NONE, N: NET_NONE, B: BATTERY_ANY }]
+07-10 21:50:07.591   856 28381 W Role    : Cannot get ApplicationInfo for default holder: com.google.android.contacts
+07-10 21:50:07.606   856 28381 W Role    : Cannot get ApplicationInfo for default holder: com.google.android.as
+07-10 21:50:07.618  8443  8523 E Finsky  : [72] [Counters] attempted to use a non-positive increment for: 4751
+07-10 21:50:07.644   561   611 W PackageManager: Failed registering loading progress callback. Package is fully loaded.
+07-10 21:50:07.648   561   612 I ActivityManager: com.google.android.packageinstaller is exempt from freezer
+07-10 21:50:07.658   856 14613 I PermissionControllerServiceImpl: Updating user sensitive for uid 10154
+07-10 21:50:07.682 27174 27286 W System  : ClassLoader referenced unknown path: 
+07-10 21:50:07.690 27174 27286 W .apps.wellbein: ClassLoaderContext classpath size mismatch. expected=14, found=2 (DLC[];PCL[base.apk*4200896048:base.apk!classes2.dex*2648861978:base.apk!classes3.dex*867742970:base.apk!classes4.dex*3647326299:base.apk!classes5.dex*1474987778:base.apk!classes6.dex*2774851643:base.apk!classes7.dex*1405854162:base.apk!classes8.dex*818860920:base.apk!classes9.dex*1720315296:base.apk!classes10.dex*3535340176:base.apk!classes11.dex*1720366269:base.apk!classes12.dex*1484636670:base.apk!classes13.dex*1342963717:base.apk!classes14.dex*4198893896]{PCL[/system/framework/org.apache.http.legacy.jar*2058259660]#PCL[/system/framework/com.android.media.remotedisplay.jar*3472798122]#PCL[/system/framework/com.android.location.provider.jar*3633238673]#PCL[/system_ext/framework/androidx.window.sidecar.jar*3539530913]#PCL[/system/framework/org.apache.http.legacy.jar*2058259660]} | DLC[];PCL[/product/priv-app/WellbeingPrebuilt/WellbeingPrebuilt.apk*3473300342:/product/priv-app/WellbeingPrebuilt/WellbeingPrebuilt.apk!classes2.dex*763334795]{PCL[/system/framework/org.apache.http.legacy.jar*2058259660]})
+07-10 21:50:07.717  8443  8515 I Finsky  : [67] SCH: Scheduling phonesky job Id: 37-14, CT: 1752209407587, Constraints: [{ L: 0, D: 0, C: CHARGING_NONE, I: IDLE_NONE, N: NET_NONE, B: BATTERY_ANY }, { L: 0, D: 0, C: CHARGING_NONE, I: IDLE_NONE, N: NET_NONE, B: BATTERY_ANY }]
+07-10 21:50:07.730   561   613 W ActivityManager: Slow operation: 82ms so far, now at startProcess: returned from zygote!
+07-10 21:50:07.743  8443  8509 I Finsky  : [61] SCH: Scheduling 1 system job(s)
+07-10 21:50:07.743  8443  8509 I Finsky  : [61] SCH: Scheduling expedited system job 9362
+07-10 21:50:07.743 28404 28404 W ackageinstalle: Unexpected CPU variant for X86 using defaults: x86_64
+07-10 21:50:07.748   561   570 I system_server: Background concurrent copying GC freed 154855(10MB) AllocSpace objects, 69(2500KB) LOS objects, 42% free, 32MB/56MB, paused 9.238ms,225us total 406.030ms
+07-10 21:50:07.753 28404 28404 E ackageinstalle: Not starting debugger since process cannot load the jdwp agent.
+07-10 21:50:07.774   561   613 W ActivityManager: Slow operation: 126ms so far, now at startProcess: done updating battery stats
+07-10 21:50:07.774   561   613 W ActivityManager: Slow operation: 126ms so far, now at startProcess: building log message
+07-10 21:50:07.774   561   613 I ActivityManager: Start proc 28404:com.google.android.packageinstaller/u0a66 for broadcast {com.google.android.packageinstaller/com.android.packageinstaller.PackageInstalledReceiver}
+07-10 21:50:07.774   561   613 W ActivityManager: Slow operation: 126ms so far, now at startProcess: starting to update pids map
+07-10 21:50:07.774   561   613 W ActivityManager: Slow operation: 126ms so far, now at startProcess: done updating pids map
+07-10 21:50:07.782   561   630 E VerityUtils: Failed to measure fs-verity, errno 1: /data/app/~~vGp4zq_xwGa8Nxq4CvbsVA==/com.amaze.filemanager-3f9Pgx9Hu6Dt_W2tvwRztQ==/base.apk
+07-10 21:50:07.800  8243 28402 I Auth    : (REDACTED) [SupervisedAccountIntentOperationV2] onHandleIntent: %s
+07-10 21:50:07.804  8243 28423 I Blockstore: (REDACTED) [DataStoreImpl] Clearing Blockstore Data for package %s
+07-10 21:50:07.805  8243 28423 I Blockstore: [DataStoreImpl] Keyless data not found or its IsLastInstallationData = false. [CONTEXT service_id=258 ]
+07-10 21:50:07.814  8243 28423 I Dck     : (REDACTED) disableDckSupport: %s
+07-10 21:50:07.815  8243 28423 W Dck     : [WirelessCapabilitiesFeatures] wccSysProp: 0 [CONTEXT service_id=289 ]
+07-10 21:50:07.815  8243 28423 I Dck     : [WirelessCapabilitiesFeatures] wccMendel: 3 [CONTEXT service_id=289 ]
+07-10 21:50:07.815  8243 28423 I Dck     : [WirelessCapabilitiesFeatures] deviceWccOverride: false [CONTEXT service_id=289 ]
+07-10 21:50:07.815  8243 28423 I Dck     : [WirelessCapabilitiesFeatures] replaceSupportedWccWithWccOverride: true [CONTEXT service_id=289 ]
+07-10 21:50:07.815  8243 28423 I Dck     : [WirelessCapabilitiesFeatures] wccOverride: not set [CONTEXT service_id=289 ]
+07-10 21:50:07.815  8243 28423 I Dck     : (REDACTED) [WirelessCapabilitiesFeatures] wcc: %s
+07-10 21:50:07.815  8243 28423 I Dck     : Dck module condition - hasWccSupport: false [CONTEXT service_id=289 ]
+07-10 21:50:07.815  8243 28423 I Dck     : Dck module condition - downloadAllowed: false [CONTEXT service_id=289 ]
+07-10 21:50:07.815  8243 28423 W Dck     : Dck module not eligible for asynchronous downloading [CONTEXT service_id=289 ]
+07-10 21:50:07.823  8260 28405 W GCM     : Unexpected forwarded intent: Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.amaze.filemanager flg=0x4000010 pkg=com.google.android.gms cmp=com.google.android.gms/.chimera.PersistentIntentOperationService (has extras) }
+07-10 21:50:07.827  8260 28406 I FontLog : (REDACTED) Package %s has no metadata
+07-10 21:50:07.828  8260 28405 W NetworkScheduler: Unexpected forwarded intent: Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.amaze.filemanager flg=0x4000010 pkg=com.google.android.gms cmp=com.google.android.gms/.chimera.PersistentIntentOperationService (has extras) }
+07-10 21:50:07.829  8243 28423 I NearbyDiscovery: (REDACTED) processGrantSlicePermission: %s
+07-10 21:50:07.843  1101  1109 W s.nexuslaunche: Reducing the number of considered missed Gc histogram windows from 106 to 100
+07-10 21:50:07.845   561   572 W System  : A resource failed to call close. 
+07-10 21:50:07.849  8443  8443 I Finsky  : [2] SCH: job service start with id 9362.
+07-10 21:50:07.850   856 28381 W Role    : Cannot get ApplicationInfo for default holder: com.google.android.as
+07-10 21:50:07.857   856 28381 W Role    : Cannot get ApplicationInfo for default holder: com.google.android.as
+07-10 21:50:07.858  8443  8521 I Finsky  : [70] SCH: Scheduling phonesky job Id: 12-1, CT: 1752209407468, Constraints: [{ L: 15000, D: 86400000, C: CHARGING_NONE, I: IDLE_NONE, N: NET_ANY, B: BATTERY_ANY }]
+07-10 21:50:07.873  8443 28383 I Finsky  : [236] SCH: Satisfied jobs for 9362 are: 37-14
+07-10 21:50:07.877  8443 28430 I Finsky  : [246] SCH: Job 37-14 starting
+07-10 21:50:07.877  8443  8515 I Finsky  : [67] SCH: Scheduling 1 system job(s)
+07-10 21:50:07.877  8443  8443 I Finsky  : [2] Received an install/uninstall event for package com.amaze.filemanager
+07-10 21:50:07.878  8443  8515 I Finsky  : [67] SCH: Scheduling system job Id: 9363, L: 14591, D: 40474762, C: false, I: false, N: 1
+07-10 21:50:07.878  8443  8443 I Finsky  : [2] SCH: jobFinished: 37-14. TimeElapsed: 1ms.
+07-10 21:50:07.878  8443  8451 I android.vendin: Background young concurrent copying GC freed 53020(2472KB) AllocSpace objects, 6(344KB) LOS objects, 11% free, 17MB/19MB, paused 13.285ms,198us total 379.897ms
+07-10 21:50:07.878  8443  8451 W android.vendin: Reducing the number of considered missed Gc histogram windows from 103 to 100
+07-10 21:50:07.884  8443  8523 I Finsky  : [72] Not an active Cubes user. Ignoring package install/uninstall event.
+07-10 21:50:07.899  8443  8503 I Finsky  : [55] [ContentSync] finished, scheduled=true
+07-10 21:50:07.902  8243  9392 I Icing   : IndexChimeraService.getServiceInterface callingPackage=com.google.android.gms componentName=AppsCorpus serviceId=36
+07-10 21:50:07.910  8443  8523 I Finsky  : [72] SCH: Scheduling phonesky job Id: 26-1414141414, CT: 1752200163230, Constraints: [{ L: 43199999, D: 44099999, C: CHARGING_NONE, I: IDLE_NONE, N: NET_NONE, B: BATTERY_ANY }]
+07-10 21:50:07.923  8443  8521 I Finsky  : [70] SCH: Scheduling 1 system job(s)
+07-10 21:50:07.923  8443  8521 I Finsky  : [70] SCH: Scheduling system job Id: 9367, L: 33955306, D: 34855306, C: false, I: false, N: 0
+07-10 21:50:07.935  8443 28430 I Finsky  : [246] SCH: job service finished with id 9362.
+07-10 21:50:07.961  8243  9392 I Icing   : IndexChimeraService.getServiceInterface callingPackage=com.google.android.gms componentName=null serviceId=30
+07-10 21:50:07.991   856 28381 W Role    : Cannot get ApplicationInfo for default holder: com.google.android.as
+07-10 21:50:08.072   856 28381 W Role    : Cannot get ApplicationInfo for default holder: com.google.android.as
+07-10 21:50:08.082   561  4920 I ActivityManager: Background started FGS: Allowed [callingPackage: com.google.android.apps.wellbeing; callingUid: 10099; uidState: BTOP; intent: Intent { cmp=com.google.android.apps.wellbeing/com.google.apps.tiktok.concurrent.InternalForegroundService (has extras) }; code:BACKGROUND_ACTIVITY_PERMISSION; tempAllowListReason:<null>; targetSdkVersion:30; callerTargetSdkVersion:30; startForegroundCount:0; bindFromPackage:null]
+07-10 21:50:08.084   856 28381 W Role    : Cannot get ApplicationInfo for default holder: com.google.android.as
+07-10 21:50:08.102   561   561 I NotificationService: Cannot find enqueued record for key: 0|com.google.android.apps.wellbeing|174344743|null|10099
+07-10 21:50:08.213  8243  9340 I Icing   : Usage reports ok 4, Failed Usage reports 0, indexed 0, rejected 0
+07-10 21:50:08.222  8243  9340 I Icing   : Usage reports ok 0, Failed Usage reports 0, indexed 0, rejected 0
+07-10 21:50:08.223  8243  9340 I Icing   : Indexing com.google.android.gms-apps from com.google.android.gms
+07-10 21:50:08.230  8243  9340 I Icing   : Indexing done com.google.android.gms-apps
+07-10 21:50:09.955  1545  3292 W MediaProvider: isAppCloneUserPair for user 0: false
+07-10 21:50:10.061  8260 28218 I NetworkScheduler.Stats: (REDACTED) Task %s/%s started execution. cause:%s exec_start_elapsed_seconds: %s
+07-10 21:50:10.065  8260 28031 I NetworkScheduler.Stats: (REDACTED) Task %s/%s finished executing. cause:%s result: %s elapsed_millis: %s uptime_millis: %s exec_start_elapsed_seconds: %s
+07-10 21:50:10.155   218   218 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+07-10 21:50:10.155 28455 28459 I Gralloc4: mapper 4.x is not supported
+07-10 21:50:10.528  1545  3703 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-10_215011.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-10 21:50:10.547  1545  3703 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-10_215011.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-10 21:50:10.616  1545  3292 I MediaProvider: Deleted 0 1 0 0 0 0 0 items on external_primary due to com.android.shell
+07-10 21:50:10.617  8260  8395 I UriTaskContentObserver: (REDACTED) Throttling content uri change event for %s
+07-10 21:50:10.782   561  4920 I ActivityManager: Force stopping com.amaze.filemanager appid=10154 user=0: from pid 28485
+07-10 21:50:10.827   561   602 I ActivityTaskManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10000100 cmp=com.google.android.apps.nexuslauncher/.NexusLauncherActivity (has extras)} from uid 0
+07-10 21:50:10.849   561   765 W ActivityManager: Unable to start service Intent { act=android.service.smartspace.SmartspaceService cmp=com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiSmartspaceService } U=0: not found
+07-10 21:50:10.849   561   765 W RemoteSmartspaceService: could not bind to Intent { act=android.service.smartspace.SmartspaceService cmp=com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiSmartspaceService } using flags 67112961
+07-10 21:50:10.850   561   561 W ActivityManager: Unbind failed: could not find connection for android.app.LoadedApk$ServiceDispatcher$InnerConnection@63649a1
+07-10 21:50:12.012  1545  1687 W MediaProvider: isAppCloneUserPair for user 0: false
+07-10 21:50:12.047   218   218 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+07-10 21:50:12.047 28509 28513 I Gralloc4: mapper 4.x is not supported
+07-10 21:50:12.388  1545  3703 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-10_215013.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-10 21:50:12.427  1545  3703 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-10_215013.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-10 21:50:12.477  1545  1688 I MediaProvider: Deleted 0 1 0 0 0 0 0 items on external_primary due to com.android.shell
+07-10 21:50:12.477  8260  8395 I UriTaskContentObserver: (REDACTED) Throttling content uri change event for %s
+07-10 21:50:12.828  1545  3292 W MediaProvider: isAppCloneUserPair for user 0: false
+07-10 21:50:12.845   218   218 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+07-10 21:50:12.846 28555 28558 I Gralloc4: mapper 4.x is not supported
+07-10 21:50:13.136  1545  3703 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-10_215014.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-10 21:50:13.147  1545  3703 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-10_215014.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-10 21:50:13.214  1545 21499 I MediaProvider: Deleted 0 1 0 0 0 0 0 items on external_primary due to com.android.shell
+07-10 21:50:13.214  8260  8395 I UriTaskContentObserver: (REDACTED) Throttling content uri change event for %s
+07-10 21:50:13.551  1545  1688 W MediaProvider: isAppCloneUserPair for user 0: false
+07-10 21:50:13.582   218   218 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+07-10 21:50:13.582 28596 28598 I Gralloc4: mapper 4.x is not supported
+07-10 21:50:13.851  1545  3703 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-10_215015.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-10 21:50:13.858  1545  3703 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-10_215015.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-10 21:50:13.915  1545 21500 I MediaProvider: Deleted 0 1 0 0 0 0 0 items on external_primary due to com.android.shell
+07-10 21:50:13.916  8260  8395 I UriTaskContentObserver: (REDACTED) Throttling content uri change event for %s
+07-10 21:50:14.101   561  2088 I ActivityTaskManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.amaze.filemanager/.activities.MainActivity} from uid 2000
+07-10 21:50:14.107   561  2088 W ActivityTaskManager: Can't find TaskDisplayArea to determine support for multi window. Task id=21 attached=false
+07-10 21:50:14.161   561   613 I ActivityManager: Start proc 28628:com.amaze.filemanager/u0a154 for pre-top-activity {com.amaze.filemanager/com.amaze.filemanager.activities.MainActivity}
+07-10 21:50:14.167 28628 28628 I aze.filemanage: Late-enabling -Xcheck:jni
+07-10 21:50:14.195 28628 28628 W aze.filemanage: Unexpected CPU variant for X86 using defaults: x86_64
+07-10 21:50:14.204  1795  1809 I adbd    : jdwp connection from 28628
+07-10 21:50:14.234  1554  1554 I GsaVoiceInteractionSrv: Handling ACTION_STOP_HOTWORD
+07-10 21:50:14.239  1554  1554 E HwDetectorWithState: a: 3
+07-10 21:50:14.417   561   990 I ActivityTaskManager: START u0 {act=android.content.pm.action.REQUEST_PERMISSIONS pkg=com.google.android.permissioncontroller cmp=com.google.android.permissioncontroller/com.android.permissioncontroller.permission.ui.GrantPermissionsActivity (has extras)} from uid 10154
+07-10 21:50:14.458 28628 28628 W aze.filemanage: Accessing hidden method Landroid/view/View;->computeFitSystemWindows(Landroid/graphics/Rect;Landroid/graphics/Rect;)Z (unsupported, reflection, allowed)
+07-10 21:50:14.460 28628 28628 W aze.filemanage: Accessing hidden method Landroid/view/ViewGroup;->makeOptionalFitsSystemWindows()V (unsupported, reflection, allowed)
+07-10 21:50:14.561   561   765 W ActivityManager: Unable to start service Intent { act=android.service.smartspace.SmartspaceService cmp=com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiSmartspaceService } U=0: not found
+07-10 21:50:14.562   561   765 W RemoteSmartspaceService: could not bind to Intent { act=android.service.smartspace.SmartspaceService cmp=com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiSmartspaceService } using flags 67112961
+07-10 21:50:14.562   561   561 W ActivityManager: Unbind failed: could not find connection for android.app.LoadedApk$ServiceDispatcher$InnerConnection@74353ca
+07-10 21:50:14.882   561   602 W ImageReader_JNI: Unable to acquire a buffer item, very likely client tried to acquire more than maxImages buffers
+07-10 21:50:14.908   561   602 W Looper  : Slow dispatch took 101ms android.ui h=android.os.Handler c=com.android.server.wm.DisplayRotation$OrientationListener$UpdateRunnable@4c8bdb1 m=0
+07-10 21:50:14.915   561   604 I ActivityTaskManager: Config changes=20000480 {1.0 310mcc260mnc [en_US] ldltr sw411dp w866dp h387dp 420dpi nrml long land finger qwerty/v/v dpad/v winConfig={ mBounds=Rect(0, 0 - 2400, 1080) mAppBounds=Rect(126, 0 - 2400, 1080) mMaxBounds=Rect(0, 0 - 2400, 1080) mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_270} s.1197 fontWeightAdjustment=0}
+07-10 21:50:14.933   561   604 I WindowManager: Override config changes=20000480 {1.0 310mcc260mnc [en_US] ldltr sw411dp w866dp h387dp 420dpi nrml long land finger qwerty/v/v dpad/v winConfig={ mBounds=Rect(0, 0 - 2400, 1080) mAppBounds=Rect(126, 0 - 2400, 1080) mMaxBounds=Rect(0, 0 - 2400, 1080) mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_270} s.1197 fontWeightAdjustment=0} for displayId=0
+07-10 21:50:14.965   561   604 I InputManager-JNI: Viewport [0] to add: local:4619827259835644672, isActive: true
+07-10 21:50:14.966   561   673 I InputReader: Reconfiguring input devices, changes=DISPLAY_INFO | 
+07-10 21:50:14.966   561   673 I InputReader: Touch device 'virtio_input_multi_touch_7' could not query the properties of its associated display.  The device will be inoperable until the display size becomes available.
+07-10 21:50:14.966   561   673 I InputReader: Touch device 'virtio_input_multi_touch_5' could not query the properties of its associated display.  The device will be inoperable until the display size becomes available.
+07-10 21:50:14.966   561   673 I InputReader: Touch device 'virtio_input_multi_touch_10' could not query the properties of its associated display.  The device will be inoperable until the display size becomes available.
+07-10 21:50:14.966   561   673 I InputReader: Touch device 'virtio_input_multi_touch_2' could not query the properties of its associated display.  The device will be inoperable until the display size becomes available.
+07-10 21:50:14.966   561   673 I InputReader: Touch device 'virtio_input_multi_touch_11' could not query the properties of its associated display.  The device will be inoperable until the display size becomes available.
+07-10 21:50:14.966   561   673 I InputReader: Touch device 'virtio_input_multi_touch_8' could not query the properties of its associated display.  The device will be inoperable until the display size becomes available.
+07-10 21:50:14.967   561   673 I InputReader: Device reconfigured: id=7, name='virtio_input_multi_touch_1', size 1080x2400, orientation 3, mode 1, display id 0
+07-10 21:50:14.968   561   673 I InputReader: Touch device 'virtio_input_multi_touch_9' could not query the properties of its associated display.  The device will be inoperable until the display size becomes available.
+07-10 21:50:14.968   561   673 I InputReader: Touch device 'virtio_input_multi_touch_3' could not query the properties of its associated display.  The device will be inoperable until the display size becomes available.
+07-10 21:50:14.968   561   673 I InputReader: Touch device 'virtio_input_multi_touch_4' could not query the properties of its associated display.  The device will be inoperable until the display size becomes available.
+07-10 21:50:14.968   561   673 I InputReader: Touch device 'virtio_input_multi_touch_6' could not query the properties of its associated display.  The device will be inoperable until the display size becomes available.
+07-10 21:50:14.971   561  3441 W InputDispatcher: Letterbox_bottom_ActivityRecord{b2ba3ae u0 com.amaze.filemanager/.activities.MainActivity t21} has FLAG_SLIPPERY. Please report this in b/157929241
+07-10 21:50:14.974   561   604 W ActivityTaskManager: Activity top resumed state loss timeout for ActivityRecord{b2ba3ae u0 com.amaze.filemanager/.activities.MainActivity t21}
+07-10 21:50:14.974   561   604 W ActivityTaskManager: Activity pause timeout for ActivityRecord{b2ba3ae u0 com.amaze.filemanager/.activities.MainActivity t21}
+07-10 21:50:14.976   561   604 W ActivityTaskManager: Tried to set launchTime (0) < mLastActivityLaunchTime (630537)
+07-10 21:50:14.988   561   960 W InputDispatcher: Letterbox_right_ActivityRecord{b2ba3ae u0 com.amaze.filemanager/.activities.MainActivity t21} has FLAG_SLIPPERY. Please report this in b/157929241
+07-10 21:50:14.988   561   960 W InputDispatcher: Letterbox_left_ActivityRecord{b2ba3ae u0 com.amaze.filemanager/.activities.MainActivity t21} has FLAG_SLIPPERY. Please report this in b/157929241
+07-10 21:50:15.042 28628 28628 E FragmentManager: Fragment Main{d6bb57b} is not currently in the FragmentManager
+07-10 21:50:15.044 28628 28628 E FragmentManager: Activity state:
+07-10 21:50:15.067   838  1263 W OpenGLRenderer: Failed to choose config with EGL_SWAP_BEHAVIOR_PRESERVED, retrying without...
+07-10 21:50:15.067   838  1263 W OpenGLRenderer: Failed to initialize 101010-2 format, error = EGL_SUCCESS
+07-10 21:50:15.083 28628 28628 W System.err: java.lang.IllegalStateException: Fragment Main{d6bb57b} is not currently in the FragmentManager
+07-10 21:50:15.087 28628 28628 W System.err: 	at android.support.v4.app.FragmentManagerImpl.putFragment(FragmentManager.java:655)
+07-10 21:50:15.088 28628 28628 W System.err: 	at com.amaze.filemanager.fragments.TabFragment.onSaveInstanceState(TabFragment.java:273)
+07-10 21:50:15.088 28628 28628 W System.err: 	at android.support.v4.app.Fragment.performSaveInstanceState(Fragment.java:2124)
+07-10 21:50:15.088 28628 28628 W System.err: 	at android.support.v4.app.FragmentManagerImpl.saveFragmentBasicState(FragmentManager.java:1771)
+07-10 21:50:15.088 28628 28628 W System.err: 	at android.support.v4.app.FragmentManagerImpl.saveAllState(FragmentManager.java:1839)
+07-10 21:50:15.089 28628 28628 W System.err: 	at android.support.v4.app.FragmentController.saveAllState(FragmentController.java:134)
+07-10 21:50:15.089 28628 28628 W System.err: 	at android.support.v4.app.FragmentActivity.onSaveInstanceState(FragmentActivity.java:566)
+07-10 21:50:15.089 28628 28628 W System.err: 	at android.support.v7.app.AppCompatActivity.onSaveInstanceState(AppCompatActivity.java:498)
+07-10 21:50:15.089 28628 28628 W System.err: 	at com.amaze.filemanager.activities.MainActivity.onSaveInstanceState(MainActivity.java:1164)
+07-10 21:50:15.089 28628 28628 W System.err: 	at android.app.Activity.performSaveInstanceState(Activity.java:2198)
+07-10 21:50:15.089 28628 28628 W System.err: 	at android.app.Instrumentation.callActivityOnSaveInstanceState(Instrumentation.java:1508)
+07-10 21:50:15.089 28628 28628 W System.err: 	at android.app.ActivityThread.callActivityOnSaveInstanceState(ActivityThread.java:5757)
+07-10 21:50:15.090 28628 28628 W System.err: 	at android.app.ActivityThread.callActivityOnStop(ActivityThread.java:5144)
+07-10 21:50:15.090 28628 28628 W System.err: 	at android.app.ActivityThread.handleRelaunchActivityInner(ActivityThread.java:5711)
+07-10 21:50:15.090 28628 28628 W System.err: 	at android.app.ActivityThread.handleRelaunchActivity(ActivityThread.java:5630)
+07-10 21:50:15.090 28628 28628 W System.err: 	at android.app.servertransaction.ActivityRelaunchItem.execute(ActivityRelaunchItem.java:71)
+07-10 21:50:15.090 28628 28628 W System.err: 	at android.app.servertransaction.ActivityTransactionItem.execute(ActivityTransactionItem.java:45)
+07-10 21:50:15.090 28628 28628 W System.err: 	at android.app.servertransaction.TransactionExecutor.executeCallbacks(TransactionExecutor.java:135)
+07-10 21:50:15.091 28628 28628 W System.err: 	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:95)
+07-10 21:50:15.091 28628 28628 W System.err: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2210)
+07-10 21:50:15.091 28628 28628 W System.err: 	at android.os.Handler.dispatchMessage(Handler.java:106)
+07-10 21:50:15.091 28628 28628 W System.err: 	at android.os.Looper.loopOnce(Looper.java:201)
+07-10 21:50:15.091 28628 28628 W System.err: 	at android.os.Looper.loop(Looper.java:288)
+07-10 21:50:15.091 28628 28628 W System.err: 	at android.app.ActivityThread.main(ActivityThread.java:7839)
+07-10 21:50:15.091 28628 28628 W System.err: 	at java.lang.reflect.Method.invoke(Native Method)
+07-10 21:50:15.091 28628 28628 W System.err: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:548)
+07-10 21:50:15.091 28628 28628 W System.err: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1003)
+07-10 21:50:15.099   561  4920 W InputManager-JNI: Input channel object '5673434 com.amaze.filemanager/com.amaze.filemanager.activities.MainActivity (client)' was disposed without first being removed with the input manager!
+07-10 21:50:15.138 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.180 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.194 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.201 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.211 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.220 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.223   561   765 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.224 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.226   561   765 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.227 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.230   561   765 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.231 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.234   561   765 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.235 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.236   561   765 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.239   561   765 I WindowManager: finishDrawing of orientation change: Window{e69f46 u0 NavigationBar0} 274ms
+07-10 21:50:15.243 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.248   561   765 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.252 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.258   561   765 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.259 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.263   561  2088 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.269 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.271   561   765 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.271 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.274   561   765 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.275 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.278   561   765 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.279 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.286   561   765 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.287 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.290   561   765 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.290 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.293   561   765 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.293 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.295   561   765 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.295 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.297   561   765 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.298 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.304   561   765 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.307 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.311   561  2088 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.313 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.315   561  2088 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.319 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.331   561   765 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.336 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.347   561   765 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.348 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.352   561  2088 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.352 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.359   561   765 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.365   561   765 I WindowManager: finishDrawing of orientation change: Window{f21d3d5 u0 StatusBar} 400ms
+07-10 21:50:15.369 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.379   561  1778 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.381 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.389   561  1778 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.391 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.394   561  1778 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.396 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.398   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.417 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.424   561  1778 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.425 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.429   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.431 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.437   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.438 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.441   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.442 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.444   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.445 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.448   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.449 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.453   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.454 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.457   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.458 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.461   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.462 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.464   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.475 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.487   561   765 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.489 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.492   561   765 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.493 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.495   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.495 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.499   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.499 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.501   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.502 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.506   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.506 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.510   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.511 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.516   561   765 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.517 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.521   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.523 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.526   561   765 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.526 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.532   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.532 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.538   561   765 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.539 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.541   561   765 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.542 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.546   561   765 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.547 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.552   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.552 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.557   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.558 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.560   561   765 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.562 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.565  1545  1687 W MediaProvider: isAppCloneUserPair for user 0: false
+07-10 21:50:15.565   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.566 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.571   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.571 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.576   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.577 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.581   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.581 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.586   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.593 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.601   218   218 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+07-10 21:50:15.601 28701 28715 I Gralloc4: mapper 4.x is not supported
+07-10 21:50:15.604   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.605 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.607   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.607 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.610   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.610 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.614   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.614 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.618   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.618 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.621   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.621 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.623   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.624 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.627   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.627 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.630   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.630 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.633   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.633 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.635   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.635 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.637   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.637 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.639   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.640 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.641   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.641 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.643   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.643 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.645   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.645 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.647   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.647 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.649   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.649 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.651   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.652 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.653   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.653 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.655   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.655 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.657   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.657 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.658   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.658 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.660   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.660 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.662   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.662 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.663   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.663 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.665   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.665 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.666   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.667 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.669   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.669 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.670   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.671 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.672   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.672 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.674   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.674 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.675   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.676 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.677   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.678 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.679   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.679 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.680   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.681 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.682   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.683 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.684   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.684 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.686   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.686 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.687   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.687 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.689   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.689 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.691   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.691 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.692   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.693 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.694   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.694 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.695   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.695 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.697   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.697 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.699   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.700 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.702   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.702 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.704   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.704 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.706   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.706 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.708   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.708 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.709   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.710 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.711   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.712 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.713   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.713 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.716   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.716 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.718   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.718 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.719   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.720 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.721   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.721 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.723   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.723 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.724   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.725 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.726   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.726 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.727   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.728 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.730   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.730 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.732   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.732 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.734   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.735 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.736   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.736 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.738   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.738 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.739   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.740 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.742   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.742 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.745   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.745 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.747   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.747 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.749   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.749 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.751   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.751 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.754   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.754 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.756   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.756 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.758   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.758 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.759   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.759 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.761   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.762 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.763   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.763 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.765   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.765 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.766   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.766 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.768   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.768 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.769   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.770 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.771   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.771 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.772   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.773 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.774   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.774 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.775   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.775 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.777   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.777 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.779   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.779 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.781   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.781 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.783   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.784 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.785   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.786 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.787   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.787 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.788   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.789 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.790   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.790 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.791   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.791 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.793   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.793 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.794   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.795 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.796   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.797 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.798   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.799 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.802   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.803 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.804   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.805 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.807   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.807 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.809   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.810 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.811   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.812 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.813   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.814 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.816   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.817 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.819   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.822 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.823   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.824 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.825   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.826 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.828   561   765 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.829 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.830   561  1778 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.831 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.834   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.835 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.835  1545  3703 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-10_215017.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-10 21:50:15.836   561  1778 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.837 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.840   561  1778 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.841 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.842   561  1778 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.843 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.845   561  1778 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.846 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.847   561  1778 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.848 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.849  1545  3703 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///sdcard/screen_2025-07-10_215017.png flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+07-10 21:50:15.850   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.850 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.851   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.852 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.854   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.854 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.856   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.856 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.858   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.858 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.860   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.860 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.862   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.862 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.866   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.867 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.869   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.870 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.871   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.872 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.874   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.875 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.878   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.879 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.881   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.882 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.883   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.885 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.886   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.887 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.889   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.890 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.892   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.893 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.894   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.895 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.897   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.897 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.898   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.899  1545 21499 I MediaProvider: Deleted 0 1 0 0 0 0 0 items on external_primary due to com.android.shell
+07-10 21:50:15.900 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.901  8260  8395 I UriTaskContentObserver: (REDACTED) Throttling content uri change event for %s
+07-10 21:50:15.902   561  1778 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.903 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.906   561  1778 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.907 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.909   561  1778 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.910 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.912   561  1778 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.913 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.914   561  1778 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.916 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.917   561  1778 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.918 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.920   561  1778 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.921 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.922   561  1778 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.923 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.925   561  1778 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.926 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.928   561  1778 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.929 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.931   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.932 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.934   561  1778 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.936 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.938   561  1778 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.939 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.941   561  1778 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.941 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.943   561  1778 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.944 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.945   561  1778 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.946 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.948   561  1778 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.949 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.951   561  1778 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.952 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.954   561  1778 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.954 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.956   561  1778 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.956 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.958   561  1778 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.959 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.961   561  1778 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.962 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.964   561  1778 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.964 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.966   561  1778 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.967 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.968   561  1778 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.969 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.971   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.972 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.974   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.975 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.977   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.978 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.979   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.980 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.982   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.982 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.984   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.985 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.987   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.988 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.990   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.990 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.992   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.992 28628 28628 W Activity: Can request only one set of permissions at a time
+07-10 21:50:15.994   561  4920 E NotificationService: Package has already queued 5 toasts. Not showing more. Package=com.amaze.filemanager
+07-10 21:50:15.995 28628 28628 W Activity: Can request only one set of permissions at a time
