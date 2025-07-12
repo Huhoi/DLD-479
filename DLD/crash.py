@@ -14,17 +14,22 @@ def detect_crashes(output_dir, similarity_threshold=5):
         similarity_threshold: Maximum hash difference to consider states similar (fixed at 5)
         
     Returns:
-        Dictionary containing crash information and metadata
+        Dictionary containing crash information, metadata, and counters
     """
     states_path = os.path.join(output_dir, "states")
     events_path = os.path.join(output_dir, "events")
     
-    # Initialize result dictionary
+    # Initialize result dictionary with counters
     result = {
         "metadata": {
             "output_dir": output_dir,
             "analysis_time": datetime.now().isoformat(),
             "similarity_threshold": similarity_threshold
+        },
+        "statistics": {
+            "total_states_analyzed": 0,
+            "total_crashes_detected": 0,
+            "crash_rate": 0.0
         },
         "crashes": []
     }
@@ -36,6 +41,9 @@ def detect_crashes(output_dir, similarity_threshold=5):
     if not state_files or not event_files:
         print(f"No state or event files found in {output_dir}")
         return result
+    
+    # Update total states count
+    result["statistics"]["total_states_analyzed"] = len(state_files) - 1  # exclude initial state
     
     # Load initial state
     initial_state_file = os.path.join(states_path, state_files[0])
@@ -70,6 +78,14 @@ def detect_crashes(output_dir, similarity_threshold=5):
                     })
             
             result["crashes"].append(crash_info)
+            result["statistics"]["total_crashes_detected"] += 1
+    
+    # Calculate crash rate
+    if result["statistics"]["total_states_analyzed"] > 0:
+        result["statistics"]["crash_rate"] = round(
+            result["statistics"]["total_crashes_detected"] / result["statistics"]["total_states_analyzed"],
+            4
+        )
     
     return result
 
@@ -94,8 +110,13 @@ if __name__ == "__main__":
     
     results = detect_crashes(args.output_dir)
     
+    # Print summary statistics
+    print("\nCrash Analysis Summary")
+    print(f"\tTotal states analyzed: {results['statistics']['total_states_analyzed']}")
+    print(f"\tTotal crashes detected: {results['statistics']['total_crashes_detected']}")
+    print(f"\tCrash rate: {results['statistics']['crash_rate'] * 100:.2f}%")
+    
     if results["crashes"]:
-        print(f"\nDetected {len(results['crashes'])} potential crash(es)")
         save_results(results, args.output_dir)
     else:
         print("\nNo crashes detected")
