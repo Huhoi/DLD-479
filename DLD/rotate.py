@@ -1,70 +1,101 @@
 import subprocess
 import time
-import random
 import os
+import json
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
+
+# List of event types that should trigger rotation
+ROTATION_EVENTS = {
+    "manual", 
+    "exit", 
+    "touch", 
+    "long_touch", 
+    "set_text",
+    "spawn"
+}
 
 class DroidBotEventHandler(FileSystemEventHandler):
     def __init__(self, events_dir):
         self.events_dir = events_dir
-        self.processed_events = set()
-        self.orientations = [
-            ("portrait", "0° (Portrait)"),
-            ("landscape", "90° (Landscape)"),
-            ("landscape", "270° (Reverse Landscape)")  # Achieved via double rotation
-        ]
-        # Initialize with existing event files
-        self._init_processed_events()
+        self.last_rotation_time = 0
+        self.current_orientation = "portrait"  # Start in portrait mode
+        # Rotate for all existing events first
+        self._rotate_for_existing_events()
     
-    def _init_processed_events(self):
-        """Track already existing event files so we don't rotate for them"""
+    def _rotate_for_existing_events(self):
+        """Rotate for all existing event files"""
         if os.path.exists(self.events_dir):
-            for f in os.listdir(self.events_dir):
-                if f.endswith('.json'):
-                    self.processed_events.add(f)
+            for event_file in sorted(os.listdir(self.events_dir)):
+                if event_file.endswith('.json'):
+                    self._process_event_file(event_file)
     
     def on_created(self, event):
-        if event.src_path.endswith('.json') and os.path.basename(event.src_path) not in self.processed_events:
-            self.processed_events.add(os.path.basename(event.src_path))
-            self.rotate_device()
+        if event.src_path.endswith('.json'):
+            self._process_event_file(os.path.basename(event.src_path))
     
-    def rotate_device(self):
-        """Perform the actual rotation"""
-        # Choose random orientation
-        orientation, description = random.choice(self.orientations)
-        print(f"Rotating to {description} (triggered by new DroidBot event)...")
+    def _process_event_file(self, event_file):
+        """Check if the event should trigger rotation"""
+        try:
+            with open(os.path.join(self.events_dir, event_file), 'r') as f:
+                event_data = json.load(f)
+            
+            event_type = event_data.get("event", {}).get("event_type", "")
+            if event_type in ROTATION_EVENTS:
+                self._rotate_device(event_file)
+        except (json.JSONDecodeError, KeyError) as e:
+            print(f"Error processing {event_file}: {e}")
+    
+    def _rotate_device(self, event_file):
+        """Perform a single clockwise rotation with rate limiting"""
+        current_time = time.time()
+        if current_time - self.last_rotation_time < 5:
+            print(f"Skipping rotation (rate limited) triggered by {event_file}")
+            return
+        
+        # Get next orientation in cycle
+        if self.current_orientation == "portrait":
+            new_orientation, description = "landscape", "90° (Landscape)"
+        elif self.current_orientation == "landscape":
+            new_orientation, description = "landscape", "270° (Reverse Landscape)"
+        else:  # reverse landscape or other
+            new_orientation, description = "portrait", "0° (Portrait)"
+        
+        print(f"Rotating to {description} (triggered by {event_file})...")
         
         try:
             # Single rotation command
             subprocess.run(
-                ["adb", "emu", "rotate", orientation],
+                ["adb", "emu", "rotate", new_orientation],
                 check=True,
                 timeout=5
             )
             
-            # For reverse landscape, rotate twice
+            # For reverse landscape, rotate twice (but still counts as one rotation)
             if description == "270° (Reverse Landscape)":
-                time.sleep(0.5)  # Short delay between rotations
+                time.sleep(1)  # Short delay between rotations
                 subprocess.run(
-                    ["adb", "emu", "rotate", orientation],
+                    ["adb", "emu", "rotate", new_orientation],
                     check=True,
                     timeout=5
                 )
             
+            self.current_orientation = new_orientation
+            self.last_rotation_time = current_time
             print(f"Successfully rotated to {description}")
         except subprocess.SubprocessError as e:
             print(f"Rotation failed: {e}")
 
 def rotate_on_event(output_dir):
-    """Monitor DroidBot's events folder and rotate on new events"""
+    """Monitor DroidBot's events folder and rotate on specific events"""
     events_dir = os.path.join(output_dir, "events")
     if not os.path.exists(events_dir):
         print(f"Error: Events directory not found at {events_dir}")
         return
     
     print("Starting event-synchronized rotation...")
-    print("Will rotate after each new DroidBot event")
+    print(f"Will rotate clockwise on these events: {', '.join(sorted(ROTATION_EVENTS))}")
+    print("Max rotation rate: once every 5 seconds")
     print("Press Ctrl+C to stop")
     
     # Create observer to watch for new event files
@@ -86,7 +117,7 @@ def rotate_on_event(output_dir):
 if __name__ == "__main__":
     import argparse
     
-    parser = argparse.ArgumentParser(description='Rotate device synchronized with DroidBot events.')
+    parser = argparse.ArgumentParser(description='Rotate device clockwise on specific DroidBot events (max once every 5s).')
     parser.add_argument('output_dir', help='DroidBot output directory containing events folder')
     args = parser.parse_args()
     
