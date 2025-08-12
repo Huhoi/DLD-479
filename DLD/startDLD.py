@@ -6,19 +6,19 @@ import os
 from typing import Optional
 
 class ProcessManager:
-    def __init__(self, apk_path: str, output_dir: str = None, rotate: bool = True):
+    def __init__(self, apk_path: str, output_dir: str = None, 
+                 rotate: bool = True, script_path: str = None):
         self.apk_path = apk_path
-        # Set default output directory to 'output/apk_filename' without extension
         apk_name = os.path.splitext(os.path.basename(apk_path))[0]
         self.output_dir = output_dir if output_dir else os.path.join("output", apk_name)
         self.rotate = rotate
+        self.script_path = script_path
         self.droidbot_process: Optional[subprocess.Popen] = None
         self.rotation_process: Optional[subprocess.Popen] = None
         self.should_stop = False
 
     def run_droidbot(self):
         """Run DroidBot in a subprocess"""
-        # Create output directory if it doesn't exist
         os.makedirs(self.output_dir, exist_ok=True)
         
         cmd = [
@@ -26,6 +26,11 @@ class ProcessManager:
             "-a", self.apk_path,
             "-o", self.output_dir
         ]
+        
+        # Add script parameter if provided
+        if self.script_path:
+            cmd.extend(["-script", self.script_path])
+        
         self.droidbot_process = subprocess.Popen(cmd)
         self.droidbot_process.wait()
 
@@ -64,6 +69,8 @@ class ProcessManager:
             print("With random screen rotation enabled")
         else:
             print("With screen rotation disabled")
+        if self.script_path:
+            print(f"Using script: {self.script_path}")
         print("Press Ctrl+C to stop")
 
         # Start DroidBot in a thread
@@ -96,6 +103,9 @@ def parse_args():
                        help='Custom output directory (defaults to "output/apk_filename")')
     parser.add_argument('--no-rotate', action='store_false', dest='rotate', 
                        help='Disable random screen rotations')
+    # Add script argument
+    parser.add_argument('-s', '--script', default=None,
+                       help='Path to DroidBot script file (JSON format)')
     return parser.parse_args()
 
 if __name__ == "__main__":
@@ -103,6 +113,7 @@ if __name__ == "__main__":
     manager = ProcessManager(
         apk_path=args.apk_path,
         output_dir=args.output,
-        rotate=args.rotate
+        rotate=args.rotate,
+        script_path=args.script  # Pass script path
     )
     manager.run()

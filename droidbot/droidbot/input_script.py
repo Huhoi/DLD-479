@@ -529,6 +529,12 @@ class ScriptEvent:
     def get_transformed_event(self, input_policy):
         device = input_policy.device
         event_dict = self.event_dict.copy()
+        if 'text' in event_dict and event_dict['text'] == NEXT_INPUT_TAG:
+            if hasattr(input_policy, 'input_manager'):
+                next_text = input_policy.input_manager.get_next_input()
+                if next_text:
+                    event_dict['text'] = next_text
+                
         if 'target_view' in event_dict:
             target_view = event_dict.pop('target_view')
             target_view_selector = event_dict.pop('target_view_selector')
