@@ -4,18 +4,19 @@ import time
 import argparse
 import os
 from typing import Optional
+import glob
 
 class ProcessManager:
-    def __init__(self, apk_path: str, output_dir: str = None, 
-                 rotate: bool = True, script_path: str = None):
+    def __init__(self, apk_path: str, output_dir: str = None, rotate: bool = True, timeout: int = 120):
         self.apk_path = apk_path
         apk_name = os.path.splitext(os.path.basename(apk_path))[0]
         self.output_dir = output_dir if output_dir else os.path.join("output", apk_name)
         self.rotate = rotate
-        self.script_path = script_path
+        self.timeout = timeout
         self.droidbot_process: Optional[subprocess.Popen] = None
         self.rotation_process: Optional[subprocess.Popen] = None
         self.should_stop = False
+        self.start_time = 0
 
     def run_droidbot(self):
         """Run DroidBot in a subprocess"""
@@ -24,7 +25,8 @@ class ProcessManager:
         cmd = [
             "droidbot",
             "-a", self.apk_path,
-            "-o", self.output_dir
+            "-o", self.output_dir,
+            "-timeout", str(self.timeout)
         ]
         
         # Add script parameter if provided
@@ -36,9 +38,18 @@ class ProcessManager:
 
     def run_rotation(self):
         """Run rotation using rotate.py script"""
-        cmd = ["python", "rotate.py"]
+        cmd = ["python", "DLD/rotate.py", self.output_dir]
         self.rotation_process = subprocess.Popen(cmd)
         self.rotation_process.wait()
+
+    def run_crash_analysis(self):
+        """Run crash analysis after DroidBot finishes"""
+        print("\nRunning crash analysis...")
+        crash_script = os.path.join(os.path.dirname(__file__), "crash.py")
+        if os.path.exists(crash_script):
+            subprocess.run(["python", crash_script, self.output_dir])
+        else:
+            print(f"Warning: Crash analysis script not found at {crash_script}")
 
     def cleanup(self):
         """Clean up processes"""
@@ -63,15 +74,18 @@ class ProcessManager:
 
     def run(self):
         """Main execution"""
+        print(f"\n{'='*50}")
         print(f"Starting DroidBot for APK: {self.apk_path}")
         print(f"Output directory: {self.output_dir}")
+        print(f"Timeout: {self.timeout} seconds")
         if self.rotate:
             print("With random screen rotation enabled")
         else:
             print("With screen rotation disabled")
-        if self.script_path:
-            print(f"Using script: {self.script_path}")
-        print("Press Ctrl+C to stop")
+        print("Press Ctrl+C to stop early")
+        print(f"{'='*50}\n")
+
+        self.start_time = time.time()
 
         # Start DroidBot in a thread
         droidbot_thread = threading.Thread(target=self.run_droidbot)
@@ -87,6 +101,11 @@ class ProcessManager:
 
         try:
             while droidbot_thread.is_alive() and not self.should_stop:
+                elapsed = time.time() - self.start_time
+                if elapsed > self.timeout:
+                    print(f"\nTimeout reached ({self.timeout} seconds), stopping...")
+                    self.should_stop = True
+                    break
                 time.sleep(0.5)
         except KeyboardInterrupt:
             self.should_stop = True
@@ -95,25 +114,92 @@ class ProcessManager:
             droidbot_thread.join(timeout=5)
             if rotation_thread:
                 rotation_thread.join(timeout=5)
+            
+            # Run crash analysis after cleanup
+            self.run_crash_analysis()
+
+def process_apk(apk_path: str, output_dir: str = None, rotate: bool = True, timeout: int = 120):
+    """Process a single APK file"""
+    manager = ProcessManager(
+        apk_path=apk_path,
+        output_dir=output_dir,
+        rotate=rotate,
+        timeout=timeout
+    )
+    manager.run()
+
+def process_all_apks(apk_dir: str, output_parent_dir: str = "output", rotate: bool = True, timeout: int = 120):
+    """Process all APK files in a directory"""
+    apk_files = glob.glob(os.path.join(apk_dir, "*.apk"))
+    
+    if not apk_files:
+        print(f"No APK files found in {apk_dir}")
+        return
+    
+    print(f"Found {len(apk_files)} APK files to process")
+    
+    for apk_path in apk_files:
+        process_apk(
+            apk_path=apk_path,
+            output_dir=os.path.join(output_parent_dir, os.path.splitext(os.path.basename(apk_path))[0]),
+            rotate=rotate,
+            timeout=timeout
+        )
 
 def parse_args():
-    parser = argparse.ArgumentParser(description='Run DroidBot with optional screen rotations.')
-    parser.add_argument('apk_path', help='Path to the APK file to test')
-    parser.add_argument('-o', '--output', default=None, 
-                       help='Custom output directory (defaults to "output/apk_filename")')
-    parser.add_argument('--no-rotate', action='store_false', dest='rotate', 
-                       help='Disable random screen rotations')
-    # Add script argument
-    parser.add_argument('-s', '--script', default=None,
-                       help='Path to DroidBot script file (JSON format)')
+    parser = argparse.ArgumentParser(
+        description='Run DroidBot with optional screen rotations.',
+        formatter_class=argparse.RawTextHelpFormatter  # Preserves formatting
+    )
+    parser.add_argument(
+        '--apk-path', 
+        default=None,
+        help='Path to a specific APK file to test\n'
+             '(default: process all in DLD/APK)'
+    )
+    parser.add_argument(
+        '--apk-dir', 
+        default="DLD/APK",
+        help='Directory containing APKs to test\n'
+             '(default: DLD/APK)'
+    )
+    parser.add_argument(
+        '-o', '--output', 
+        default="output",
+        help='Parent output directory\n'
+             '(default: "output")'
+    )
+    parser.add_argument(
+        '--no-rotate', 
+        action='store_false', 
+        dest='rotate',
+        help='Disable random screen rotations'
+    )
+    parser.add_argument(
+        '-t', '--timeout', 
+        type=int, 
+        default=120,
+        help='Timeout in seconds for each APK\n'
+             '(default: 120)'
+    )
     return parser.parse_args()
 
 if __name__ == "__main__":
     args = parse_args()
-    manager = ProcessManager(
-        apk_path=args.apk_path,
-        output_dir=args.output,
-        rotate=args.rotate,
-        script_path=args.script  # Pass script path
-    )
-    manager.run()
+    
+    if args.apk_path:
+        # Process single APK
+        process_apk(
+            apk_path=args.apk_path,
+            output_dir=None,  # Will use default subdirectory under args.output
+            rotate=args.rotate,
+            timeout=args.timeout
+        )
+    else:
+        # Process all APKs in directory
+        process_all_apks(
+            apk_dir=args.apk_dir,
+            output_parent_dir=args.output,
+            rotate=args.rotate,
+            timeout=args.timeout
+        )

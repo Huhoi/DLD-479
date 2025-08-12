@@ -7,6 +7,7 @@
 # Python Packages
 - pip install Pillow imagehash
 - pip install androguard==3.4.0a1
+- pip install watchdog
 - cd droidbot
     - pip install e .
 - (Maybe make an install.py?)
