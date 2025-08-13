@@ -7,11 +7,12 @@ from typing import Optional
 import glob
 
 class ProcessManager:
-    def __init__(self, apk_path: str, output_dir: str = None, rotate: bool = True, timeout: int = 120):
+    def __init__(self, apk_path: str, output_dir: str = None, rotate: bool = True, power_cycle: bool = True, timeout: int = 120):
         self.apk_path = apk_path
         apk_name = os.path.splitext(os.path.basename(apk_path))[0]
         self.output_dir = output_dir if output_dir else os.path.join("output", apk_name)
         self.rotate = rotate
+        self.power_cycle = power_cycle
         self.timeout = timeout
         self.droidbot_process: Optional[subprocess.Popen] = None
         self.rotation_process: Optional[subprocess.Popen] = None
@@ -28,10 +29,6 @@ class ProcessManager:
             "-o", self.output_dir,
             "-timeout", str(self.timeout)
         ]
-        
-        # Add script parameter if provided
-        if self.script_path:
-            cmd.extend(["-script", self.script_path])
         
         self.droidbot_process = subprocess.Popen(cmd)
         self.droidbot_process.wait()
@@ -72,6 +69,11 @@ class ProcessManager:
         if self.rotate:
             subprocess.run(["adb", "emu", "rotate", "portrait"], timeout=5)
 
+    def run_power_cycle(self):
+        """Run power cycle simulation"""
+        cmd = ["python", "DLD/power_cycle.py", self.output_dir]
+        self.power_cycle_process = subprocess.Popen(cmd)
+    
     def run(self):
         """Main execution"""
         print(f"\n{'='*50}")
@@ -99,6 +101,13 @@ class ProcessManager:
             rotation_thread.daemon = True
             rotation_thread.start()
 
+        # Start power cycle simulation if enabled
+        power_cycle_thread = None
+        if self.power_cycle:
+            power_cycle_thread = threading.Thread(target=self.run_power_cycle)
+            power_cycle_thread.daemon = True
+            power_cycle_thread.start()
+            
         try:
             while droidbot_thread.is_alive() and not self.should_stop:
                 elapsed = time.time() - self.start_time
@@ -114,9 +123,13 @@ class ProcessManager:
             droidbot_thread.join(timeout=5)
             if rotation_thread:
                 rotation_thread.join(timeout=5)
+            if power_cycle_thread:
+                power_cycle_thread.join(timeout=5)
             
             # Run crash analysis after cleanup
             self.run_crash_analysis()
+            
+        
 
 def process_apk(apk_path: str, output_dir: str = None, rotate: bool = True, timeout: int = 120):
     """Process a single APK file"""
@@ -181,6 +194,12 @@ def parse_args():
         default=120,
         help='Timeout in seconds for each APK\n'
              '(default: 120)'
+    )
+    parser.add_argument(
+        '--no-power-cycle', 
+        action='store_false', 
+        dest='power_cycle',
+        help='Disable power cycle simulation'
     )
     return parser.parse_args()
 
