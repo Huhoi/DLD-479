@@ -31,6 +31,8 @@ class ProcessManager:
         """Run DroidBot in a subprocess"""
         # Create output directory if it doesn't exist
         os.makedirs(self.output_dir, exist_ok=True)
+        # Explicitly create events directory if it doesn't exist
+        os.makedirs(os.path.join(self.output_dir, "events"), exist_ok=True)
         
         cmd = [
             "droidbot",
