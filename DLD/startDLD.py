@@ -3,6 +3,7 @@ import threading
 import time
 import argparse
 import os
+import shutil
 from typing import Optional
 import glob
 import logging
@@ -14,22 +15,22 @@ from dataloss import EnhancedDataLossDetector
 
 
 class ProcessManager:
-    def __init__(self, apk_path: str, output_dir: str = None, rotate: bool = True, timeout: int = 120):
+    def __init__(self, apk_path: str, output_dir: str = None, rotate: bool = True, power_cycle: bool = True, home_button: bool = False, timeout: int = 300):
         self.apk_path = apk_path
-        # Set default output directory to 'output/apk_filename' without extension
         apk_name = os.path.splitext(os.path.basename(apk_path))[0]
         self.output_dir = output_dir if output_dir else os.path.join("output", apk_name)
         self.rotate = rotate
+        self.power_cycle = power_cycle
         self.timeout = timeout
         self.droidbot_process: Optional[subprocess.Popen] = None
         self.rotation_process: Optional[subprocess.Popen] = None
         self.data_loss_detector = None
         self.should_stop = False
         self.start_time = 0
+        self.home_button = home_button
 
     def run_droidbot(self):
         """Run DroidBot in a subprocess"""
-        # Create output directory if it doesn't exist
         os.makedirs(self.output_dir, exist_ok=True)
         # Explicitly create events directory if it doesn't exist
         os.makedirs(os.path.join(self.output_dir, "events"), exist_ok=True)
@@ -40,6 +41,7 @@ class ProcessManager:
             "-o", self.output_dir,
             "-timeout", str(self.timeout)
         ]
+        
         self.droidbot_process = subprocess.Popen(cmd)
         self.droidbot_process.wait()
 
@@ -48,6 +50,18 @@ class ProcessManager:
         cmd = ["python", "DLD/rotate.py", self.output_dir]
         self.rotation_process = subprocess.Popen(cmd)
         self.rotation_process.wait()
+        
+    def run_home_button_sim(self):
+        cmd = [
+            "python", "DLD/home_button.py", 
+            self.output_dir,]
+        self.home_button_process = subprocess.Popen(cmd)
+    
+    def run_power_cycle(self):
+        """Run power cycle simulation"""
+        cmd = ["python", "DLD/power_cycle.py", self.output_dir]
+        self.power_cycle_process = subprocess.Popen(cmd)
+    
 
     def run_data_loss_detector(self):
         """Run the enhanced data loss detector"""
@@ -104,6 +118,7 @@ class ProcessManager:
         if self.rotate:
             subprocess.run(["adb", "emu", "rotate", "portrait"], timeout=5)
 
+    
     def run(self):
         """Main execution"""
         print(f"\n{'='*50}")
@@ -137,6 +152,20 @@ class ProcessManager:
         data_loss_thread.daemon = True
         data_loss_thread.start()
 
+
+        # Start power cycle simulation if enabled
+        power_cycle_thread = None
+        if self.power_cycle:
+            power_cycle_thread = threading.Thread(target=self.run_power_cycle)
+            power_cycle_thread.daemon = True
+            power_cycle_thread.start()
+        
+        home_button_thread = None
+        if self.home_button:
+            home_button_thread = threading.Thread(target=self.run_home_button_sim)
+            home_button_thread.daemon = True
+            home_button_thread.start()
+            
         try:
             while droidbot_thread.is_alive() and not self.should_stop:
                 elapsed = time.time() - self.start_time
@@ -152,13 +181,19 @@ class ProcessManager:
             droidbot_thread.join(timeout=5)
             if rotation_thread:
                 rotation_thread.join(timeout=5)
+            if power_cycle_thread:
+                power_cycle_thread.join(timeout=5)
+            if home_button_thread:
+                home_button_thread.join(timeout=5)
             if data_loss_thread:
                 data_loss_thread.join(timeout=5)
             
             # Run crash analysis after cleanup
             self.run_crash_analysis()
+            
+        
 
-def process_apk(apk_path: str, output_dir: str = None, rotate: bool = True, timeout: int = 120):
+def process_apk(apk_path: str, output_dir: str = None, rotate: bool = True, timeout: int = 300):
     """Process a single APK file"""
     manager = ProcessManager(
         apk_path=apk_path,
@@ -218,15 +253,52 @@ def parse_args():
     parser.add_argument(
         '-t', '--timeout', 
         type=int, 
-        default=120,
+        default=300,
         help='Timeout in seconds for each APK\n'
              '(default: 120)'
     )
+    parser.add_argument(
+        '--no-power-cycle', 
+        action='store_false', 
+        dest='power_cycle',
+        help='Disable power cycle simulation'
+    )
+    parser.add_argument(
+        '--max-home-actions', 
+        type=int, 
+        default=20,
+        help='Maximum home button actions per test session'
+    )
     return parser.parse_args()
 
+def cleanDirectory(apk_path = None):
+    dir_output = "output\\"
+    folder_names = ["data_loss_events", 
+                    "data_loss_logs", 
+                    "data_loss_states",
+                    "events",
+                    "states",
+                    "temp",
+                    "views"]
+    if not os.path.exists("output"):
+        os.makedirs("output",exist_ok=True)
+    if(apk_path):
+        copy_apk = apk_path
+        new_apk_path = copy_apk.split('\\')
+        apk_file_name = new_apk_path[2].strip(".apk")
+        for folder in folder_names:
+            folder_output = dir_output + apk_file_name + '\\' + folder
+            if os.path.exists(folder_output):
+                shutil.rmtree(folder_output)
+        
+            os.makedirs(folder_output, exist_ok=True)
+    else:
+        pass
+ 
 if __name__ == "__main__":
-    args = parse_args()
     
+    args = parse_args()
+    cleanDirectory(args.apk_path)
     if args.apk_path:
         # Process single APK
         process_apk(

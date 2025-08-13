@@ -444,7 +444,16 @@ class UtgGreedySearchPolicy(UtgBasedInputPolicy):
         # including back events
         if self.device.humanoid is not None:
             possible_events = self.__sort_inputs_by_humanoid(possible_events)
-
+        
+        # Add text events before the unexplored event check
+        set_text_events = [e for e in possible_events if isinstance(e, SetTextEvent)]
+        if set_text_events:
+            for text_event in set_text_events:
+                if not self.utg.is_event_explored(event=text_event, state=current_state):
+                    self.logger.info("Trying an unexplored text event")
+                    self.__event_trace += EVENT_FLAG_EXPLORE
+                    return text_event
+        
         # If there is an unexplored event, try the event first
         for input_event in possible_events:
             if not self.utg.is_event_explored(event=input_event, state=current_state):
