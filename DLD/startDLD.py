@@ -274,8 +274,7 @@ def parse_args():
 def cleanDirectory(apk_path = None):
     dir_output = "output\\"
     folder_names = ["data_loss_events", 
-                    "data_loss_logs", 
-                    "data_loss_states",
+                    "data_loss_logs",
                     "events",
                     "states",
                     "temp",
