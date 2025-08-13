@@ -5,6 +5,13 @@ import argparse
 import os
 from typing import Optional
 import glob
+import logging
+from datetime import datetime
+from droidbot.app import App
+from droidbot.device import Device
+from droidbot.input_event import KeyEvent
+from dataloss import EnhancedDataLossDetector
+
 
 class ProcessManager:
     def __init__(self, apk_path: str, output_dir: str = None, rotate: bool = True, power_cycle: bool = True, timeout: int = 120):
@@ -16,6 +23,7 @@ class ProcessManager:
         self.timeout = timeout
         self.droidbot_process: Optional[subprocess.Popen] = None
         self.rotation_process: Optional[subprocess.Popen] = None
+        self.data_loss_detector = None
         self.should_stop = False
         self.start_time = 0
 
@@ -38,6 +46,28 @@ class ProcessManager:
         cmd = ["python", "DLD/rotate.py", self.output_dir]
         self.rotation_process = subprocess.Popen(cmd)
         self.rotation_process.wait()
+
+    def run_data_loss_detector(self):
+        """Run the enhanced data loss detector"""
+        # Initialize device and app objects
+        device = Device(
+            device_serial=None,
+            output_dir=self.output_dir,
+            grant_perm=True,
+            enable_accessibility_hard=True,
+            ignore_ad=True
+        )
+        
+        app = App(self.apk_path)
+        
+        # Start data loss detector
+        self.data_loss_detector = EnhancedDataLossDetector(
+            device=device,
+            app=app,
+            output_dir=self.output_dir,
+            interval=30  # Test every 30 seconds
+        )
+        self.data_loss_detector.start()
 
     def run_crash_analysis(self):
         """Run crash analysis after DroidBot finishes"""
@@ -65,6 +95,9 @@ class ProcessManager:
             except subprocess.TimeoutExpired:
                 self.rotation_process.kill()
         
+        if self.data_loss_detector:
+            self.data_loss_detector.stop()
+        
         # Reset to portrait if rotation was enabled
         if self.rotate:
             subprocess.run(["adb", "emu", "rotate", "portrait"], timeout=5)
@@ -84,6 +117,7 @@ class ProcessManager:
             print("With random screen rotation enabled")
         else:
             print("With screen rotation disabled")
+        print("With enhanced data loss detection enabled")
         print("Press Ctrl+C to stop early")
         print(f"{'='*50}\n")
 
@@ -100,6 +134,12 @@ class ProcessManager:
             rotation_thread = threading.Thread(target=self.run_rotation)
             rotation_thread.daemon = True
             rotation_thread.start()
+
+        # Start data loss detector
+        data_loss_thread = threading.Thread(target=self.run_data_loss_detector)
+        data_loss_thread.daemon = True
+        data_loss_thread.start()
+
 
         # Start power cycle simulation if enabled
         power_cycle_thread = None
@@ -125,6 +165,8 @@ class ProcessManager:
                 rotation_thread.join(timeout=5)
             if power_cycle_thread:
                 power_cycle_thread.join(timeout=5)
+            if data_loss_thread:
+                data_loss_thread.join(timeout=5)
             
             # Run crash analysis after cleanup
             self.run_crash_analysis()
@@ -161,7 +203,7 @@ def process_all_apks(apk_dir: str, output_parent_dir: str = "output", rotate: bo
 
 def parse_args():
     parser = argparse.ArgumentParser(
-        description='Run DroidBot with optional screen rotations.',
+        description='Run DroidBot with optional screen rotations and data loss detection.',
         formatter_class=argparse.RawTextHelpFormatter  # Preserves formatting
     )
     parser.add_argument(

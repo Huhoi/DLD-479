@@ -7,13 +7,18 @@ from watchdog.events import FileSystemEventHandler
 
 # List of event types that should trigger rotation
 ROTATION_EVENTS = {
+    "key"
     "manual", 
     "exit", 
-    "touch", 
+    "touch",  
     "long_touch", 
     "set_text",
+    "select",
+    "unselect",
+    "intent",
     "spawn"
 }
+
 
 class DroidBotEventHandler(FileSystemEventHandler):
     def __init__(self, events_dir):
