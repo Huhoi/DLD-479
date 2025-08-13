@@ -72,48 +72,43 @@ class PowerCycleEventHandler(FileSystemEventHandler):
         logger.info(f"Simulating power button press (triggered by {event_file})...")
         
         try:
-            
-            # Step 1: Turn screen off
-            logger.info("Turning screen off...")
-            subprocess.run(
-                ["adb", "shell", "input", "keyevent", "KEYCODE_POWER"],
-                check=True,
-                timeout=5
-            )
-            
-            # Wait for device to sleep
-            time.sleep(3)
-            
-            # Step 2: Turn screen back on
-            logger.info("Turning screen on...")
-            subprocess.run(
-                ["adb", "shell", "input", "keyevent", "KEYCODE_POWER"],
-                check=True,
-                timeout=5
-            )
-            
-            if self.power_cycle_count == 0:
+            if self.power_cycle_count != 0:
+                # Step 1: Turn screen off
                 logger.info("Turning screen off...")
                 subprocess.run(
-                ["adb", "shell", "input", "keyevent", "KEYCODE_POWER"],
-                check=True,
-                timeout=5
-            )
-            
-            # Step 3: Unlock device if needed (swipe up)
-            logger.info("Unlocking device...")
-            subprocess.run(
-                ["adb", "shell", "input", "swipe", "500", "1500", "500", "500", "300"],
-                check=True,
-                timeout=5
-            )
-            
+                    ["adb", "shell", "input", "keyevent", "KEYCODE_POWER"],
+                    check=True,
+                    timeout=5
+                )
+                
+                # Wait for device to sleep
+                time.sleep(3)
+                
+                # Step 2: Turn screen back on
+                logger.info("Turning screen on...")
+                subprocess.run(
+                    ["adb", "shell", "input", "keyevent", "KEYCODE_POWER"],
+                    check=True,
+                    timeout=5
+                )
+                
+                
+                
+                # Step 3: Unlock device if needed (swipe up)
+                logger.info("Unlocking device...")
+                subprocess.run(
+                    ["adb", "shell", "input", "swipe", "500", "1500", "500", "500", "300"],
+                    check=True,
+                    timeout=5
+                )
+                
             
             
             # Update tracking
             self.last_power_cycle_time = current_time
             self.power_cycle_count += 1
-            logger.info(f"Power cycle #{self.power_cycle_count} completed successfully")
+            if self.power_cycle_count != 1:
+                logger.info(f"Power cycle #{self.power_cycle_count} completed successfully")
             
         except subprocess.SubprocessError as e:
             logger.error(f"Power cycle simulation failed: {e}")
