@@ -1,4 +1,5 @@
 import subprocess
+import glob
 import threading
 import time
 import argparse
@@ -251,7 +252,7 @@ def parse_args():
     parser.add_argument(
         '-t', '--timeout', 
         type=int, 
-        default=300,
+        default=900,
         help='Timeout in seconds for each APK\n'
              '(default: 120)'
     )
@@ -291,7 +292,14 @@ def cleanDirectory(apk_path = None):
         
             os.makedirs(folder_output, exist_ok=True)
     else:
-        pass
+        apk_dir = file_paths = glob.glob('DLD/APK/*')
+        apk_names = [os.path.basename(path) for path in file_paths]
+        for apk in apk_names:
+            for folder in folder_names:
+                folder_output = dir_output + apk.strip(".apk") + '\\' + folder
+                if os.path.exists(folder_output):
+                    shutil.rmtree(folder_output)
+                os.makedirs(folder_output, exist_ok=True)
  
 if __name__ == "__main__":
     
