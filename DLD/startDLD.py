@@ -114,9 +114,8 @@ class ProcessManager:
         if self.data_loss_detector:
             self.data_loss_detector.stop()
         
-        # Reset to portrait if rotation was enabled
-        if self.rotate:
-            subprocess.run(["adb", "emu", "rotate", "portrait"], timeout=5)
+        # Always reset to portrait when cleaning up
+        subprocess.run(["adb", "emu", "rotate", "portrait"], timeout=5)
 
     
     def run(self):
@@ -280,8 +279,12 @@ def cleanDirectory(apk_path = None):
                     "temp",
                     "views"]
     if not os.path.exists("output"):
-        os.makedirs("output",exist_ok=True)
-    if(apk_path):
+        os.makedirs("output", exist_ok=True)
+    
+    # Reset to portrait orientation before starting new test
+    subprocess.run(["adb", "emu", "rotate", "portrait"], timeout=5)
+    
+    if apk_path:
         copy_apk = apk_path
         new_apk_path = copy_apk.split('\\')
         apk_file_name = new_apk_path[2].strip(".apk")
@@ -291,8 +294,6 @@ def cleanDirectory(apk_path = None):
                 shutil.rmtree(folder_output)
         
             os.makedirs(folder_output, exist_ok=True)
-    else:
-        pass
  
 if __name__ == "__main__":
     
