@@ -16,6 +16,48 @@ from droidbot.device import Device
 from droidbot.input_event import KeyEvent
 from dataloss import EnhancedDataLossDetector
 
+def checkAdbPath():
+    """
+    Prepend <SDK>/platform-tools, <SDK>/emulator, <SDK>/cmdline-tools/latest/bin
+    to PATH (for the current process) if ANDROID_SDK_ROOT/HOME is set.
+    This helps both our code and 3rd-party libs (like droidbot) find adb.
+    """
+    sdk = os.environ.get("ANDROID_SDK_ROOT") or os.environ.get("ANDROID_HOME")
+    if not sdk:
+        return
+    paths = [
+        os.path.join(sdk, "platform-tools"),
+        os.path.join(sdk, "emulator"),
+        os.path.join(sdk, "cmdline-tools", "latest", "bin"),
+    ]
+    existing = os.environ.get("PATH", "")
+    prefix = os.pathsep.join(p for p in paths if os.path.isdir(p))
+    if prefix:
+        os.environ["PATH"] = prefix + os.pathsep + existing
+
+
+def fixAdb() -> Optional[str]:
+    cand = shutil.which("adb")
+    if cand:
+        return cand
+    for env in ("ANDROID_SDK_ROOT", "ANDROID_HOME"):
+        sdk = os.environ.get(env)
+        if not sdk:
+            continue
+        for c in (os.path.join(sdk, "platform-tools", "adb.exe"),
+                  os.path.join(sdk, "platform-tools", "adb")):
+            if os.path.exists(c):
+                return c
+    return None
+
+def adbCheck(args, **kwargs):
+    adb = fixAdb()
+    if not adb:
+        logger.warning("adb not found; skipping adb command: %s", " ".join(args))
+        # Return a fake failed result so callers don’t crash
+        return subprocess.CompletedProcess(args=[], returncode=1)
+    return subprocess.run([adb] + args, **kwargs)
+
 # Set up logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logger = logging.getLogger('ProcessManager')
@@ -94,6 +136,26 @@ class ProcessManager:
         self.rotation_thread = None
         self.data_loss_thread = None
         self.power_cycle_thread = None
+
+    def enableAccessibility(self):
+        """
+        Ensure the DroidBot accessibility service is enabled.
+        prevent crash if adb missing.
+        """
+        try:
+            adbCheck(["shell", "settings", "put", "secure",
+                      "enabled_accessibility_services",
+                      "com.github.droidbotapp/.DroidBotAppAccessibilityService"],
+                     check=False, timeout=5)
+            adbCheck(["shell", "settings", "put", "secure", "accessibility_enabled", "1"],
+                     check=False, timeout=5)
+            adbCheck(["shell", "am", "force-stop", "com.github.droidbotapp"],
+                     check=False, timeout=5)
+            adbCheck(["shell", "monkey", "-p", "com.github.droidbotapp",
+                      "-c", "android.intent.category.LAUNCHER", "1"],
+                     check=False, timeout=5)
+        except subprocess.TimeoutExpired:
+            logger.warning("Timed out enabling accessibility service")
 
     def _load_app_info(self):
         """Load app information from DroidBot's app.json"""
@@ -333,7 +395,10 @@ class ProcessManager:
             "droidbot",
             "-a", self.apk_path,
             "-o", self.output_dir,
-            "-timeout", str(self.timeout)
+            "-timeout", str(self.timeout),
+            "-is_emulator",
+            "-grant_perm",
+            "-accessibility_auto",
         ]
         
         logger.info(f"Starting DroidBot: {' '.join(cmd)}")
@@ -464,7 +529,7 @@ class ProcessManager:
         print("With enhanced data loss detection enabled")
         print("Press Ctrl+C to stop early")
         print(f"{'='*50}\n")
-
+        self.enableAccessibility()
         self.start_time = time.time()
 
         # Initialize event tracking
@@ -640,30 +705,38 @@ def cleanDirectory(apk_path = None):
         os.makedirs("output", exist_ok=True)
     
     # Reset to portrait orientation before starting new test
-    subprocess.run(["adb", "emu", "rotate", "portrait"], timeout=5)
-    
+    # subprocess.run(["adb", "emu", "rotate", "portrait"], timeout=5)
+    # Reset to portrait orientation before starting new test
+    try:
+        subprocess.run(["adb", "emu", "rotate", "portrait"], timeout=5, check=False)
+    except FileNotFoundError:
+        logger.warning("adb not found on PATH; skipping portrait reset. Add platform-tools to PATH or set ANDROID_SDK_ROOT.")
+    except subprocess.TimeoutExpired:
+        logger.warning("Failed to reset to portrait orientation (timeout)")
+
+
     if apk_path:
-        copy_apk = apk_path
-        new_apk_path = copy_apk.split('/')
-        apk_file_name = new_apk_path[2].strip(".apk")
+        apk_file_name = os.path.splitext(os.path.basename(os.path.normpath(apk_path)))[0]
         for folder in folder_names:
-            folder_output = dir_output + apk_file_name + '/' + folder
+            folder_output = os.path.join(dir_output, apk_file_name, folder)
             if os.path.exists(folder_output):
                 shutil.rmtree(folder_output)
-        
             os.makedirs(folder_output, exist_ok=True)
     else:
-        apk_dir = file_paths = glob.glob('DLD/APK/*')
-        apk_names = [os.path.basename(path) for path in file_paths]
+        file_paths = glob.glob(os.path.join('DLD', 'APK', '*.apk'))
+        # apk_dir = file_paths = glob.glob('DLD/APK/*')
+        # apk_names = [os.path.basename(path) for path in file_paths]
+        apk_names = [os.path.splitext(os.path.basename(p))[0] for p in file_paths]
         for apk in apk_names:
             for folder in folder_names:
-                folder_output = dir_output + apk.strip(".apk") + '/' + folder
+                # folder_output = dir_output + apk.strip(".apk") + '/' + folder
+                folder_output = os.path.join(dir_output, apk, folder)
                 if os.path.exists(folder_output):
                     shutil.rmtree(folder_output)
                 os.makedirs(folder_output, exist_ok=True)
- 
+
 if __name__ == "__main__":
-    
+    checkAdbPath()
     args = parse_args()
     cleanDirectory(args.apk_path)
     if args.apk_path:
