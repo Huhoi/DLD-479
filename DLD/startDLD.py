@@ -499,7 +499,7 @@ class ProcessManager:
                     break
                 
                 # Check for events that should trigger home button
-                if self.home_button and self.check_events_for_home_trigger():
+                if self.home_button and self.check_events_for_home_trigger() and (time.time() - self.last_home_time) >= self.min_home_interval:
                     print("\n=== Event detected that requires home button simulation ===")
                     
                     # Pause threads and terminate subprocesses
@@ -530,8 +530,8 @@ class ProcessManager:
                 self.run_home_button_analysis()
             logger.info("Processing complete")
 
-def process_apk(apk_path: str, output_dir: str = None, rotate: bool = False, 
-                power_cycle: bool = False, home_button: bool = True, 
+def process_apk(apk_path: str, output_dir: str = None, rotate: bool = True, 
+                power_cycle: bool = True, home_button: bool = True, 
                 timeout: int = 300, max_home_actions: int = 20):
     """Process a single APK file"""
     manager = ProcessManager(
@@ -612,7 +612,7 @@ def parse_args():
     parser.add_argument(
         '-t', '--timeout', 
         type=int, 
-        default=300,
+        default=120,
         help='Timeout in seconds for each APK\n'
              '(default: 120)'
     )
@@ -625,7 +625,7 @@ def parse_args():
     return parser.parse_args()
 
 def cleanDirectory(apk_path = None):
-    dir_output = "output\\"
+    dir_output = "output/"
     folder_names = ["data_loss_events", 
                     "data_loss_logs", 
                     "data_loss_states",
@@ -638,10 +638,10 @@ def cleanDirectory(apk_path = None):
         os.makedirs("output",exist_ok=True)
     if(apk_path):
         copy_apk = apk_path
-        new_apk_path = copy_apk.split('\\')
+        new_apk_path = copy_apk.split('/')
         apk_file_name = new_apk_path[2].strip(".apk")
         for folder in folder_names:
-            folder_output = dir_output + apk_file_name + '\\' + folder
+            folder_output = dir_output + apk_file_name + '/' + folder
             if os.path.exists(folder_output):
                 shutil.rmtree(folder_output)
         
@@ -651,7 +651,7 @@ def cleanDirectory(apk_path = None):
         apk_names = [os.path.basename(path) for path in file_paths]
         for apk in apk_names:
             for folder in folder_names:
-                folder_output = dir_output + apk.strip(".apk") + '\\' + folder
+                folder_output = dir_output + apk.strip(".apk") + '/' + folder
                 if os.path.exists(folder_output):
                     shutil.rmtree(folder_output)
                 os.makedirs(folder_output, exist_ok=True)
