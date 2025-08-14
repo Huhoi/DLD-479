@@ -7,7 +7,7 @@ from watchdog.events import FileSystemEventHandler
 
 # List of event types that should trigger rotation
 ROTATION_EVENTS = {
-    "key"
+    "key",
     "manual", 
     "exit", 
     "touch",  
@@ -25,15 +25,27 @@ class DroidBotEventHandler(FileSystemEventHandler):
         self.events_dir = events_dir
         self.last_rotation_time = 0
         self.current_orientation = "portrait"  # Start in portrait mode
+        # Wait for directory to be created
+        self._wait_for_events_dir()
         # Rotate for all existing events first
         self._rotate_for_existing_events()
     
+    def _wait_for_events_dir(self, timeout=30):
+        """Wait for events directory to be created"""
+        start_time = time.time()
+        while not os.path.exists(self.events_dir):
+            if time.time() - start_time > timeout:
+                raise FileNotFoundError(f"Events directory not created within {timeout} seconds")
+            time.sleep(1)
+    
     def _rotate_for_existing_events(self):
         """Rotate for all existing event files"""
-        if os.path.exists(self.events_dir):
+        try:
             for event_file in sorted(os.listdir(self.events_dir)):
                 if event_file.endswith('.json'):
                     self._process_event_file(event_file)
+        except FileNotFoundError:
+            print(f"Events directory not found yet, will process new events as they arrive")
     
     def on_created(self, event):
         if event.src_path.endswith('.json'):
@@ -48,7 +60,7 @@ class DroidBotEventHandler(FileSystemEventHandler):
             event_type = event_data.get("event", {}).get("event_type", "")
             if event_type in ROTATION_EVENTS:
                 self._rotate_device(event_file)
-        except (json.JSONDecodeError, KeyError) as e:
+        except (json.JSONDecodeError, KeyError, FileNotFoundError) as e:
             print(f"Error processing {event_file}: {e}")
     
     def _rotate_device(self, event_file):
@@ -94,9 +106,6 @@ class DroidBotEventHandler(FileSystemEventHandler):
 def rotate_on_event(output_dir):
     """Monitor DroidBot's events folder and rotate on specific events"""
     events_dir = os.path.join(output_dir, "events")
-    if not os.path.exists(events_dir):
-        print(f"Error: Events directory not found at {events_dir}")
-        return
     
     print("Starting event-synchronized rotation...")
     print(f"Will rotate clockwise on these events: {', '.join(sorted(ROTATION_EVENTS))}")

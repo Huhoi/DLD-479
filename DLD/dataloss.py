@@ -46,8 +46,7 @@ class EnhancedDataLossDetector:
         dirs = [
             "data_loss_logs",
             "data_loss_events",
-            "event_analysis",
-            "states",
+            "monitered_states",
             "events"
         ]
         for dir_name in dirs:
@@ -185,7 +184,7 @@ class EnhancedDataLossDetector:
                 
             screenshot_path = os.path.join(
                 self.output_dir, 
-                "states",
+                "monitered_states",
                 f"state_{timestamp}.png"
             )
             

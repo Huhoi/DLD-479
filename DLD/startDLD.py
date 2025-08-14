@@ -326,6 +326,8 @@ class ProcessManager:
     def run_droidbot(self):
         """Run DroidBot in a subprocess"""
         os.makedirs(self.output_dir, exist_ok=True)
+        # Explicitly create events directory if it doesn't exist
+        os.makedirs(os.path.join(self.output_dir, "events"), exist_ok=True)
         
         cmd = [
             "droidbot",
@@ -434,6 +436,7 @@ class ProcessManager:
         if self.data_loss_detector:
             self.data_loss_detector.stop()
         
+
         # Reset to portrait if rotation was enabled
         if self.rotate:
             try:
@@ -627,16 +630,19 @@ def parse_args():
 def cleanDirectory(apk_path = None):
     dir_output = "output/"
     folder_names = ["data_loss_events", 
-                    "data_loss_logs", 
-                    "data_loss_states",
+                    "data_loss_logs",
                     "events",
                     "states",
                     "temp",
                     "views",
                     "home_button_screenshots"]
     if not os.path.exists("output"):
-        os.makedirs("output",exist_ok=True)
-    if(apk_path):
+        os.makedirs("output", exist_ok=True)
+    
+    # Reset to portrait orientation before starting new test
+    subprocess.run(["adb", "emu", "rotate", "portrait"], timeout=5)
+    
+    if apk_path:
         copy_apk = apk_path
         new_apk_path = copy_apk.split('/')
         apk_file_name = new_apk_path[2].strip(".apk")
