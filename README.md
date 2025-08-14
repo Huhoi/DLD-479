@@ -17,12 +17,13 @@
 - Have emulator running
 - Be in the root of the project
 - Run ***DLD/startDLD.py apk_path***  (NOT start.py in droidbot)
+  - ```python ./DLD/startDLD.py --apk-path DLD/APK/example.apk```
 - Ctrl + C to stop.
 - Output should be in "output/**apk_name**"
 
 # Possible Conflicts and Fixes
 ## Missing Environment Variables
-Before running `startDLD.py`, make sure `adb` is available on your PATH.
+On windows, before running `startDLD.py`, make sure `adb` is available on your PATH.
 You can add it with the following command:
 ```
 $env:ANDROID_SDK_ROOT = "C:\Users\YOUR-USERNAME\AppData\Local\Android\Sdk"
