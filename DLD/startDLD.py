@@ -240,7 +240,7 @@ class ProcessManager:
         
         # Check constraints
         if time_since_last < self.min_home_interval:
-            logger.info(f"Skipping home button (interval: {time_since_last:.1f}s < {self.min_home_interval}s)")
+            #logger.info(f"Skipping home button (interval: {time_since_last:.1f}s < {self.min_home_interval}s)")
             return False
             
         if self.home_action_count >= self.max_home_actions:
@@ -397,6 +397,15 @@ class ProcessManager:
             subprocess.run(["python", crash_script, self.output_dir])
         else:
             print(f"Warning: Crash analysis script not found at {crash_script}")
+        
+    def run_home_button_analysis(self):
+        """Run home button analysis after DroidBot finishes"""
+        print("\nRunning home button analysis...")
+        crash_script = os.path.join(os.path.dirname(__file__), "home_button_data_loss.py")
+        if os.path.exists(crash_script):
+            subprocess.run(["python", crash_script, self.output_dir])
+        else:
+            print(f"Warning: Crash analysis script not found at {crash_script}")
 
     def cleanup(self):
         """Clean up all processes and threads"""
@@ -517,6 +526,8 @@ class ProcessManager:
             
             # Run crash analysis after cleanup
             self.run_crash_analysis()
+            if(self.home_button):
+                self.run_home_button_analysis()
             logger.info("Processing complete")
 
 def process_apk(apk_path: str, output_dir: str = None, rotate: bool = False, 
