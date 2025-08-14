@@ -55,7 +55,7 @@ class DroidBotEventHandler(FileSystemEventHandler):
         """Perform a single clockwise rotation with rate limiting"""
         current_time = time.time()
         if current_time - self.last_rotation_time < 5:
-            print(f"Skipping rotation (rate limited) triggered by {event_file}")
+            #print(f"Skipping rotation (rate limited) triggered by {event_file}")
             return
         
         # Get next orientation in cycle
