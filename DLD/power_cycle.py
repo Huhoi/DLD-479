@@ -61,7 +61,7 @@ class PowerCycleEventHandler(FileSystemEventHandler):
         
         # Rate limiting: Only allow power cycle every 30 seconds
         if current_time - self.last_power_cycle_time < 30:
-            logger.info(f"Skipping power cycle (rate limited) triggered by {event_file}")
+            #logger.info(f"Skipping power cycle (rate limited) triggered by {event_file}")
             return
         
         # Max power cycles per test
