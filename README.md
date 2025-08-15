@@ -5,13 +5,14 @@
 - Need to use androguard version 3.4.0a1
 
 # Python Packages
-- pip install Pillow imagehash
-- pip install androguard==3.4.0a1
-- pip install watchdog
-- pip install opencv-python
-- cd droidbot
+ - Ensure the following has been installed before running:
+    - pip install Pillow imagehash
+    - pip install androguard==3.4.0a1
+    - pip install watchdog
+    - pip install opencv-python
+    - pip install numpy
     - pip install e .
-- (Maybe make an install.py?)
+      - Run this inside the droidbot folder (cd droidbot)
 
 # How to Run
 - Have emulator running
