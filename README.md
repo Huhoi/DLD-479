@@ -16,8 +16,10 @@
 # How to Run
 - Have emulator running
 - Be in the root of the project
-- Run ***DLD/startDLD.py apk_path***  (NOT start.py in droidbot)
-  - ```python ./DLD/startDLD.py --apk-path DLD/APK/example.apk```
+- Run Either of the Following (DO NOT RUN start.py in droidbot):
+  - ***python DLD/startDLD.py --apk-path apkFileDirectory --no-home-button*** (To simulate both rotate and power_cycle)
+  - ***python DLD/startDLD.py --apk-path apkFileDirectory --no-rotate --no-power-cycle*** (to simulate only home-button)
+  - Add -t <time-in-seconds> to add how long you wish to run the program for (default to 120 seconds).
 - Ctrl + C to stop.
 - Output should be in "output/**apk_name**"
 
