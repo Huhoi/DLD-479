@@ -185,7 +185,7 @@ class ProcessManager:
                     n += 1
         return n
 
-    def _read_utg_stats(self):
+    def parseUTGStats(self):
         """
         Return (num_reached_activities, app_num_total_activities) from utg.js/utg.json.
         Works with either pure JSON or a JS assignment like 'var utg = {...};'.
@@ -218,30 +218,8 @@ class ProcessManager:
                 if isinstance(nr, int) and isinstance(nt, int):
                     return nr, nt
             except Exception:
-                # 2) Regex fallback (very forgiving)
-                try:
-                    with open(path, "r", encoding="utf-8", errors="ignore") as f:
-                        txt = f.read()
-                    import re
-                    m1 = re.search(r'"num_reached_activities"\s*:\s*(\d+)', txt)
-                    m2 = re.search(r'"app_num_total_activities"\s*:\s*(\d+)', txt)
-                    nr = int(m1.group(1)) if m1 else None
-                    nt = int(m2.group(1)) if m2 else None
-                    if nr is not None and nt is not None:
-                        return nr, nt
-                except Exception:
-                    pass
+                pass
         return None, None
-
-    def count_files(self, folder, patterns=("*.json",)):
-        """Count files matching patterns in folder (non-recursive)."""
-        if not folder or not os.path.isdir(folder):
-            return 0
-        total = 0
-        for pat in patterns:
-            total += len(glob.glob(os.path.join(folder, pat)))
-        return total
-
 
     def activityCount(self, app_info: dict):
         acts = app_info.get("activities")
@@ -249,17 +227,10 @@ class ProcessManager:
             return len(acts)
         if isinstance(acts, dict):
             return len(acts.keys())
-        # As a last resort, try some legacy keys
-        for key in ("activities", "activity_list", "activities_list"):
-            val = app_info.get(key)
-            if isinstance(val, list):
-                return len(val)
-            if isinstance(val, dict):
-                return len(val.keys())
         return 0
 
     def print_end_summary(self):
-        app_info = self._load_app_info()
+        app_info = self.apkMetadata()
         app_label = (app_info.get("label")
                      or app_info.get("app_name")
                      or app_info.get("name")
@@ -270,7 +241,7 @@ class ProcessManager:
         incidents = self.count_incidents()
         crashes = self.count_crashes()
 
-        reached, total = self._read_utg_stats()
+        reached, total = self.parseUTGStats()
         if isinstance(reached, int) and isinstance(total, int) and total > 0:
             pct = 100.0 * reached / total
             coverage_line = f"{reached}/{total} ({pct:.1f}%)"
@@ -281,11 +252,11 @@ class ProcessManager:
             total_acts_line = str(total_acts)
 
         print("\n" + "=" * 60)
-        print(f"App:                         {app_label} ({package})")
-        print(f"# Activities (APK/UTG):      {total_acts_line}")
-        print(f"Activity coverage:           {coverage_line}")
-        print(f"Data Loss Incidents:         {incidents}")
-        print(f"Total Crashes:               {crashes}")
+        print(f"App: {app_label} ({package})")
+        print(f"# Activities (APK/UTG): {total_acts_line}")
+        print(f"Activity coverage: {coverage_line}")
+        print(f"Data Loss Incidents: {incidents}")
+        print(f"Total Crashes: {crashes}")
 
     def enableAccessibility(self):
         """
@@ -307,7 +278,7 @@ class ProcessManager:
         except subprocess.TimeoutExpired:
             logger.warning("Timed out enabling accessibility service")
 
-    def _load_app_info(self):
+    def apkMetadata(self):
         """
         Try to load app info from output/app.json (preferred), else parse the APK.
         Returns a dict including 'package', 'main_activity', 'label', and 'activities' (list) when possible.
@@ -527,17 +498,17 @@ class ProcessManager:
                 logger.info(f"Saved pre-home screenshot to {before_path}")
 
             logger.info("Pressing home button...")
-            adbCheck(["shell", "input", "keyevent", "KEYCODE_HOME"], check=False, timeout=5)  # >>> CHANGED
+            adbCheck(["shell", "input", "keyevent", "KEYCODE_HOME"], check=False, timeout=5)
 
             time.sleep(0.5)
-            app_info = self._load_app_info()
+            app_info = self.apkMetadata()
             package = app_info.get("package", "")
             activity = app_info.get("main_activity", "")
             if package and activity:
                 logger.info(f"Reopening app: {package}/{activity}")
                 # Some app.json store fully qualified activity; if not, prefix with package
                 comp = f"{package}/{activity if '.' in activity else package + '.' + activity}"
-                adbCheck(["shell", "am", "start", "-n", comp], check=False, timeout=5)  # >>> CHANGED
+                adbCheck(["shell", "am", "start", "-n", comp], check=False, timeout=5)
             time.sleep(7)
 
             after_path = os.path.join(self.screenshot_dir, f"after_{self.home_action_count}.png")
@@ -557,31 +528,21 @@ class ProcessManager:
         events_dir = os.path.join(self.output_dir, "events")
         if not os.path.exists(events_dir):
             return False
+        current = {e.name for e in os.scandir(events_dir) if e.is_file() and e.name.endswith(".json")}
+        new_files = current - self.seen_events
 
-        # Get current event files
-        current_events = set()
-        for entry in os.scandir(events_dir):
-            if entry.is_file() and entry.name.endswith('.json'):
-                current_events.add(entry.name)
-
-        # Find new events
-        new_events = current_events - self.seen_events
-
-        for event_file in new_events:
+        for name in new_files:
             try:
-                with open(os.path.join(events_dir, event_file), 'r') as f:
-                    event_data = json.load(f)
-
-                event_type = event_data.get("event", {}).get("event_type", "")
-                if event_type in HOME_BUTTON_EVENTS:
-                    logger.info(f"Found trigger event: {event_type} in {event_file}")
+                with open(os.path.join(events_dir, name), "r", encoding="utf-8") as f:
+                    data = json.load(f)
+                etype = data.get("event", {}).get("event_type", "")
+                if etype in HOME_BUTTON_EVENTS:
+                    logger.info("Found trigger event: %s in %s", etype, name)
                     return True
-
-            except (json.JSONDecodeError, IOError) as e:
-                logger.error(f"Error processing {event_file}: {e}")
+            except Exception as e:
+                logger.error("Error processing %s: %s", name, e)
             finally:
-                self.seen_events.add(event_file)
-
+                self.seen_events.add(name)
         return False
 
     def run_droidbot(self):
