@@ -65,8 +65,8 @@ logger = logging.getLogger('ProcessManager')
 
 # List of event types that should trigger home button simulation
 HOME_BUTTON_EVENTS = {
-    "touch", 
-    "long_touch", 
+    "touch",
+    "long_touch",
     "set_text",
     "spawn",
     "scroll",
@@ -109,7 +109,7 @@ class PausableThread(threading.Thread):
 
 class ProcessManager:
     def __init__(self, apk_path: str, output_dir: str = None, rotate: bool = True,
-                 power_cycle: bool = True, home_button: bool = True, timeout: int = 300, 
+                 power_cycle: bool = True, home_button: bool = True, timeout: int = 300,
                  max_home_actions: int = 20):
         self.apk_path = apk_path
         apk_name = os.path.splitext(os.path.basename(apk_path))[0]
@@ -131,12 +131,107 @@ class ProcessManager:
         self.seen_events = set()
         self.screenshot_dir = os.path.join(self.output_dir, "home_button_screenshots")
         os.makedirs(self.screenshot_dir, exist_ok=True)
-        
+
+        self.crash_dir = os.path.join(self.output_dir, "crashes")
+        os.makedirs(self.crash_dir, exist_ok=True)
+
         # Thread references
         self.droidbot_thread = None
         self.rotation_thread = None
         self.data_loss_thread = None
         self.power_cycle_thread = None
+
+    def count_crashes(self) -> int:
+        """
+        Prefer the parsed count written by run_crash_analysis().
+        Fallback to counting artifacts in crashes/.
+        """
+        # 1) If our crash summary exists, use it
+        from_path = os.path.join(self.crash_dir, "crashes.json")
+        try:
+            if os.path.isfile(from_path):
+                with open(from_path, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+                if isinstance(data, dict) and isinstance(data.get("count"), int):
+                    return data["count"]
+        except Exception:
+            pass
+
+        # 2) Else count textual artifacts as a loose fallback
+        try:
+            if os.path.isdir(self.crash_dir):
+                return len([f for f in os.listdir(self.crash_dir)
+                            if f.lower().endswith((".json", ".txt", ".log"))])
+        except Exception:
+            pass
+        return 0
+
+    def count_incidents(self) -> int:
+        """
+        Count data loss incidents as the number of incident folders in: output_dir>/data_loss_events/
+        """
+        base = os.path.join(self.output_dir, "data_loss_events")
+        if not os.path.isdir(base):
+            return 0
+
+        n = 0
+        with os.scandir(base) as it:
+            for entry in it:
+                if not entry.is_dir():
+                    continue
+                name_ok = entry.name.startswith("incident_")
+                has_report = os.path.isfile(os.path.join(entry.path, "report.json"))
+                if name_ok or has_report:
+                    n += 1
+        return n
+
+    def _read_utg_stats(self):
+        """
+        Return (num_reached_activities, app_num_total_activities) from utg.js/utg.json.
+        Works with either pure JSON or a JS assignment like 'var utg = {...};'.
+        Falls back to regex if JSON parsing fails. Returns (None, None) if missing.
+        """
+        candidates = [
+            os.path.join(self.output_dir, "utg.js"),
+            os.path.join(self.output_dir, "utg.json"),
+        ]
+        for path in candidates:
+            if not os.path.isfile(path):
+                continue
+            try:
+                # 1) First try strict JSON
+                with open(path, "r", encoding="utf-8", errors="ignore") as f:
+                    txt = f.read().strip()
+
+                # If it's a JS assignment, extract the {...} part
+                if not txt.startswith("{"):
+                    # Try to find the first '{' and the matching last '}'.
+                    start = txt.find("{")
+                    end = txt.rfind("}")
+                    if start != -1 and end != -1 and end > start:
+                        txt = txt[start:end + 1]
+
+                data = json.loads(txt)
+
+                nr = data.get("num_reached_activities")
+                nt = data.get("app_num_total_activities")
+                if isinstance(nr, int) and isinstance(nt, int):
+                    return nr, nt
+            except Exception:
+                # 2) Regex fallback (very forgiving)
+                try:
+                    with open(path, "r", encoding="utf-8", errors="ignore") as f:
+                        txt = f.read()
+                    import re
+                    m1 = re.search(r'"num_reached_activities"\s*:\s*(\d+)', txt)
+                    m2 = re.search(r'"app_num_total_activities"\s*:\s*(\d+)', txt)
+                    nr = int(m1.group(1)) if m1 else None
+                    nt = int(m2.group(1)) if m2 else None
+                    if nr is not None and nt is not None:
+                        return nr, nt
+                except Exception:
+                    pass
+        return None, None
 
     def count_files(self, folder, patterns=("*.json",)):
         """Count files matching patterns in folder (non-recursive)."""
@@ -147,63 +242,8 @@ class ProcessManager:
             total += len(glob.glob(os.path.join(folder, pat)))
         return total
 
-    def _count_crashes(self):
-        """
-        Heuristics:
-        1) If crash.py wrote a JSON summary (e.g., crashes.json), count its items.
-        2) Else, count files in output_dir/crashes/*
-        3) Else, scan logs in data_loss_logs for 'FATAL EXCEPTION' as a fallback.
-        """
-        # 1) JSON summary
-        for name in ("crashes.json", "crash_report.json"):
-            p = os.path.join(self.output_dir, name)
-            if os.path.isfile(p):
-                try:
-                    with open(p, "r", encoding="utf-8") as f:
-                        data = json.load(f)
-                    if isinstance(data, list):
-                        return len(data)
-                    if isinstance(data, dict):
-                        # try common keys
-                        for k in ("crashes", "items", "events"):
-                            if k in data and isinstance(data[k], list):
-                                return len(data[k])
-                except Exception:
-                    pass
 
-        # 2) crashes/ folder
-        crashes_dir = os.path.join(self.output_dir, "crashes")
-        cnt = self.count_files(crashes_dir, ("*.json", "*.txt", "*.log"))
-        if cnt:
-            return cnt
-
-        # 3) scan logs
-        logs_dir = os.path.join(self.output_dir, "data_loss_logs")
-        if os.path.isdir(logs_dir):
-            pat = re.compile(r"FATAL EXCEPTION", re.IGNORECASE)
-            hits = 0
-            for fp in glob.glob(os.path.join(logs_dir, "*.log")):
-                try:
-                    with open(fp, "r", errors="ignore", encoding="utf-8") as f:
-                        for line in f:
-                            if pat.search(line):
-                                hits += 1
-                                break
-                except Exception:
-                    pass
-            if hits:
-                return hits
-
-        return 0
-
-    def countDataLoss(self):
-        """
-        Count 'Our Benchmark Data Loss' artifacts.
-        This assumes your detectors write to data_loss_events/*.
-        """
-        return self.count_files(os.path.join(self.output_dir, "data_loss_events"), ("*.json", "*.csv"))
-
-    def _num_activities_from_appjson(self, app_info: dict):
+    def activityCount(self, app_info: dict):
         acts = app_info.get("activities")
         if isinstance(acts, list):
             return len(acts)
@@ -220,52 +260,32 @@ class ProcessManager:
 
     def print_end_summary(self):
         app_info = self._load_app_info()
-        app_label = app_info.get("label") or app_info.get("app_name") or app_info.get("name") or app_info.get(
-            "package") or "Unknown"
+        app_label = (app_info.get("label")
+                     or app_info.get("app_name")
+                     or app_info.get("name")
+                     or app_info.get("package")
+                     or "Unknown")
         package = app_info.get("package") or "Unknown"
-        num_activities = self._num_activities_from_appjson(app_info)
 
-        our_benchmark = self.countDataLoss()
-        crashes = self._count_crashes()
+        incidents = self.count_incidents()
+        crashes = self.count_crashes()
+
+        reached, total = self._read_utg_stats()
+        if isinstance(reached, int) and isinstance(total, int) and total > 0:
+            pct = 100.0 * reached / total
+            coverage_line = f"{reached}/{total} ({pct:.1f}%)"
+            total_acts_line = str(total)
+        else:
+            total_acts = self.activityCount(app_info)
+            coverage_line = "N/A"
+            total_acts_line = str(total_acts)
 
         print("\n" + "=" * 60)
-        print(f"App: {app_label} ({package})")
-        print(f"# Activities: {num_activities}")
-        print(f"Our Benchmark Data Loss: {our_benchmark}")
-        print(f"Crashes:{crashes}")
-
-    def count_files_recursive(self, folder, patterns=("*.json",)):
-        if not folder or not os.path.isdir(folder):
-            return 0
-        total = 0
-        for pat in patterns:
-            total += len(glob.glob(os.path.join(folder, "**", pat), recursive=True))
-        return total
-
-    def countDataLoss(self):
-        # Count all JSON/CSV anywhere under data_loss_events (e.g., incident_*/report.json)
-        return self.count_files_recursive(os.path.join(self.output_dir, "data_loss_events"), ("*.json", "*.csv"))
-
-    def _load_app_info(self):
-        """Try app.json; if missing, fall back to parsing the APK."""
-        app_json_path = os.path.join(self.output_dir, "app.json")
-        if os.path.exists(app_json_path):
-            try:
-                with open(app_json_path, "r", encoding="utf-8") as f:
-                    return json.load(f)
-            except Exception as e:
-                logger.error("Error loading app.json: %s", e)
-        try:
-            apk = App(self.apk_path)
-            return {
-                "package": apk.get_package_name() if hasattr(apk, "get_package_name") else getattr(apk, "package_name",
-                                                                                                   "com.example.app"),
-                "main_activity": apk.get_main_activity() if hasattr(apk, "get_main_activity") else "MainActivity",
-                "label": apk.get_app_name() if hasattr(apk, "get_app_name") else None,
-            }
-        except Exception:
-            logger.warning("app.json missing and APK parse failed; using defaults")
-            return {"package": "com.example.app", "main_activity": "MainActivity"}
+        print(f"App:                         {app_label} ({package})")
+        print(f"# Activities (APK/UTG):      {total_acts_line}")
+        print(f"Activity coverage:           {coverage_line}")
+        print(f"Data Loss Incidents:         {incidents}")
+        print(f"Total Crashes:               {crashes}")
 
     def enableAccessibility(self):
         """
@@ -372,7 +392,7 @@ class ProcessManager:
         try:
             # Create screenshot directory if needed
             os.makedirs(os.path.dirname(filename), exist_ok=True)
-            
+
             # Take screenshot
             result = subprocess.run(
                 ["adb", "shell", "screencap", "-p", "/sdcard/screen.png"],
@@ -380,11 +400,11 @@ class ProcessManager:
                 stderr=subprocess.PIPE,
                 timeout=10
             )
-            
+
             if result.returncode != 0:
                 logger.error(f"Screencap failed: {result.stderr.decode().strip()}")
                 return False
-                
+
             # Pull screenshot from device
             result = subprocess.run(
                 ["adb", "pull", "/sdcard/screen.png", filename],
@@ -392,13 +412,13 @@ class ProcessManager:
                 stderr=subprocess.PIPE,
                 timeout=10
             )
-            
+
             if result.returncode != 0:
                 logger.error(f"Pull screenshot failed: {result.stderr.decode().strip()}")
                 return False
-                
+
             return True
-            
+
         except (subprocess.SubprocessError, subprocess.TimeoutExpired) as e:
             logger.error(f"Screenshot failed: {e}")
             return False
@@ -407,7 +427,7 @@ class ProcessManager:
         """Terminate a subprocess safely"""
         if proc and proc.poll() is None:  # Process is still running
             logger.info(f"Terminating {name} process (PID: {proc.pid})")
-            
+
             # Try to terminate gracefully
             proc.terminate()
             try:
@@ -424,33 +444,33 @@ class ProcessManager:
     def pause_threads_and_processes(self):
         """Pause all threads and terminate their subprocesses"""
         logger.info("Pausing threads and terminating subprocesses...")
-        
+
         # Pause threads
         if self.droidbot_thread and self.droidbot_thread.is_alive():
             self.droidbot_thread.pause()
-            
+
         if self.rotation_thread and self.rotation_thread.is_alive():
             self.rotation_thread.pause()
-            
+
         if self.data_loss_thread and self.data_loss_thread.is_alive():
             self.data_loss_thread.pause()
-            
+
         if self.power_cycle_thread and self.power_cycle_thread.is_alive():
             self.power_cycle_thread.pause()
-        
+
         # Terminate subprocesses
         if self.rotation_process:
             self.terminate_subprocess(self.rotation_process, "rotation")
             self.rotation_process = None
-            
+
         if self.power_cycle_process:
             self.terminate_subprocess(self.power_cycle_process, "power cycle")
             self.power_cycle_process = None
-            
+
     def resume_threads_and_processes(self):
         """Resume threads and restart their subprocesses"""
         logger.info("Resuming threads and restarting subprocesses...")
-        
+
         # Restart rotation if needed
         if self.rotate:
             if not self.rotation_process or self.rotation_process.poll() is not None:
@@ -463,7 +483,7 @@ class ProcessManager:
                 self.rotation_thread.resume()
             else:
                 logger.warning("Rotation thread is not alive, not resuming")
-        
+
         # Restart power cycle if needed
         if self.power_cycle:
             if not self.power_cycle_process or self.power_cycle_process.poll() is not None:
@@ -476,12 +496,12 @@ class ProcessManager:
                 self.power_cycle_thread.resume()
             else:
                 logger.warning("Power cycle thread is not alive, not resuming")
-        
-        
+
+
         # Resume other threads
         if self.droidbot_thread and self.droidbot_thread.is_alive():
             self.droidbot_thread.resume()
-            
+
         if self.data_loss_thread and self.data_loss_thread.is_alive():
             self.data_loss_thread.resume()
 
@@ -489,18 +509,18 @@ class ProcessManager:
         """Simulate pressing home button and reopening app"""
         current_time = time.time()
         time_since_last = current_time - self.last_home_time
-        
+
         # Check constraints
         if time_since_last < self.min_home_interval:
             #logger.info(f"Skipping home button (interval: {time_since_last:.1f}s < {self.min_home_interval}s)")
             return False
-            
+
         if self.home_action_count >= self.max_home_actions:
             logger.info(f"Max home button actions ({self.max_home_actions}) reached")
             return False
-            
+
         logger.info(f"=== Triggering home button simulation ({trigger_reason}) ===")
-        
+
         try:
             before_path = os.path.join(self.screenshot_dir, f"before_{self.home_action_count}.png")
             if self.take_screenshot(before_path):
@@ -537,31 +557,31 @@ class ProcessManager:
         events_dir = os.path.join(self.output_dir, "events")
         if not os.path.exists(events_dir):
             return False
-            
+
         # Get current event files
         current_events = set()
         for entry in os.scandir(events_dir):
             if entry.is_file() and entry.name.endswith('.json'):
                 current_events.add(entry.name)
-        
+
         # Find new events
         new_events = current_events - self.seen_events
-        
+
         for event_file in new_events:
             try:
                 with open(os.path.join(events_dir, event_file), 'r') as f:
                     event_data = json.load(f)
-                
+
                 event_type = event_data.get("event", {}).get("event_type", "")
                 if event_type in HOME_BUTTON_EVENTS:
                     logger.info(f"Found trigger event: {event_type} in {event_file}")
                     return True
-                    
+
             except (json.JSONDecodeError, IOError) as e:
                 logger.error(f"Error processing {event_file}: {e}")
             finally:
                 self.seen_events.add(event_file)
-                
+
         return False
 
     def run_droidbot(self):
@@ -569,7 +589,7 @@ class ProcessManager:
         os.makedirs(self.output_dir, exist_ok=True)
         # Explicitly create events directory if it doesn't exist
         os.makedirs(os.path.join(self.output_dir, "events"), exist_ok=True)
-        
+
         cmd = [
             "droidbot",
             "-a", self.apk_path,
@@ -579,7 +599,7 @@ class ProcessManager:
             "-grant_perm",
             "-accessibility_auto",
         ]
-        
+
         logger.info(f"Starting DroidBot: {' '.join(cmd)}")
         self.droidbot_process = subprocess.Popen(
             cmd,
@@ -591,7 +611,7 @@ class ProcessManager:
         """Run rotation using rotate.py script"""
         if not self.rotate:
             return
-            
+
         cmd = ["python", "DLD/rotate.py", self.output_dir]
         logger.info(f"Starting rotation: {' '.join(cmd)}")
         self.rotation_process = subprocess.Popen(
@@ -599,12 +619,12 @@ class ProcessManager:
             start_new_session=True
         )
         self.rotation_process.wait()
-        
+
     def run_power_cycle(self):
         """Run power cycle simulation"""
         if not self.power_cycle:
             return
-            
+
         cmd = ["python", "DLD/power_cycle.py", self.output_dir]
         logger.info(f"Starting power cycle: {' '.join(cmd)}")
         self.power_cycle_process = subprocess.Popen(
@@ -623,9 +643,9 @@ class ProcessManager:
             enable_accessibility_hard=True,
             ignore_ad=True
         )
-        
+
         app = App(self.apk_path)
-        
+
         # Start data loss detector
         self.data_loss_detector = EnhancedDataLossDetector(
             device=device,
@@ -636,14 +656,51 @@ class ProcessManager:
         self.data_loss_detector.start()
 
     def run_crash_analysis(self):
-        """Run crash analysis after DroidBot finishes"""
-        print("\nRunning crash analysis...")
-        crash_script = os.path.join(os.path.dirname(__file__), "crash.py")
-        if os.path.exists(crash_script):
-            subprocess.run(["python", crash_script, self.output_dir])
-        else:
+        """
+        Run crash.py, capture its stdout, save it, and extract total crash count.
+        Writes:
+          - crashes/crash_analysis.txt (full stdout)
+          - crashes/crashes.json      ({"count": N, "source": "crash.py"})
+        """
+        crash_script = os.path.join(os.path.dirname(__file__), "DLD", "crash.py")
+        if not os.path.exists(crash_script):
+            # Try relative path if startDLD.py lives next to DLD/
+            alt = os.path.join(os.path.dirname(__file__), "crash.py")
+            crash_script = alt if os.path.exists(alt) else crash_script
+
+        if not os.path.exists(crash_script):
             print(f"Warning: Crash analysis script not found at {crash_script}")
-        
+            return
+
+        try:
+            # Run and capture
+            proc = subprocess.run(
+                ["python", crash_script, self.output_dir],
+                stdout=subprocess.PIPE,
+                stderr=subprocess.STDOUT,
+                text=True,
+                check=False
+            )
+            out_txt = proc.stdout or ""
+
+            # Save full stdout
+            os.makedirs(self.crash_dir, exist_ok=True)
+            analysis_path = os.path.join(self.crash_dir, "crash_analysis.txt")
+            with open(analysis_path, "w", encoding="utf-8") as f:
+                f.write(out_txt)
+
+            # Parse "Total crashes detected: N"
+            m = re.search(r"Total crashes detected:\s*(\d+)", out_txt)
+            count = int(m.group(1)) if m else 0
+
+            # Save a simple JSON summary that count_crashes() will use
+            with open(os.path.join(self.crash_dir, "crashes.json"), "w", encoding="utf-8") as f:
+                json.dump({"count": count, "source": "crash.py"}, f, indent=2)
+
+            logging.info("Crash analysis complete (count=%d). Output saved to %s", count, analysis_path)
+        except Exception:
+            logging.exception("Failed to run/parse crash analysis")
+
     def run_home_button_analysis(self):
         """Run home button analysis after DroidBot finishes"""
         print("\nRunning home button analysis...")
@@ -657,16 +714,16 @@ class ProcessManager:
         """Clean up all processes and threads"""
         logger.info("\nCleaning up all resources...")
         self.should_stop = True
-        
+
         # Stop threads
-        for thread in [self.droidbot_thread, self.rotation_thread, 
+        for thread in [self.droidbot_thread, self.rotation_thread,
                        self.data_loss_thread, self.power_cycle_thread]:
             if thread and thread.is_alive():
                 thread.stop()  # Signal thread to stop
                 thread.join(timeout=5)
                 if thread.is_alive():
                     logger.warning(f"{thread.name} did not stop gracefully")
-        
+
         # Terminate subprocesses
         for proc, name in [
             (self.droidbot_process, "DroidBot"),
@@ -675,11 +732,11 @@ class ProcessManager:
         ]:
             if proc:
                 self.terminate_subprocess(proc, name)
-        
+
         # Stop data loss detector
         if self.data_loss_detector:
             self.data_loss_detector.stop()
-        
+
 
         # Reset to portrait if rotation was enabled
         if self.rotate:
@@ -687,7 +744,7 @@ class ProcessManager:
                 subprocess.run(["adb", "emu", "rotate", "portrait"], timeout=5)
             except subprocess.TimeoutExpired:
                 logger.warning("Failed to reset to portrait orientation")
-        
+
         logger.info("Cleanup complete")
 
     def run(self):
@@ -734,33 +791,33 @@ class ProcessManager:
             self.power_cycle_thread = PausableThread(target=self.run_power_cycle, name="PowerCycleThread")
             self.power_cycle_thread.daemon = True
             self.power_cycle_thread.start()
-        
+
         try:
             while self.droidbot_thread.is_alive() and not self.should_stop:
                 elapsed = time.time() - self.start_time
-                
+
                 # Check timeout
                 if elapsed > self.timeout:
                     print(f"\nTimeout reached ({self.timeout} seconds), stopping...")
                     self.should_stop = True
                     break
-                
+
                 # Check for events that should trigger home button
                 if self.home_button and self.check_events_for_home_trigger() and (time.time() - self.last_home_time) >= self.min_home_interval:
                     print("\n=== Event detected that requires home button simulation ===")
-                    
+
                     # Pause threads and terminate subprocesses
                     self.pause_threads_and_processes()
-                    
+
                     # Perform home button simulation
                     self.trigger_home_button(trigger_reason="event")
-                    
+
                     # Resume threads and restart subprocesses
                     self.resume_threads_and_processes()
                     print("Resumed normal operations")
-                
+
                 time.sleep(1)  # Check interval
-                
+
         except KeyboardInterrupt:
             logger.info("\nCtrl+C detected, stopping...")
             self.should_stop = True
@@ -770,7 +827,7 @@ class ProcessManager:
         finally:
             # Run cleanup
             self.cleanup()
-            
+
             # Run crash analysis after cleanup
             self.run_crash_analysis()
             if(self.home_button):
@@ -779,8 +836,8 @@ class ProcessManager:
             self.print_end_summary()
 
 
-def process_apk(apk_path: str, output_dir: str = None, rotate: bool = True, 
-                power_cycle: bool = True, home_button: bool = True, 
+def process_apk(apk_path: str, output_dir: str = None, rotate: bool = True,
+                power_cycle: bool = True, home_button: bool = True,
                 timeout: int = 300, max_home_actions: int = 20):
     """Process a single APK file"""
     manager = ProcessManager(
@@ -794,18 +851,18 @@ def process_apk(apk_path: str, output_dir: str = None, rotate: bool = True,
     )
     manager.run()
 
-def process_all_apks(apk_dir: str, output_parent_dir: str = "output", rotate: bool = True, 
-                     power_cycle: bool = True, home_button: bool = True, 
+def process_all_apks(apk_dir: str, output_parent_dir: str = "output", rotate: bool = True,
+                     power_cycle: bool = True, home_button: bool = True,
                      timeout: int = 120, max_home_actions: int = 20):
     """Process all APK files in a directory"""
     apk_files = glob.glob(os.path.join(apk_dir, "*.apk"))
-    
+
     if not apk_files:
         print(f"No APK files found in {apk_dir}")
         return
-    
+
     print(f"Found {len(apk_files)} APK files to process")
-    
+
     for apk_path in apk_files:
         process_apk(
             apk_path=apk_path,
@@ -823,51 +880,51 @@ def parse_args():
         formatter_class=argparse.RawTextHelpFormatter
     )
     parser.add_argument(
-        '--apk-path', 
+        '--apk-path',
         default=None,
         help='Path to a specific APK file to test\n'
              '(default: process all in DLD/APK)'
     )
     parser.add_argument(
-        '--apk-dir', 
+        '--apk-dir',
         default="DLD/APK",
         help='Directory containing APKs to test\n'
              '(default: DLD/APK)'
     )
     parser.add_argument(
-        '-o', '--output', 
+        '-o', '--output',
         default="output",
         help='Parent output directory\n'
              '(default: "output")'
     )
     parser.add_argument(
-        '--no-rotate', 
-        action='store_false', 
+        '--no-rotate',
+        action='store_false',
         dest='rotate',
         help='Disable random screen rotations'
     )
     parser.add_argument(
-        '--no-power-cycle', 
-        action='store_false', 
+        '--no-power-cycle',
+        action='store_false',
         dest='power_cycle',
         help='Disable power cycle simulation'
     )
     parser.add_argument(
-        '--no-home-button', 
-        action='store_false', 
+        '--no-home-button',
+        action='store_false',
         dest='home_button',
         help='Disable home button simulation'
     )
     parser.add_argument(
-        '-t', '--timeout', 
-        type=int, 
+        '-t', '--timeout',
+        type=int,
         default=120,
         help='Timeout in seconds for each APK\n'
              '(default: 120)'
     )
     parser.add_argument(
-        '--max-home-actions', 
-        type=int, 
+        '--max-home-actions',
+        type=int,
         default=99,
         help='Maximum home button actions per test session'
     )
@@ -875,7 +932,7 @@ def parse_args():
 
 def cleanDirectory(apk_path = None):
     dir_output = "output/"
-    folder_names = ["data_loss_events", 
+    folder_names = ["data_loss_events",
                     "data_loss_logs",
                     "events",
                     "states",
@@ -884,7 +941,7 @@ def cleanDirectory(apk_path = None):
                     "home_button_screenshots"]
     if not os.path.exists("output"):
         os.makedirs("output", exist_ok=True)
-    
+
     # Reset to portrait orientation before starting new test
     # subprocess.run(["adb", "emu", "rotate", "portrait"], timeout=5)
     # Reset to portrait orientation before starting new test
@@ -921,22 +978,20 @@ if __name__ == "__main__":
     args = parse_args()
     cleanDirectory(args.apk_path)
     if args.apk_path:
-        # Process single APK
         process_apk(
             apk_path=args.apk_path,
-            output_dir=None,  # Will use default subdirectory under args.output
+            output_dir=None,
             rotate=args.rotate,
-            power_cycle = args.power_cycle,
-            home_button = args.home_button,
+            power_cycle=args.power_cycle,
+            home_button=args.home_button,
             timeout=args.timeout
         )
     else:
-        # Process all APKs in directory
         process_all_apks(
             apk_dir=args.apk_dir,
             output_parent_dir=args.output,
             rotate=args.rotate,
-            power_cycle = args.power_cycle,
-            home_button = args.home_button,
+            power_cycle=args.power_cycle,
+            home_button=args.home_button,
             timeout=args.timeout
         )
